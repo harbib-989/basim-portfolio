@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="باسم الحربي - حلول برمجية وتطوير ويب وأتمتة الأعمال والتحول الرقمي للشركات في المملكة العربية السعودية">
+  <meta name="keywords" content="تطوير ويب، أتمتة، تحول رقمي، برمجة، السعودية، شركات">
+  <meta name="author" content="باسم الحربي">
+  <title>باسم الحربي | حلول برمجية وتطوير رقمي للشركات - السعودية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { cairo: ['Cairo', 'sans-serif'] },
+          colors: {
+            primary: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+            accent: { DEFAULT: '#0ea5e9', dark: '#0284c7' },
+            corporate: { navy: '#0f172a', slate: '#1e293b', gray: '#64748b' }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.6s ease-out forwards',
+            'slide-up': 'slideUp 0.5s ease-out forwards',
+            'float': 'float 3s ease-in-out infinite'
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+            slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+            float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Cairo', sans-serif; }
+    .animate-delay-100 { animation-delay: 100ms; }
+    .animate-delay-200 { animation-delay: 200ms; }
+    .animate-delay-300 { animation-delay: 300ms; }
+    .animate-delay-400 { animation-delay: 400ms; }
+    [data-animate].in-view { opacity: 1; transform: translateY(0); }
+    [data-animate] { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
+  </style>
+</head>
+<body class="bg-slate-50 text-corporate-slate antialiased">
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/966554299950" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر واتساب"
+     class="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl animate-float">
+    <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur-sm">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#hero" class="flex items-center gap-2" aria-label="الرئيسية">
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-accent text-white transition hover:bg-accent-dark">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>
+        </span>
+        <span class="text-lg font-bold text-corporate-navy">حلول رقمية</span>
+      </a>
+      <div class="hidden items-center gap-8 md:flex">
+        <a href="#services" class="py-2 text-slate-600 transition hover:text-accent">الخدمات</a>
+        <a href="#why-us" class="py-2 text-slate-600 transition hover:text-accent">لماذا نحن</a>
+        <a href="#process" class="py-2 text-slate-600 transition hover:text-accent">كيف نعمل</a>
+        <a href="#work" class="py-2 text-slate-600 transition hover:text-accent">أعمالي</a>
+        <a href="#contact" class="rounded-lg bg-accent px-4 py-2.5 font-medium text-white transition hover:bg-accent-dark">تواصل الآن</a>
+      </div>
+      <button type="button" class="rounded-lg p-2 md:hidden" aria-label="القائمة" id="menu-btn">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-slate-200 bg-white px-4 py-4 md:hidden">
+      <a href="#services" class="block py-2 text-slate-600">الخدمات</a>
+      <a href="#why-us" class="block py-2 text-slate-600">لماذا نحن</a>
+      <a href="#process" class="block py-2 text-slate-600">كيف نعمل</a>
+      <a href="#work" class="block py-2 text-slate-600">أعمالي</a>
+      <a href="#contact" class="mt-2 block rounded-lg bg-accent py-2 text-center font-medium text-white">تواصل الآن</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white py-16 sm:py-24 lg:py-32">
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%230ea5e9\' fill-opacity=\'0.04\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-60"></div>
+      <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <p class="mb-4 text-sm font-medium uppercase tracking-wider text-accent opacity-0 animate-fade-in">مطور برمجيات • تحول رقمي</p>
+          <h1 class="mb-6 text-4xl font-extrabold leading-tight text-corporate-navy opacity-0 animate-fade-in animate-delay-100 sm:text-5xl lg:text-6xl">
+            حلول برمجية <span class="text-accent">تنقل شركتك</span> للمستقبل
+          </h1>
+          <p class="mx-auto max-w-2xl text-lg text-slate-600 opacity-0 animate-fade-in animate-delay-200 sm:text-xl">
+            تطوير مواقع احترافية، أتمتة العمليات، والتحول الرقمي — نقدم لشركاتكم في المملكة حلولاً تقنية موثوقة وسريعة التنفيذ.
+          </p>
+          <div class="mt-10 flex flex-wrap items-center justify-center gap-4 opacity-0 animate-slide-up animate-delay-300">
+            <a href="#contact" class="inline-flex items-center rounded-xl bg-accent px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:bg-accent-dark hover:shadow-xl">
+              اطلب استشارة
+            </a>
+            <a href="#services" class="inline-flex items-center rounded-xl border-2 border-slate-300 bg-white px-8 py-4 text-lg font-semibold text-slate-700 transition hover:border-accent hover:text-accent">
+              استكشف الخدمات
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 sm:py-24 bg-white">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center" data-animate>
+          <h2 class="text-3xl font-bold text-corporate-navy sm:text-4xl">خدماتنا الرقمية</h2>
+          <p class="mt-4 max-w-2xl mx-auto text-slate-600">حلول متكاملة تناسب احتياجات شركتك من التصميم إلى التشغيل</p>
+        </div>
+        <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3" data-animate>
+          <article class="group rounded-2xl border border-slate-200 bg-slate-50/50 p-8 transition hover:border-accent/30 hover:shadow-xl">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-accent/10 text-accent transition group-hover:bg-accent group-hover:text-white">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-corporate-navy">تطوير الويب</h3>
+            <p class="mt-3 text-slate-600">مواقع وتطبيقات ويب سريعة، آمنة، وسهلة الاستخدام — متوافقة مع الهواتف وجاهزة لمحركات البحث.</p>
+            <a href="#contact" class="mt-4 inline-flex items-center font-medium text-accent transition hover:underline">اطلب عرض سعر ←</a>
+          </article>
+          <article class="group rounded-2xl border border-slate-200 bg-slate-50/50 p-8 transition hover:border-accent/30 hover:shadow-xl">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-accent/10 text-accent transition group-hover:bg-accent group-hover:text-white">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-corporate-navy">أتمتة الأعمال</h3>
+            <p class="mt-3 text-slate-600">أتمتة المهام المتكررة والتقارير والعمليات لرفع الكفاءة وتقليل الأخطاء وتوفير الوقت.</p>
+            <a href="#contact" class="mt-4 inline-flex items-center font-medium text-accent transition hover:underline">اطلب عرض سعر ←</a>
+          </article>
+          <article class="group rounded-2xl border border-slate-200 bg-slate-50/50 p-8 transition hover:border-accent/30 hover:shadow-xl sm:col-span-2 lg:col-span-1">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-accent/10 text-accent transition group-hover:bg-accent group-hover:text-white">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-corporate-navy">التحول الرقمي</h3>
+            <p class="mt-3 text-slate-600">استشارات وتنفيذ استراتيجيات التحول الرقمي لربط الأنظمة وتحسين تجربة العملاء والموظفين.</p>
+            <a href="#contact" class="mt-4 inline-flex items-center font-medium text-accent transition hover:underline">اطلب عرض سعر ←</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" class="py-16 sm:py-24 bg-slate-50">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center" data-animate>
+          <h2 class="text-3xl font-bold text-corporate-navy sm:text-4xl">لماذا تختارنا؟</h2>
+          <p class="mt-4 max-w-2xl mx-auto text-slate-600">نلتزم بمعايير عالية ونتائج قابلة للقياس لشركائنا</p>
+        </div>
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-animate>
+          <div class="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-md">
+            <span class="text-3xl font-bold text-accent">١</span>
+            <h3 class="mt-3 font-bold text-corporate-navy">خبرة عملية</h3>
+            <p class="mt-2 text-sm text-slate-600">مشاريع منجزة مع شركات محلية — فهم عميق لاحتياجات السوق السعودي.</p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-md">
+            <span class="text-3xl font-bold text-accent">٢</span>
+            <h3 class="mt-3 font-bold text-corporate-navy">تسليم في الوقت</h3>
+            <p class="mt-2 text-sm text-slate-600">التزام بمواعيد واضحة وتحديثات دورية حتى تسلم مشروعك كما اتفقنا.</p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-md">
+            <span class="text-3xl font-bold text-accent">٣</span>
+            <h3 class="mt-3 font-bold text-corporate-navy">دعم مستمر</h3>
+            <p class="mt-2 text-sm text-slate-600">دعم فني وصيانة بعد التسليم لضمان استمرارية عمل الحلول.</p>
+          </div>
+          <div class="rounded-2xl bg-white p-6 shadow-sm transition hover:shadow-md">
+            <span class="text-3xl font-bold text-accent">٤</span>
+            <h3 class="mt-3 font-bold text-corporate-navy">أسعار منافسة</h3>
+            <p class="mt-2 text-sm text-slate-600">عروض شفافة تناسب ميزانيات الشركات الصغيرة والمتوسطة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="py-16 sm:py-24 bg-white">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center" data-animate>
+          <h2 class="text-3xl font-bold text-corporate-navy sm:text-4xl">كيف نعمل</h2>
+          <p class="mt-4 max-w-2xl mx-auto text-slate-600">خطوات واضحة من أول اتصال حتى تسليم المشروع</p>
+        </div>
+        <div class="mt-14" data-animate>
+          <div class="space-y-8 lg:flex lg:items-start lg:gap-8 lg:space-y-0">
+            <div class="flex-1 rounded-2xl border border-slate-200 bg-slate-50/50 p-8">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent text-white font-bold">١</span>
+              <h3 class="mt-4 text-xl font-bold text-corporate-navy">التواصل والاستشارة</h3>
+              <p class="mt-2 text-slate-600">نستمع لاحتياجاتك ونحدد الأهداف والجدول الزمني المناسب.</p>
+            </div>
+            <div class="hidden lg:block flex-shrink-0 text-accent">←</div>
+            <div class="flex-1 rounded-2xl border border-slate-200 bg-slate-50/50 p-8">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent text-white font-bold">٢</span>
+              <h3 class="mt-4 text-xl font-bold text-corporate-navy">العرض والتخطيط</h3>
+              <p class="mt-2 text-slate-600">نقدم عرضاً تفصيلياً وخطة عمل قبل البدء بأي تطوير.</p>
+            </div>
+            <div class="hidden lg:block flex-shrink-0 text-accent">←</div>
+            <div class="flex-1 rounded-2xl border border-slate-200 bg-slate-50/50 p-8">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent text-white font-bold">٣</span>
+              <h3 class="mt-4 text-xl font-bold text-corporate-navy">التنفيذ والمتابعة</h3>
+              <p class="mt-2 text-slate-600">ننفذ المشروع مع تحديثات دورية ومراجعات في كل مرحلة.</p>
+            </div>
+            <div class="hidden lg:block flex-shrink-0 text-accent">←</div>
+            <div class="flex-1 rounded-2xl border border-slate-200 bg-slate-50/50 p-8">
+              <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-accent text-white font-bold">٤</span>
+              <h3 class="mt-4 text-xl font-bold text-corporate-navy">التسليم والدعم</h3>
+              <p class="mt-2 text-slate-600">تسليم المشروع مع تدريب ودعم فني لضمان الاستخدام الأمثل.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Work / Portfolio -->
+    <section id="work" class="py-16 sm:py-24 bg-slate-50">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center" data-animate>
+          <h2 class="text-3xl font-bold text-corporate-navy sm:text-4xl">أعمالي</h2>
+          <p class="mt-4 max-w-2xl mx-auto text-slate-600">نماذج من المشاريع والأنظمة التي تم تطويرها وتشغيلها</p>
+        </div>
+        <div class="mt-14 grid gap-8 sm:grid-cols-2" data-animate>
+          <div class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:border-accent/30 hover:shadow-xl">
+            <div class="aspect-video w-full overflow-hidden bg-slate-100">
+              <img src="images/work/acthub.png" alt="لقطة من موقع الرابط الموحد acthub.act.edu.sa" class="h-full w-full object-cover transition group-hover:scale-105"
+                   onerror="this.src='https://placehold.co/640x360/0ea5e9/ffffff?text=acthub.act.edu.sa'; this.onerror=null;">
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="text-lg font-bold text-corporate-navy">الرابط الموحد</h3>
+              <p class="mt-2 flex-1 text-sm text-slate-600">بوابة موحدة للخدمات والروابط</p>
+            </div>
+          </div>
+          <div class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:border-accent/30 hover:shadow-xl">
+            <div class="aspect-video w-full overflow-hidden bg-slate-100">
+              <img src="images/work/mytable.png" alt="لقطة من موقع جدولي mytable.act.edu.sa" class="h-full w-full object-cover transition group-hover:scale-105"
+                   onerror="this.src='https://placehold.co/640x360/0284c7/ffffff?text=mytable.act.edu.sa'; this.onerror=null;">
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="text-lg font-bold text-corporate-navy">موقع جدولي</h3>
+              <p class="mt-2 flex-1 text-sm text-slate-600">منصة لإدارة الطلبات الإلكترونية والتواصل</p>
+            </div>
+          </div>
+          <div class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:border-accent/30 hover:shadow-xl">
+            <div class="aspect-video w-full overflow-hidden bg-slate-100">
+              <img src="images/work/complaints.png" alt="لقطة من نظام إدارة الشكاوي والتظلمات" class="h-full w-full object-cover transition group-hover:scale-105"
+                   onerror="this.src='https://placehold.co/640x360/0369a1/ffffff?text=%D9%86%D8%B8%D8%A7%D9%85+%D8%A7%D9%84%D8%B4%D9%83%D8%A7%D9%88%D9%8A'; this.onerror=null;">
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="text-lg font-bold text-corporate-navy">نظام إدارة الشكاوي والتظلمات</h3>
+              <p class="mt-2 flex-1 text-sm text-slate-600">منصة لتسجيل ومتابعة الشكاوي والتظلمات</p>
+            </div>
+          </div>
+          <div class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:border-accent/30 hover:shadow-xl">
+            <div class="aspect-video w-full overflow-hidden bg-slate-100">
+              <img src="images/work/invitations.png" alt="لقطة من نظام إدارة الدعوات الرسمية" class="h-full w-full object-cover transition group-hover:scale-105"
+                   onerror="this.src='https://placehold.co/640x360/25D366/ffffff?text=%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A7%D8%AA+%D8%A7%D9%84%D8%B1%D8%B3%D9%85%D9%8A%D8%A9'; this.onerror=null;">
+            </div>
+            <div class="flex flex-1 flex-col p-6">
+              <h3 class="text-lg font-bold text-corporate-navy">نظام إدارة الدعوات الرسمية <span class="text-slate-500 font-normal">(الواتساب)</span></h3>
+              <p class="mt-2 flex-1 text-sm text-slate-600">إدارة وإرسال الدعوات الرسمية عبر واتساب</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 sm:py-24 bg-accent">
+      <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-white sm:text-4xl">جاهز لبدء مشروعك الرقمي؟</h2>
+        <p class="mt-4 text-lg text-white/90">احصل على استشارة مجانية ووضع خطة تناسب ميزانيتك ومواعيدك.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="https://wa.me/966554299950" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center rounded-xl bg-white px-8 py-4 font-semibold text-accent transition hover:bg-slate-100">
+            واتساب الآن
+          </a>
+          <a href="#contact" class="inline-flex items-center rounded-xl border-2 border-white px-8 py-4 font-semibold text-white transition hover:bg-white/10">
+            نموذج التواصل
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 sm:py-24 bg-white">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="text-center" data-animate>
+          <h2 class="text-3xl font-bold text-corporate-navy sm:text-4xl">تواصل معنا</h2>
+          <p class="mt-4 max-w-2xl mx-auto text-slate-600">نرد على استفساراتك خلال ٢٤ ساعة</p>
+        </div>
+        <div class="mt-14 grid gap-10 lg:grid-cols-2 lg:gap-16" data-animate>
+          <div>
+            <h3 class="text-lg font-bold text-corporate-navy">باسم الحربي</h3>
+            <p class="mt-2 text-slate-600">مطور برمجيات — حلول ويب، أتمتة، وتحول رقمي للشركات</p>
+            <ul class="mt-6 space-y-4">
+              <li class="flex items-center gap-3">
+                <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </span>
+                <a href="tel:+966554299950" class="text-slate-700 hover:text-accent">0554299950</a>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent">
+                  <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </span>
+                <a href="mailto:basim.devs@gmail.com" class="text-slate-700 hover:text-accent">basim.devs@gmail.com</a>
+              </li>
+            </ul>
+          </div>
+          <form id="contact-form" class="rounded-2xl border border-slate-200 bg-slate-50/50 p-8" action="https://formspree.io/f/mdawkjdb" method="POST">
+            <input type="hidden" name="_subject" value="رسالة جديدة من موقع حلول رقمية">
+            <div id="form-status" class="mb-4 hidden rounded-lg p-4 text-sm"></div>
+            <div class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-slate-700">الاسم</label>
+                <input type="text" id="name" name="name" required placeholder="اسمك أو اسم الشركة"
+                       class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-accent focus:ring-2 focus:ring-accent/20">
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-slate-700">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" required placeholder="example@company.com"
+                       class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-accent focus:ring-2 focus:ring-accent/20">
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium text-slate-700">الرسالة</label>
+                <textarea id="message" name="message" rows="4" required placeholder="صف مشروعك أو احتياجك..."
+                          class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-accent focus:ring-2 focus:ring-accent/20"></textarea>
+              </div>
+              <button type="submit" id="submit-btn" class="w-full rounded-xl bg-accent py-4 font-semibold text-white transition hover:bg-accent-dark disabled:opacity-70">
+                إرسال الرسالة
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-slate-50 py-10">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center space-y-3">
+      <p class="text-slate-600 text-sm">© <span id="year"></span> باسم الحربي. جميع الحقوق محفوظة.</p>
+      <div class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-1.5 text-xs text-slate-500">
+        <svg class="h-4 w-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <span>موثّق لدى منصة العمل الحر — رمز التوثيق: <strong class="text-slate-700 font-semibold">FL-144293594</strong></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    var menuBtn = document.getElementById('menu-btn');
+    var mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', function () { mobileMenu.classList.toggle('hidden'); });
+    mobileMenu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { mobileMenu.classList.add('hidden'); });
+    });
+    (function () {
+      var form = document.getElementById('contact-form');
+      var statusEl = document.getElementById('form-status');
+      var submitBtn = document.getElementById('submit-btn');
+      function showStatus(message, isError) {
+        statusEl.textContent = message;
+        statusEl.className = 'mb-4 rounded-lg p-4 text-sm ' + (isError ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700');
+        statusEl.classList.remove('hidden');
+      }
+      function hideStatus() {
+        statusEl.classList.add('hidden');
+      }
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        hideStatus();
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'جاري الإرسال...';
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        })
+          .then(function (res) {
+            if (res.ok) {
+              showStatus('شكراً لتواصلك. تم إرسال رسالتك وسنرد عليك خلال ٢٤ ساعة.', false);
+              form.reset();
+            } else {
+              showStatus('حدث خطأ أثناء الإرسال. جرّب مرة أخرى أو تواصل عبر الواتساب.', true);
+            }
+          })
+          .catch(function () {
+            showStatus('حدث خطأ في الاتصال. تحقق من الإنترنت أو تواصل عبر الواتساب.', true);
+          })
+          .finally(function () {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'إرسال الرسالة';
+          });
+      });
+    })();
+    (function () {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) entry.target.classList.add('in-view');
+        });
+      }, { rootMargin: '0px 0px -40px 0px', threshold: 0.1 });
+      document.querySelectorAll('[data-animate]').forEach(function (el) { observer.observe(el); });
+    })();
+  </script>
+</body>
+</html>
