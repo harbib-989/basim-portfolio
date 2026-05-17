@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>باسم الحربي | صفحات هبوط احترافية للمشاريع العقارية</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Noto+Kufi+Arabic:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--em:#1D4ED8;--em2:#3B82F6;--em3:#1E3A8A;--gold:#D4A853;--gold2:#FDF6E9;--ink:#111827;--sl:#374151;--st:#6B7280;--mist:#D1D5DB;--off:#FAFAF8;--iv:#F5F3EE;--line:#E5E7EB}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);overflow-x:hidden}
+::selection{background:var(--em);color:#fff}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:.9rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,250,248,0);backdrop-filter:blur(0);transition:all .4s}
+.nav.on{background:rgba(250,250,248,.96);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(0,0,0,.05)}
+.nav-brand{font-family:'Noto Kufi Arabic';font-weight:900;font-size:1.1rem;color:var(--em);text-decoration:none}
+.nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:.84rem;color:var(--sl);font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--em)}
+.nav-cta{background:var(--em)!important;color:#fff!important;padding:.55rem 1.4rem;border-radius:9px;font-weight:700!important;box-shadow:0 2px 10px rgba(59,130,246,.25);transition:all .3s!important}
+.nav-cta:hover{background:var(--em3)!important;transform:translateY(-1px)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:6rem 3rem 4rem;position:relative;overflow:hidden;background:linear-gradient(170deg,#FDFCFA,#EFF6FF 35%,#EFF6FF 50%,#FEF9EF 100%)}
+.hero::before{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(59,130,246,.07),transparent 70%);top:-80px;left:-100px;animation:dft 12s ease-in-out infinite alternate}
+.hero::after{content:'';position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(212,168,83,.05),transparent 70%);bottom:-60px;right:-80px;animation:dft 10s ease-in-out infinite alternate-reverse}
+@keyframes dft{from{transform:translate(0,0) scale(1)}to{transform:translate(30px,20px) scale(1.08)}}
+
+.hero-inner{max-width:800px;margin:0 auto;text-align:center;position:relative;z-index:2}
+
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1px solid rgba(59,130,246,.15);padding:.4rem 1rem;border-radius:100px;font-size:.72rem;font-weight:600;color:var(--em);margin-bottom:2rem;box-shadow:0 2px 8px rgba(0,0,0,.03)}
+.hero-badge .dot{width:7px;height:7px;border-radius:50%;background:var(--em2);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 2px rgba(59,130,246,.15)}50%{box-shadow:0 0 0 6px rgba(59,130,246,0)}}
+
+.hero h1{font-family:'Noto Kufi Arabic';font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;line-height:1.35;margin-bottom:1.2rem}
+.hero h1 .gr{background:linear-gradient(120deg,var(--em),var(--em2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+
+.hero-p{font-size:1.08rem;color:var(--st);line-height:1.9;max-width:580px;margin:0 auto 2.5rem}
+
+.hero-btns{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+.btn-main{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--em),var(--em2));color:#fff;border:none;padding:1rem 2.2rem;border-radius:12px;font-family:'Tajawal';font-size:1rem;font-weight:700;cursor:pointer;text-decoration:none;box-shadow:0 6px 20px rgba(59,130,246,.3);transition:all .3s;position:relative;overflow:hidden}
+.btn-main::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(255,255,255,.15) 50%,transparent 60%);transform:translateX(-100%);transition:transform .6s}
+.btn-main:hover::before{transform:translateX(100%)}
+.btn-main:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(59,130,246,.35)}
+.btn-sec{display:inline-flex;align-items:center;gap:.5rem;background:#fff;color:var(--ink);border:1.5px solid var(--mist);padding:1rem 2rem;border-radius:12px;font-family:'Tajawal';font-size:1rem;font-weight:600;text-decoration:none;transition:all .3s}
+.btn-sec:hover{border-color:var(--em);color:var(--em)}
+
+.hero-trust{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+.ht{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--st)}
+.ht svg{width:16px;height:16px;color:var(--em);flex-shrink:0}
+
+/* SECTION */
+.sec{padding:5.5rem 3rem;max-width:1100px;margin:0 auto}
+.sec-head{text-align:center;margin-bottom:3.5rem}
+.sec-tag{display:inline-flex;align-items:center;gap:.4rem;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--em);margin-bottom:.7rem}
+.sec-tag::before,.sec-tag::after{content:'';width:18px;height:1.5px;background:var(--em);opacity:.3}
+.sec-h2{font-family:'Noto Kufi Arabic';font-size:clamp(1.5rem,3.2vw,2.2rem);font-weight:900;margin-bottom:.5rem}
+.sec-p{color:var(--st);max-width:480px;margin:0 auto;line-height:1.7;font-size:.92rem}
+
+/* WHAT I BUILD */
+.wib-bg{background:var(--iv)}
+.wib-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.2rem}
+.wib{background:#fff;border:1px solid rgba(0,0,0,.04);border-radius:16px;padding:2rem;transition:all .35s;position:relative;overflow:hidden}
+.wib:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(0,0,0,.06);border-color:rgba(59,130,246,.12)}
+.wib::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--em),var(--gold));transform:scaleX(0);transition:transform .4s;transform-origin:right}
+.wib:hover::after{transform:scaleX(1);transform-origin:left}
+.wib-icon{font-size:1.8rem;margin-bottom:.8rem}
+.wib h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
+.wib p{color:var(--st);line-height:1.75;font-size:.84rem}
+
+/* PRICING PACKAGE */
+.package-box{max-width:700px;margin:0 auto;background:#fff;border:2px solid var(--em);border-radius:24px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.05)}
+.pkg-head{background:linear-gradient(135deg,var(--em),var(--em2));padding:1.8rem 2rem;text-align:center}
+.pkg-title{font-family:'Noto Kufi Arabic';font-size:1.15rem;font-weight:900;color:#fff;margin-bottom:.3rem}
+.pkg-sub{font-size:.82rem;color:rgba(255,255,255,.8)}
+.pkg-items{padding:0}
+.pkg-item{display:flex;align-items:center;gap:1.2rem;padding:1.4rem 2rem;border-bottom:1px solid var(--line)}
+.pkg-item:last-child{border-bottom:none}
+.pkg-icon{font-size:1.6rem;flex-shrink:0;width:44px;height:44px;background:var(--iv);border-radius:12px;display:grid;place-items:center}
+.pkg-info{flex:1}
+.pkg-label{font-weight:700;font-size:.92rem;margin-bottom:.2rem}
+.pkg-detail{font-size:.78rem;color:var(--st);line-height:1.65}
+.pkg-price{text-align:center;flex-shrink:0;min-width:100px}
+.pkg-price strong{display:block;font-family:'Noto Kufi Arabic';font-size:1.4rem;font-weight:900;color:var(--em)}
+.pkg-price span{font-size:.62rem;color:var(--st)}
+.pkg-footer{padding:1.5rem 2rem;background:var(--off);text-align:center;border-top:1px solid var(--line)}
+
+/* PROCESS */
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.proc{text-align:center;padding:1.5rem;position:relative}
+.proc::after{content:'←';position:absolute;left:-8px;top:40%;color:var(--mist);font-size:1.2rem}
+.proc:last-child::after{display:none}
+.proc-num{width:40px;height:40px;border-radius:50%;background:var(--em);color:#fff;display:grid;place-items:center;margin:0 auto .8rem;font-weight:800;font-size:.9rem}
+.proc h3{font-size:.88rem;font-weight:700;margin-bottom:.3rem}
+.proc p{font-size:.76rem;color:var(--st);line-height:1.6}
+
+/* CONTACT */
+.contact-box{max-width:600px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:24px;padding:3rem;position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.03)}
+.contact-box::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--em),var(--em2),var(--gold))}
+.contact-info{text-align:center;margin-bottom:2rem}
+.ci-name{font-family:'Noto Kufi Arabic';font-size:1.3rem;font-weight:900;margin-bottom:.3rem}
+.ci-role{font-size:.85rem;color:var(--st);margin-bottom:1rem}
+.ci-badge{display:inline-block;background:#EFF6FF;color:var(--em);padding:.3rem .8rem;border-radius:6px;font-size:.7rem;font-weight:600;margin-bottom:1.5rem}
+.ci-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+.ci-link{display:inline-flex;align-items:center;gap:.4rem;padding:.6rem 1.4rem;border-radius:10px;text-decoration:none;font-size:.88rem;font-weight:600;transition:all .3s}
+.ci-link.wa{background:#1D4ED8;color:#fff;box-shadow:0 3px 12px rgba(59,130,246,.3)}
+.ci-link.wa:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(59,130,246,.35)}
+.ci-link.phone{background:var(--em);color:#fff;box-shadow:0 3px 12px rgba(59,130,246,.25)}
+.ci-link.phone:hover{transform:translateY(-2px)}
+.ci-link.email{background:var(--iv);color:var(--ink);border:1px solid var(--line)}
+.ci-link.email:hover{border-color:var(--em);color:var(--em)}
+
+/* FOOTER */
+.foot{text-align:center;padding:2rem 3rem;border-top:1px solid var(--line);font-size:.72rem;color:var(--st);background:#fff}
+.foot a{color:var(--em);text-decoration:none;font-weight:600}
+
+/* WA FLOAT */
+.wa-float{position:fixed;bottom:1.5rem;left:1.5rem;width:56px;height:56px;background:linear-gradient(135deg,#1D4ED8,#1E3A8A);border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 20px rgba(59,130,246,.4);z-index:999;text-decoration:none;transition:transform .3s;animation:wap 3s ease-in-out infinite}
+@keyframes wap{0%,85%,100%{transform:scale(1)}90%{transform:scale(1.1)}95%{transform:scale(.96)}}
+.wa-float:hover{transform:scale(1.1)!important;animation:none}
+.wa-float svg{width:26px;height:26px;fill:#fff}
+
+.rv{opacity:0;transform:translateY(28px);transition:all .7s cubic-bezier(.16,1,.3,1)}
+.rv.on{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+  .nav-links{display:none}.nav{padding:.8rem 1.5rem}
+  .hero{padding:5rem 1.5rem 3rem}.hero-trust{gap:1rem}
+  .wib-grid{grid-template-columns:1fr}
+  .pkg-item{flex-direction:column;text-align:center;gap:.8rem}
+  .pkg-price{min-width:auto}
+  .proc-grid{grid-template-columns:1fr 1fr}.proc::after{display:none}
+  .sec{padding:3.5rem 1.5rem}
+  .hero-btns{flex-direction:column;align-items:center}
+  .ci-links{flex-direction:column;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="#" class="nav-brand">باسم الحربي</a>
+  <ul class="nav-links">
+    <li><a href="#what">الخدمة</a></li>
+    <li><a href="#pricing">الأسعار</a></li>
+    <li><a href="#process">آلية العمل</a></li>
+    <li><a href="#contact" class="nav-cta">تواصل معي</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="dot"></span>خدمة جديدة — متاح الآن</div>
+    <h1>صفحات هبوط احترافية<br>تبيع <span class="gr">شققك أسرع</span></h1>
+    <p class="hero-p">هل عندك مشروع عقاري وتبي تسوّق له بطريقة مميزة؟ أبني لك صفحة هبوط احترافية تعرض شققك بشكل يجذب العملاء ويحفزهم على التواصل — تصميم عصري، محتوى تسويقي مقنع، وربط واتساب مباشر</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-main">📞 تواصل الحين — عرض خاص</a>
+      <a href="#what" class="btn-sec">🔍 شوف التفاصيل</a>
+    </div>
+    <div class="hero-trust">
+      <span class="ht"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>موثّق بمنصة العمل الحر</span>
+      <span class="ht"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>تسليم خلال ٧ أيام</span>
+      <span class="ht"><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>عمولة مربوطة بالنتائج</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT -->
+<section class="wib-bg" id="what">
+  <div class="sec">
+    <div class="sec-head rv"><div class="sec-tag">وش أسوي لك بالضبط</div><h2 class="sec-h2">صفحة هبوط تبيع بدالك</h2><p class="sec-p">كل شي تحتاجه لتسويق مشروعك العقاري إلكترونياً في صفحة واحدة احترافية</p></div>
+    <div class="wib-grid">
+      <div class="wib rv"><div class="wib-icon">🎨</div><h3>تصميم عصري فاخر</h3><p>تصميم حديث بألوان متناسقة وتأثيرات بصرية جذابة — يعكس فخامة المشروع ويبني ثقة فورية مع الزائر</p></div>
+      <div class="wib rv"><div class="wib-icon">🏠</div><h3>عرض تفاعلي للشقق</h3><p>كل شقة ببطاقة مفصلة — المساحة، الغرف، السعر — مع تبديل تلقائي جذاب يعرض جميع الخيارات</p></div>
+      <div class="wib rv"><div class="wib-icon">📱</div><h3>واتساب + نموذج حجز</h3><p>زر واتساب عائم وربط مباشر + نموذج تواصل ذكي يجمع بيانات العملاء المهتمين بضغطة واحدة</p></div>
+      <div class="wib rv"><div class="wib-icon">⏰</div><h3>عداد وشريط استعجال</h3><p>عداد تنازلي حقيقي وشريط عروض يخلق إحساس بالفرصة المحدودة — يحفز الزائر على التصرف بسرعة</p></div>
+      <div class="wib rv"><div class="wib-icon">📊</div><h3>تقارير وإحصائيات</h3><p>تقارير دورية عن عدد الزوار والطلبات — تعرف كم شخص زار الصفحة وكم واحد تواصل معك</p></div>
+      <div class="wib rv"><div class="wib-icon">📐</div><h3>قسم مخططات ومواصفات</h3><p>عرض المخططات الهندسية والمواصفات التفصيلية — يساعد العميل في اتخاذ القرار بدون ما يتصل يسأل</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="sec">
+    <div class="sec-head rv"><div class="sec-tag">تكلفة الخدمة</div><h2 class="sec-h2">تسعير شفاف ومرن</h2><p class="sec-p">الخدمة كاملة تشمل التأسيس والإدارة الشهرية مع عمولة نجاح مربوطة بالنتائج</p></div>
+    <div class="package-box rv">
+      <div class="pkg-head">
+        <div class="pkg-title">باقة واحدة شاملة — كل شي تحتاجه</div>
+        <div class="pkg-sub">خدمة متكاملة من التصميم للإدارة مع عمولة نجاح مربوطة بالنتائج</div>
+      </div>
+      <div class="pkg-items">
+        <div class="pkg-item">
+          <div class="pkg-icon">🚀</div>
+          <div class="pkg-info"><div class="pkg-label">رسوم التأسيس والتصميم</div><div class="pkg-detail">بناء صفحة الهبوط من الصفر بتصميم مخصص — تشمل كل المميزات والتأثيرات والمحتوى التسويقي</div></div>
+          <div class="pkg-price"><strong>٤,٠٠٠</strong><span>ريال — دفعة واحدة</span></div>
+        </div>
+        <div class="pkg-item">
+          <div class="pkg-icon">⚡</div>
+          <div class="pkg-info"><div class="pkg-label">الإدارة والتشغيل الشهري</div><div class="pkg-detail">تحديث حالة الشقق والمحتوى، استقبال الطلبات وتحويلها لك، تقارير أداء، ودعم فني مستمر</div></div>
+          <div class="pkg-price"><strong>٣٠٠</strong><span>ريال / شهر</span></div>
+        </div>
+        <div class="pkg-item">
+          <div class="pkg-icon">🤝</div>
+          <div class="pkg-info"><div class="pkg-label">عمولة نجاح على كل شقة</div><div class="pkg-detail">تُدفع فقط عند إتمام بيع شقة عن طريق الصفحة — أنا واثق من شغلي لدرجة إني حاط جزء من أتعابي مربوط بالنتائج</div></div>
+          <div class="pkg-price"><strong>٥٠٠</strong><span>ريال / شقة مباعة</span></div>
+        </div>
+      </div>
+      <div class="pkg-footer">
+        <a href="#contact" class="btn-main">📞 ابدأ الحين — تواصل معي</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="wib-bg" id="process">
+  <div class="sec">
+    <div class="sec-head rv"><div class="sec-tag">آلية العمل</div><h2 class="sec-h2">٤ خطوات وصفحتك جاهزة</h2></div>
+    <div class="proc-grid">
+      <div class="proc rv"><div class="proc-num">١</div><h3>نجتمع ونفهم</h3><p>أفهم مشروعك وشققك والفئة المستهدفة — وتعطيني الصور والمخططات والأسعار</p></div>
+      <div class="proc rv"><div class="proc-num">٢</div><h3>أصمم وأبني</h3><p>أصمم صفحة هبوط مخصصة بهوية مشروعك — تصميم عصري مع كل المميزات التسويقية</p></div>
+      <div class="proc rv"><div class="proc-num">٣</div><h3>مراجعة وتعديل</h3><p>تشوف الصفحة وتعطيني ملاحظاتك — أعدل لين تكون راضي ١٠٠٪</p></div>
+      <div class="proc rv"><div class="proc-num">٤</div><h3>إطلاق ومتابعة</h3><p>ننشر الصفحة على رابط خاص وأبدأ أرسل لك تقارير الزوار والطلبات</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sec">
+    <div class="sec-head rv"><div class="sec-tag">جاهز تبدأ؟</div><h2 class="sec-h2">تواصل معي الحين</h2><p class="sec-p">خلنا نحول مشروعك العقاري لصفحة تسويقية تبيع بدالك</p></div>
+    <div class="contact-box rv">
+      <div class="contact-info">
+        <div class="ci-name">باسم الحربي</div>
+        <div class="ci-role">مطور برمجيات — حلول ويب، أتمتة، وتحول رقمي للشركات</div>
+        <div class="ci-badge">✓ موثّق لدى منصة العمل الحر — FL-144293594</div>
+        <div class="ci-links">
+          <a href="https://wa.me/966554299950" class="ci-link wa" target="_blank">💬 واتساب مباشر</a>
+          <a href="tel:+966554299950" class="ci-link phone">📞 0554299950</a>
+          <a href="mailto:basim.devs@gmail.com" class="ci-link email">📧 basim.devs@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot"><p>© ٢٠٢٦ باسم الحربي — جميع الحقوق محفوظة</p></footer>
+
+<a href="https://wa.me/966554299950" class="wa-float" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<script>
+const ro=new IntersectionObserver(es=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('on'),i*60);ro.unobserve(e.target)}})},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('on',scrollY>60));
+</script>
+</body>
+</html>

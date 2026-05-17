@@ -12,6 +12,8 @@ export default defineConfig({
       input: {
         main: resolve(import.meta.dirname, 'index.html'),
         privacy: resolve(import.meta.dirname, 'privacy.html'),
+        realEstate: resolve(import.meta.dirname, 'real-estate-landing.html'),
+        basimServices: resolve(import.meta.dirname, 'basim-services.html'),
       },
     },
   },

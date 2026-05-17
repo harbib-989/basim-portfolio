@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>شقق تمليك فاخرة | امتلك الآن</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Noto+Kufi+Arabic:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --em:#0F7B5F;--em-glow:#10B981;--em-deep:#065F46;
+  --sand:#D4A853;--sand-soft:#F6EDDA;
+  --off:#FAFAF8;--ivory:#F5F3EE;
+  --ink:#111827;--slate:#374151;--stone:#6B7280;--mist:#D1D5DB;
+  --glass:rgba(255,255,255,0.7);--glass-b:rgba(255,255,255,0.25);
+  --r:20px;--rs:12px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);overflow-x:hidden}
+::selection{background:var(--em);color:#fff}
+
+/* NAV */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,250,248,0);backdrop-filter:blur(0);transition:all .4s cubic-bezier(.4,0,.2,1)}
+.topbar.solid{background:rgba(250,250,248,.95);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(0,0,0,.05)}
+.logo{font-family:'Noto Kufi Arabic',serif;font-size:1.15rem;font-weight:900;color:var(--em);text-decoration:none;display:flex;align-items:center;gap:.6rem}
+.logo-mark{width:38px;height:38px;background:linear-gradient(135deg,var(--em),var(--em-glow));border-radius:10px;display:grid;place-items:center;color:#fff;font-size:1.1rem;box-shadow:0 4px 12px rgba(16,185,129,.3)}
+.topnav{display:flex;align-items:center;gap:2rem;list-style:none}
+.topnav a{text-decoration:none;font-size:.85rem;font-weight:500;color:var(--slate);transition:color .2s;position:relative}
+.topnav a::after{content:'';position:absolute;bottom:-3px;right:0;width:0;height:2px;background:var(--em);transition:width .3s;border-radius:2px}
+.topnav a:hover{color:var(--em)}
+.topnav a:hover::after{width:100%}
+.topnav-cta{background:var(--em)!important;color:#fff!important;padding:.6rem 1.5rem!important;border-radius:9px!important;font-weight:700!important;box-shadow:0 2px 10px rgba(16,185,129,.25);transition:transform .2s,box-shadow .2s!important}
+.topnav-cta::after{display:none!important}
+.topnav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 18px rgba(16,185,129,.35)!important}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:6rem 3rem 4rem;position:relative;overflow:hidden;background:linear-gradient(170deg,#FDFCFA 0%,#ECFDF5 35%,#ECFDF5 50%,#FEF9EF 100%)}
+.hero::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(16,185,129,.08),transparent 70%);top:-100px;left:-150px;animation:drift 12s ease-in-out infinite alternate}
+.hero::after{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(212,168,83,.06),transparent 70%);bottom:-80px;right:-100px;animation:drift 10s ease-in-out infinite alternate-reverse}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(40px,30px) scale(1.1)}}
+.hero-grid{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;position:relative;z-index:2}
+
+.hero-text{animation:slideR .8s cubic-bezier(.16,1,.3,1) both}
+@keyframes slideR{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+
+.status-pill{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1px solid rgba(16,185,129,.15);padding:.45rem 1.1rem .45rem .7rem;border-radius:100px;font-size:.76rem;font-weight:600;color:var(--em);margin-bottom:1.8rem;box-shadow:0 2px 8px rgba(0,0,0,.03)}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(--em-glow);box-shadow:0 0 0 3px rgba(16,185,129,.15);animation:livePulse 2s ease infinite}
+@keyframes livePulse{0%,100%{box-shadow:0 0 0 3px rgba(16,185,129,.15)}50%{box-shadow:0 0 0 8px rgba(16,185,129,0)}}
+
+.hero h1{font-family:'Noto Kufi Arabic',serif;font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:900;line-height:1.3;margin-bottom:1.2rem}
+.hero h1 .hi{position:relative;display:inline;background:linear-gradient(120deg,var(--em),var(--em-glow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:1.1rem;color:var(--stone);line-height:1.85;max-width:440px;margin-bottom:2.2rem}
+.hero-cta-row{display:flex;gap:.7rem;margin-bottom:2.5rem;flex-wrap:wrap}
+
+.cta-primary{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--em),var(--em-glow));color:#fff;border:none;padding:1rem 2.2rem;border-radius:var(--rs);font-family:'Tajawal';font-size:1rem;font-weight:700;cursor:pointer;text-decoration:none;box-shadow:0 6px 20px rgba(16,185,129,.3);transition:all .3s;position:relative;overflow:hidden}
+.cta-primary::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(255,255,255,.15) 50%,transparent 60%);transform:translateX(-100%);transition:transform .6s}
+.cta-primary:hover::before{transform:translateX(100%)}
+.cta-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(16,185,129,.35)}
+
+.cta-secondary{display:inline-flex;align-items:center;gap:.5rem;background:#fff;color:var(--ink);border:1.5px solid var(--mist);padding:1rem 2rem;border-radius:var(--rs);font-family:'Tajawal';font-size:1rem;font-weight:600;cursor:pointer;text-decoration:none;transition:all .3s}
+.cta-secondary:hover{border-color:var(--em);color:var(--em)}
+
+.proof-row{display:flex;gap:2rem;flex-wrap:wrap;padding-top:1.5rem;border-top:1px solid rgba(0,0,0,.05)}
+.proof{display:flex;flex-direction:column;gap:.1rem}
+.proof strong{font-size:1.3rem;font-weight:800;color:var(--em)}
+.proof span{font-size:.72rem;color:var(--stone)}
+
+.hero-vis{position:relative;animation:slideL .8s cubic-bezier(.16,1,.3,1) .15s both}
+@keyframes slideL{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+
+.showcase{border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 25px 80px rgba(0,0,0,.08),0 0 0 1px rgba(0,0,0,.03)}
+.showcase-img{height:280px;background:linear-gradient(135deg,#ECFDF5,#FEF9EF,#ECFDF5);display:grid;place-items:center;position:relative;overflow:hidden}
+.showcase-img::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30h60M30 0v60' stroke='%23000' stroke-opacity='.02' fill='none'/%3E%3C/svg%3E")}
+.showcase-icon{font-size:4rem;opacity:.2;position:relative;z-index:1}
+.showcase-label{position:absolute;bottom:1rem;right:1rem;left:1rem;background:var(--glass);backdrop-filter:blur(12px);border:1px solid var(--glass-b);border-radius:12px;padding:.8rem 1rem;display:flex;justify-content:space-between;align-items:center}
+.showcase-label h4{font-size:.9rem;font-weight:700}
+.showcase-label p{font-size:.72rem;color:var(--stone);margin-top:.1rem}
+.showcase-price{background:var(--em);color:#fff;padding:.4rem .8rem;border-radius:8px;font-weight:800;font-size:.82rem;white-space:nowrap}
+.showcase-bar{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(0,0,0,.04)}
+.showcase-stat{padding:1rem;text-align:center;border-left:1px solid rgba(0,0,0,.04)}
+.showcase-stat:last-child{border-left:none}
+.showcase-stat strong{display:block;font-size:1rem;font-weight:800;color:var(--em)}
+.showcase-stat span{font-size:.65rem;color:var(--stone)}
+.showcase{position:relative}
+.showcase-slide{position:absolute;inset:0;opacity:0;transition:opacity .8s cubic-bezier(.4,0,.2,1);pointer-events:none}
+.showcase-slide.active{position:relative;opacity:1;pointer-events:auto}
+.showcase-dots{display:flex;justify-content:center;gap:.4rem;padding:.7rem 0;background:#fff}
+.showcase-dots button{width:8px;height:8px;border-radius:50%;border:none;background:var(--mist);cursor:pointer;transition:all .3s;padding:0}
+.showcase-dots button.active{background:var(--em);width:22px;border-radius:4px}
+
+.badge-float{position:absolute;background:#fff;border-radius:14px;padding:.7rem 1rem;box-shadow:0 8px 30px rgba(0,0,0,.08);border:1px solid rgba(0,0,0,.04);z-index:10}
+.bf-units{top:1rem;left:-2rem;animation:bob 4s ease-in-out infinite}
+.bf-units strong{font-family:'Noto Kufi Arabic';font-size:1.6rem;font-weight:900;color:var(--em);display:block;line-height:1}
+.bf-units small{font-size:.65rem;color:var(--stone)}
+.bf-rating{bottom:4rem;left:-1rem;display:flex;align-items:center;gap:.4rem;animation:bob 4s ease-in-out infinite 2s}
+.bf-rating .stars{color:#F59E0B;font-size:.75rem;letter-spacing:2px}
+.bf-rating span{font-size:.75rem;font-weight:600;color:var(--slate)}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+/* URGENCY */
+.urgency{background:linear-gradient(90deg,var(--em-deep),var(--em),var(--em-glow));color:#fff;text-align:center;padding:1rem 2rem;font-size:.88rem;font-weight:600;display:flex;justify-content:center;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.urgency-timer{display:inline-flex;gap:.4rem;direction:ltr}
+.timer-box{background:rgba(255,255,255,.2);backdrop-filter:blur(6px);border-radius:6px;padding:.3rem .5rem;min-width:36px;text-align:center;font-weight:800;font-size:.95rem}
+.timer-label{font-size:.55rem;font-weight:400;display:block;opacity:.8}
+
+/* TRUST */
+.trust{background:#fff;border-bottom:1px solid rgba(0,0,0,.04)}
+.trust-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{padding:1.6rem 1rem;text-align:center;border-left:1px solid rgba(0,0,0,.04);transition:background .3s}
+.trust-item:last-child{border-left:none}
+.trust-item:hover{background:var(--off)}
+.ti-icon{width:44px;height:44px;border-radius:12px;margin:0 auto .6rem;display:grid;place-items:center;font-size:1.2rem}
+.ti-1{background:#ECFDF5}.ti-2{background:#EEF2FF}.ti-3{background:var(--sand-soft)}.ti-4{background:#FEF3C7}
+.trust-item h4{font-size:.85rem;font-weight:700;margin-bottom:.15rem}
+.trust-item p{font-size:.7rem;color:var(--stone)}
+
+/* SECTIONS */
+.sec{padding:5.5rem 3rem;max-width:1200px;margin:0 auto}
+.sec-head{text-align:center;margin-bottom:3.5rem}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--em);margin-bottom:.8rem}
+.sec-eyebrow::before,.sec-eyebrow::after{content:'';width:20px;height:1.5px;background:var(--em);opacity:.3;border-radius:2px}
+.sec-h2{font-family:'Noto Kufi Arabic';font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;margin-bottom:.6rem}
+.sec-p{color:var(--stone);max-width:480px;margin:0 auto;line-height:1.75;font-size:.95rem}
+
+/* FEATURES */
+.feat-bg{background:var(--ivory)}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.feat{background:#fff;border:1px solid rgba(0,0,0,.04);border-radius:var(--r);padding:2rem;transition:all .35s;position:relative;overflow:hidden}
+.feat::before{content:'';position:absolute;top:0;right:0;width:80px;height:80px;border-radius:0 0 0 80px;background:linear-gradient(135deg,rgba(16,185,129,.04),transparent);transition:all .4s}
+.feat:hover{transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.06);border-color:rgba(16,185,129,.12)}
+.feat:hover::before{width:160px;height:160px}
+.feat-num{font-family:'Noto Kufi Arabic';font-size:2.5rem;font-weight:900;color:rgba(16,185,129,.08);line-height:1;margin-bottom:.5rem}
+.feat h3{font-size:1rem;font-weight:700;margin-bottom:.5rem}
+.feat p{color:var(--stone);line-height:1.75;font-size:.86rem}
+
+/* APARTMENTS */
+.apt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.apt{background:#fff;border:1px solid rgba(0,0,0,.05);border-radius:var(--r);overflow:hidden;transition:all .4s;position:relative}
+.apt:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 25px 60px rgba(0,0,0,.08)}
+.apt:nth-child(2){border-color:var(--em);border-width:2px}
+.apt-visual{height:200px;position:relative;overflow:hidden;background:linear-gradient(135deg,#ECFDF5,#FEF9EF);display:grid;place-items:center}
+.apt-visual::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='.5' fill='%23000' opacity='.04'/%3E%3C/svg%3E")}
+.apt-visual span{font-size:3rem;opacity:.15;position:relative;z-index:1}
+.apt-ribbon{position:absolute;top:.8rem;right:.8rem;padding:.25rem .65rem;border-radius:6px;font-size:.68rem;font-weight:700;backdrop-filter:blur(8px)}
+.ribbon-ok{background:rgba(16,185,129,.12);color:var(--em)}
+.ribbon-hot{background:rgba(245,158,11,.12);color:#D97706}
+.apt-content{padding:1.5rem}
+.apt-type{font-size:.68rem;font-weight:600;color:var(--em);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem}
+.apt-title{font-family:'Noto Kufi Arabic';font-size:1.1rem;font-weight:800;margin-bottom:.2rem}
+.apt-where{font-size:.78rem;color:var(--stone);margin-bottom:1rem}
+.apt-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:.4rem;padding:1rem 0;border-top:1px solid rgba(0,0,0,.04);border-bottom:1px solid rgba(0,0,0,.04);margin-bottom:1rem}
+.apt-m{text-align:center}
+.apt-m strong{display:block;font-size:.92rem;color:var(--em);font-weight:800}
+.apt-m small{font-size:.6rem;color:var(--stone)}
+.apt-bottom{display:flex;justify-content:space-between;align-items:center}
+.apt-price{font-family:'Noto Kufi Arabic';font-size:1.2rem;font-weight:900;color:var(--ink)}
+.apt-price small{font-size:.62rem;font-weight:400;color:var(--stone);display:block}
+.apt-go{background:var(--em);border:none;color:#fff;padding:.55rem 1.2rem;border-radius:8px;font-family:'Tajawal';font-size:.78rem;font-weight:700;cursor:pointer;transition:all .25s;box-shadow:0 2px 8px rgba(16,185,129,.2)}
+.apt-go:hover{background:var(--em-deep);transform:translateY(-1px)}
+
+/* FLOORPLAN */
+.fp-bg{background:var(--ivory)}
+.fp-layout{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.fp-visual{background:#fff;border:1px solid rgba(0,0,0,.05);border-radius:var(--r);aspect-ratio:1;display:grid;place-items:center;position:relative;overflow:hidden}
+.fp-visual::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30h60M30 0v60' stroke='%23000' stroke-opacity='.015' fill='none'/%3E%3C/svg%3E")}
+.fp-placeholder{text-align:center;color:var(--stone);position:relative;z-index:1}
+.fp-placeholder svg{width:100px;height:100px;opacity:.12;stroke:var(--slate);margin-bottom:.5rem}
+.fp-placeholder p{font-size:.82rem}
+.fp-text .sec-eyebrow{margin-bottom:1rem}
+.fp-text h3{font-family:'Noto Kufi Arabic';font-size:1.6rem;font-weight:900;margin-bottom:.7rem}
+.fp-text>p{color:var(--stone);line-height:1.85;margin-bottom:2rem;font-size:.95rem}
+.fp-chips{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.fp-chip{background:#fff;border:1px solid rgba(0,0,0,.05);border-radius:var(--rs);padding:1rem;transition:border-color .3s}
+.fp-chip:hover{border-color:rgba(16,185,129,.2)}
+.fp-chip small{display:block;font-size:.68rem;color:var(--stone);margin-bottom:.15rem}
+.fp-chip strong{font-size:1.05rem;color:var(--em);font-weight:800}
+
+/* CONTACT */
+.contact-card{max-width:680px;margin:0 auto;background:#fff;border:1px solid rgba(0,0,0,.05);border-radius:24px;padding:3rem;box-shadow:0 8px 40px rgba(0,0,0,.04);position:relative;overflow:hidden}
+.contact-card::before{content:'';position:absolute;top:0;right:0;left:0;height:4px;background:linear-gradient(90deg,var(--em),var(--em-glow),var(--sand))}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:.8rem}
+.fgrp{margin-bottom:.8rem}
+.fgrp label{display:block;font-size:.8rem;font-weight:600;margin-bottom:.4rem;color:var(--slate)}
+.fgrp input,.fgrp select,.fgrp textarea{width:100%;background:var(--off);border:1.5px solid rgba(0,0,0,.06);border-radius:var(--rs);padding:.85rem 1rem;font-family:'Tajawal';font-size:.92rem;color:var(--ink);outline:none;transition:all .25s}
+.fgrp input:focus,.fgrp select:focus,.fgrp textarea:focus{border-color:var(--em);background:#fff;box-shadow:0 0 0 3px rgba(16,185,129,.08)}
+.fgrp input::placeholder,.fgrp textarea::placeholder{color:var(--mist)}
+.fgrp textarea{resize:vertical;min-height:80px}
+.fgrp select option{background:#fff}
+.form-go{width:100%;margin-top:.6rem;background:linear-gradient(135deg,var(--em),var(--em-glow));color:#fff;border:none;padding:1rem;border-radius:var(--rs);font-family:'Tajawal';font-size:1.05rem;font-weight:700;cursor:pointer;transition:all .3s;box-shadow:0 4px 16px rgba(16,185,129,.2);position:relative;overflow:hidden}
+.form-go::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,transparent 40%,rgba(255,255,255,.12) 50%,transparent 60%);transform:translateX(-100%);transition:transform .6s}
+.form-go:hover::before{transform:translateX(100%)}
+.form-go:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(16,185,129,.3)}
+
+.footer{text-align:center;padding:2rem 3rem;border-top:1px solid rgba(0,0,0,.04);font-size:.75rem;color:var(--stone);background:#fff}
+.footer a{color:var(--em);text-decoration:none;font-weight:600}
+
+.wa-btn{position:fixed;bottom:1.5rem;left:1.5rem;width:56px;height:56px;background:linear-gradient(135deg,#25D366,#128C7E);border-radius:50%;display:grid;place-items:center;box-shadow:0 6px 20px rgba(16,185,129,.4);z-index:999;text-decoration:none;transition:transform .3s;animation:waAtt 3s ease-in-out infinite}
+@keyframes waAtt{0%,85%,100%{transform:scale(1)}90%{transform:scale(1.08)}95%{transform:scale(.97)}}
+.wa-btn:hover{transform:scale(1.1)!important;animation:none}
+.wa-btn svg{width:26px;height:26px;fill:#fff}
+
+.rv{opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.16,1,.3,1)}
+.rv.on{opacity:1;transform:translateY(0)}
+
+@media(max-width:1024px){.feat-grid,.apt-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.topnav{display:none}.topbar{padding:.8rem 1.5rem}.hero{padding:5.5rem 1.5rem 3rem}.hero-grid{grid-template-columns:1fr;text-align:center}.hero-sub{margin:0 auto 2rem}.hero-cta-row{justify-content:center}.proof-row{justify-content:center}.hero-vis{max-width:420px;margin:0 auto}.bf-units,.bf-rating{display:none}.trust-inner{grid-template-columns:1fr 1fr}.trust-item{border-left:none}.feat-grid,.apt-grid{grid-template-columns:1fr}.fp-layout{grid-template-columns:1fr}.frow{grid-template-columns:1fr}.sec{padding:3.5rem 1.5rem}.urgency{flex-direction:column;gap:.6rem}}
+@media(max-width:480px){.hero-cta-row{flex-direction:column}.trust-inner{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="topbar" id="topbar">
+  <a href="#" class="logo"><span class="logo-mark">🏢</span>اسم المشروع</a>
+  <ul class="topnav">
+    <li><a href="#features">المزايا</a></li>
+    <li><a href="#units">الشقق</a></li>
+    <li><a href="#plans">المخططات</a></li>
+    <li><a href="#contact" class="topnav-cta">احجز شقتك</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-text">
+      <div class="status-pill"><span class="status-dot"></span>البيع مفتوح الآن — عدد محدود</div>
+      <h1>سكنك الفاخر<br>يبدأ <span class="hi">من هنا</span></h1>
+      <p class="hero-sub">شقق تمليك بتصاميم عصرية وتشطيبات فندقية في موقع استراتيجي — مساحات تبدأ من ١٢٠م² مع خيارات تمويل مرنة وأسعار لن تتكرر</p>
+      <div class="hero-cta-row">
+        <a href="#units" class="cta-primary">🏠 شاهد الشقق المتاحة</a>
+        <a href="https://wa.me/966XXXXXXXXX" class="cta-secondary" target="_blank">💬 تواصل واتساب</a>
+      </div>
+      <div class="proof-row">
+        <div class="proof"><strong>٨</strong><span>وحدات متاحة</span></div>
+        <div class="proof"><strong>١٢٠+</strong><span>م² أصغر مساحة</span></div>
+        <div class="proof"><strong>٤٥٠K</strong><span>يبدأ من ريال</span></div>
+      </div>
+    </div>
+    <div class="hero-vis">
+      <div class="showcase" id="heroSlider">
+        <!-- Slide 1: Model A -->
+        <div class="showcase-slide active">
+          <div class="showcase-img">
+            <span class="showcase-icon">🏠</span>
+            <div class="showcase-label">
+              <div><h4>نموذج A — كلاسيك</h4><p>الدور الأول | واجهة شمالية</p></div>
+              <div class="showcase-price">٤٥٠ ألف</div>
+            </div>
+          </div>
+          <div class="showcase-bar">
+            <div class="showcase-stat"><strong>٣</strong><span>غرف نوم</span></div>
+            <div class="showcase-stat"><strong>٢</strong><span>دورات مياه</span></div>
+            <div class="showcase-stat"><strong>١٢٠</strong><span>م²</span></div>
+            <div class="showcase-stat"><strong>صالة</strong><span>معيشة</span></div>
+          </div>
+        </div>
+        <!-- Slide 2: Model B -->
+        <div class="showcase-slide">
+          <div class="showcase-img" style="background:linear-gradient(135deg,#ECFDF5,#ECFDF5,#FEF9EF)">
+            <span class="showcase-icon">🏠</span>
+            <div class="showcase-label">
+              <div><h4>نموذج B — بريميوم</h4><p>الدور الثاني | واجهة جنوبية</p></div>
+              <div class="showcase-price">٥٨٠ ألف</div>
+            </div>
+          </div>
+          <div class="showcase-bar">
+            <div class="showcase-stat"><strong>٤</strong><span>غرف نوم</span></div>
+            <div class="showcase-stat"><strong>٣</strong><span>دورات مياه</span></div>
+            <div class="showcase-stat"><strong>١٥٠</strong><span>م²</span></div>
+            <div class="showcase-stat"><strong>صالتين</strong><span>معيشة</span></div>
+          </div>
+        </div>
+        <!-- Slide 3: Model C -->
+        <div class="showcase-slide">
+          <div class="showcase-img" style="background:linear-gradient(135deg,#FEF9EF,#ECFDF5,#ECFDF5)">
+            <span class="showcase-icon">🏠</span>
+            <div class="showcase-label">
+              <div><h4>نموذج C — بنتهاوس</h4><p>الدور الأخير | سطح خاص</p></div>
+              <div class="showcase-price">٧٥٠ ألف</div>
+            </div>
+          </div>
+          <div class="showcase-bar">
+            <div class="showcase-stat"><strong>٥</strong><span>غرف نوم</span></div>
+            <div class="showcase-stat"><strong>٤</strong><span>دورات مياه</span></div>
+            <div class="showcase-stat"><strong>٢٠٠</strong><span>م²</span></div>
+            <div class="showcase-stat"><strong>سطح</strong><span>خاص</span></div>
+          </div>
+        </div>
+        <!-- Dots -->
+        <div class="showcase-dots">
+          <button class="active" data-slide="0"></button>
+          <button data-slide="1"></button>
+          <button data-slide="2"></button>
+        </div>
+      </div>
+      <div class="badge-float bf-units"><strong>٨</strong><small>شقق فقط!</small></div>
+      <div class="badge-float bf-rating"><span class="stars">★★★★★</span><span>تقييم العملاء</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="urgency">
+  <span>⏰ عرض الإطلاق — خصم خاص لأول ٣ حجوزات</span>
+  <div class="urgency-timer" id="timer">
+    <div class="timer-box"><span id="t-d">١٤</span><span class="timer-label">يوم</span></div>
+    <div class="timer-box"><span id="t-h">٠٨</span><span class="timer-label">ساعة</span></div>
+    <div class="timer-box"><span id="t-m">٤٥</span><span class="timer-label">دقيقة</span></div>
+    <div class="timer-box"><span id="t-s">٣٠</span><span class="timer-label">ثانية</span></div>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="trust-inner">
+    <div class="trust-item rv"><div class="ti-icon ti-1">🛡️</div><h4>ضمان شامل</h4><p>هيكلي + كهرباء + سباكة</p></div>
+    <div class="trust-item rv"><div class="ti-icon ti-2">🏦</div><h4>تمويل بنكي معتمد</h4><p>جهات تمويل متعددة</p></div>
+    <div class="trust-item rv"><div class="ti-icon ti-3">📜</div><h4>صكوك إلكترونية</h4><p>مفرغة وجاهزة للنقل</p></div>
+    <div class="trust-item rv"><div class="ti-icon ti-4">🔑</div><h4>استلام فوري</h4><p>جاهزة للسكن اليوم</p></div>
+  </div>
+</div>
+
+<section class="feat-bg" id="features">
+  <div class="sec">
+    <div class="sec-head rv">
+      <div class="sec-eyebrow">لماذا نحن مختلفون</div>
+      <h2 class="sec-h2">٦ أسباب تخليك تختارنا</h2>
+      <p class="sec-p">كل تفصيلة في المشروع مدروسة لتوفر لك حياة مريحة وعصرية</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat rv"><div class="feat-num">01</div><h3>تصاميم هندسية ذكية</h3><p>مساحات مفتوحة بتوزيع يستغل كل متر مربع مع إضاءة طبيعية وافرة وتهوية ممتازة</p></div>
+      <div class="feat rv"><div class="feat-num">02</div><h3>تشطيبات سوبر ديلوكس</h3><p>أرضيات بورسلان، أدوات صحية أوروبية، مطابخ مجهزة بالكامل وأبواب خشبية فاخرة</p></div>
+      <div class="feat rv"><div class="feat-num">03</div><h3>موقع استراتيجي مميز</h3><p>قريب من المدارس والمستشفيات والأسواق والطرق الرئيسية — كل شي على بعد دقائق</p></div>
+      <div class="feat rv"><div class="feat-num">04</div><h3>تسهيلات في السداد</h3><p>تمويل بنكي معتمد وخطط أقساط مرنة تناسب مختلف الميزانيات والدخل الشهري</p></div>
+      <div class="feat rv"><div class="feat-num">05</div><h3>ضمان شامل على البناء</h3><p>ضمان هيكلي وضمان على التمديدات الكهربائية والسباكة لراحة بالك</p></div>
+      <div class="feat rv"><div class="feat-num">06</div><h3>مواقف سيارات خاصة</h3><p>موقفين لكل وحدة سكنية مع نظام أمني متكامل وكاميرات مراقبة ٢٤/٧</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="units">
+  <div class="sec">
+    <div class="sec-head rv">
+      <div class="sec-eyebrow">الوحدات المتاحة</div>
+      <h2 class="sec-h2">اختر الشقة اللي تناسب عائلتك</h2>
+      <p class="sec-p">٣ نماذج بمساحات مختلفة — كلها بتشطيبات فندقية وجاهزة للسكن</p>
+    </div>
+    <div class="apt-grid">
+      <div class="apt rv">
+        <div class="apt-visual"><span>🏠</span><div class="apt-ribbon ribbon-ok">متاح</div></div>
+        <div class="apt-content">
+          <div class="apt-type">نموذج A</div>
+          <div class="apt-title">شقة عائلية كلاسيك</div>
+          <div class="apt-where">📍 الدور الأول — واجهة شمالية</div>
+          <div class="apt-meta"><div class="apt-m"><strong>٣</strong><small>غرف نوم</small></div><div class="apt-m"><strong>٢</strong><small>دورات مياه</small></div><div class="apt-m"><strong>١٢٠</strong><small>م²</small></div><div class="apt-m"><strong>صالة</strong><small>معيشة</small></div></div>
+          <div class="apt-bottom"><div class="apt-price">٤٥٠,٠٠٠<small>ريال سعودي</small></div><button class="apt-go" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">احجز</button></div>
+        </div>
+      </div>
+      <div class="apt rv">
+        <div class="apt-visual"><span>🏠</span><div class="apt-ribbon ribbon-ok">متاح</div></div>
+        <div class="apt-content">
+          <div class="apt-type">نموذج B</div>
+          <div class="apt-title">شقة عائلية بريميوم</div>
+          <div class="apt-where">📍 الدور الثاني — واجهة جنوبية</div>
+          <div class="apt-meta"><div class="apt-m"><strong>٤</strong><small>غرف نوم</small></div><div class="apt-m"><strong>٣</strong><small>دورات مياه</small></div><div class="apt-m"><strong>١٥٠</strong><small>م²</small></div><div class="apt-m"><strong>صالتين</strong><small>معيشة</small></div></div>
+          <div class="apt-bottom"><div class="apt-price">٥٨٠,٠٠٠<small>ريال سعودي</small></div><button class="apt-go" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">احجز</button></div>
+        </div>
+      </div>
+      <div class="apt rv">
+        <div class="apt-visual"><span>🏠</span><div class="apt-ribbon ribbon-hot">الأخيرة!</div></div>
+        <div class="apt-content">
+          <div class="apt-type">نموذج C — روف</div>
+          <div class="apt-title">بنتهاوس مع سطح خاص</div>
+          <div class="apt-where">📍 الدور الأخير — إطلالة مفتوحة</div>
+          <div class="apt-meta"><div class="apt-m"><strong>٥</strong><small>غرف نوم</small></div><div class="apt-m"><strong>٤</strong><small>دورات مياه</small></div><div class="apt-m"><strong>٢٠٠</strong><small>م²</small></div><div class="apt-m"><strong>سطح</strong><small>خاص</small></div></div>
+          <div class="apt-bottom"><div class="apt-price">٧٥٠,٠٠٠<small>ريال سعودي</small></div><button class="apt-go" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">احجز</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fp-bg" id="plans">
+  <div class="sec">
+    <div class="fp-layout rv">
+      <div class="fp-visual"><div class="fp-placeholder"><svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1"><rect x="5" y="5" width="90" height="90" rx="2"/><line x1="50" y1="5" x2="50" y2="95"/><line x1="5" y1="50" x2="50" y2="50"/><line x1="50" y1="35" x2="95" y2="35"/><rect x="10" y="10" width="15" height="15" rx="1" opacity=".3"/><rect x="55" y="40" width="15" height="15" rx="1" opacity=".3"/></svg><p>المخطط التفصيلي<br><small style="opacity:.5">ضع صورة المخطط هنا</small></p></div></div>
+      <div class="fp-text">
+        <div class="sec-eyebrow">المخططات الهندسية</div>
+        <h3>كل متر محسوب بعناية</h3>
+        <p>غرف واسعة، مطبخ مجهز بالكامل، صالات بإضاءة طبيعية وافرة، ودورات مياه بتصميم فندقي — كل شي مدروس لراحتك.</p>
+        <div class="fp-chips">
+          <div class="fp-chip"><small>المساحات من</small><strong>١٢٠ م²</strong></div>
+          <div class="fp-chip"><small>المساحات إلى</small><strong>٢٠٠ م²</strong></div>
+          <div class="fp-chip"><small>ارتفاع السقف</small><strong>٣.٢ متر</strong></div>
+          <div class="fp-chip"><small>عدد الأدوار</small><strong>٣ أدوار</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="sec">
+    <div class="sec-head rv">
+      <div class="sec-eyebrow">احجز الآن</div>
+      <h2 class="sec-h2">خطوتك الأولى نحو بيتك</h2>
+      <p class="sec-p">سجّل بياناتك وسيتواصل معك مستشار عقاري خلال ساعات</p>
+    </div>
+    <div class="contact-card rv">
+      <div class="frow"><div class="fgrp"><label>الاسم الكامل</label><input type="text" placeholder="أدخل اسمك الكامل"></div><div class="fgrp"><label>رقم الجوال</label><input type="tel" placeholder="05XXXXXXXX" dir="ltr"></div></div>
+      <div class="frow"><div class="fgrp"><label>البريد الإلكتروني</label><input type="email" placeholder="example@email.com" dir="ltr"></div><div class="fgrp"><label>الشقة المفضلة</label><select><option value="">اختر النموذج</option><option>نموذج A — ١٢٠م² (٤٥٠ ألف)</option><option>نموذج B — ١٥٠م² (٥٨٠ ألف)</option><option>نموذج C — ٢٠٠م² (٧٥٠ ألف)</option></select></div></div>
+      <div class="fgrp"><label>ملاحظات إضافية</label><textarea placeholder="اكتب استفسارك هنا..."></textarea></div>
+      <button class="form-go" onclick="this.textContent='✓ تم إرسال طلبك — سنتواصل معك قريباً';this.style.background='#25D366';setTimeout(()=>{this.textContent='أرسل طلب الحجز';this.style.background=''},4000)">أرسل طلب الحجز</button>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><p>جميع الحقوق محفوظة © ٢٠٢٦ — <a href="#">اسم المشروع</a> | تم التطوير بواسطة <a href="https://basim-dev.com/" target="_blank">حلول رقمية</a></p></footer>
+
+<a href="https://wa.me/966XXXXXXXXX" class="wa-btn" target="_blank"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<script>
+const ro=new IntersectionObserver(es=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('on'),i*60);ro.unobserve(e.target)}})},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+window.addEventListener('scroll',()=>{document.getElementById('topbar').classList.toggle('solid',scrollY>60)});
+// Hero Slideshow
+(function(){
+  const slides=document.querySelectorAll('.showcase-slide');
+  const dots=document.querySelectorAll('.showcase-dots button');
+  let cur=0, timer;
+  function go(i){
+    slides[cur].classList.remove('active');
+    dots[cur].classList.remove('active');
+    cur=i%slides.length;
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('active');
+  }
+  function auto(){timer=setInterval(()=>go(cur+1),4000)}
+  dots.forEach(d=>d.addEventListener('click',()=>{clearInterval(timer);go(+d.dataset.slide);auto()}));
+  auto();
+})();
+(function(){const end=Date.now()+14*864e5;const toAr=n=>n.toString().replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);function tick(){const diff=Math.max(0,end-Date.now());const d=Math.floor(diff/864e5);const h=Math.floor(diff%864e5/36e5);const m=Math.floor(diff%36e5/6e4);const s=Math.floor(diff%6e4/1e3);document.getElementById('t-d').textContent=toAr(String(d).padStart(2,'0'));document.getElementById('t-h').textContent=toAr(String(h).padStart(2,'0'));document.getElementById('t-m').textContent=toAr(String(m).padStart(2,'0'));document.getElementById('t-s').textContent=toAr(String(s).padStart(2,'0'));if(diff>0)requestAnimationFrame(tick)}tick()})();
+</script>
+</body>
+</html>
