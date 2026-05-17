@@ -116,7 +116,10 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
 .contact-info{text-align:center;margin-bottom:2rem}
 .ci-name{font-family:'Noto Kufi Arabic';font-size:1.3rem;font-weight:900;margin-bottom:.3rem}
 .ci-role{font-size:.85rem;color:var(--st);margin-bottom:1rem}
-.ci-badge{display:inline-block;background:#EFF6FF;color:var(--em);padding:.3rem .8rem;border-radius:6px;font-size:.7rem;font-weight:600;margin-bottom:1.5rem}
+.ci-badge{display:inline-flex;align-items:center;gap:.55rem;background:linear-gradient(135deg,#EFF6FF,#F5F9FF);border:1px solid rgba(59,130,246,.22);color:var(--em3);padding:.55rem 1rem;border-radius:12px;font-size:.8rem;font-weight:700;margin-bottom:1.5rem;box-shadow:0 4px 14px -6px rgba(59,130,246,.25)}
+.ci-badge svg{width:18px;height:18px;flex-shrink:0;color:var(--em2)}
+.ci-badge .ci-code{font-family:'Noto Kufi Arabic';background:var(--em);color:#fff;padding:.18rem .55rem;border-radius:7px;font-size:.72rem;font-weight:800;letter-spacing:.04em;direction:ltr}
+@media(max-width:768px){.ci-badge{flex-direction:column;gap:.4rem;text-align:center}}
 .ci-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
 .ci-link{display:inline-flex;align-items:center;gap:.4rem;padding:.6rem 1.4rem;border-radius:10px;text-decoration:none;font-size:.88rem;font-weight:600;transition:all .3s}
 .ci-link.wa{background:#1D4ED8;color:#fff;box-shadow:0 3px 12px rgba(59,130,246,.3)}
@@ -276,7 +279,7 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
       <div class="contact-info">
         <div class="ci-name">باسم الحربي</div>
         <div class="ci-role">مطور برمجيات — حلول ويب، أتمتة، وتحول رقمي للشركات</div>
-        <div class="ci-badge">✓ موثّق لدى منصة العمل الحر — FL-144293594</div>
+        <div class="ci-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg><span>موثّق لدى منصة العمل الحر</span><span class="ci-code">FL-144293594</span></div>
         <div class="ci-links">
           <a href="https://wa.me/966554299950" class="ci-link wa" target="_blank">💬 واتساب مباشر</a>
           <a href="tel:+966554299950" class="ci-link phone">📞 0554299950</a>
