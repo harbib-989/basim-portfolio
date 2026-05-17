@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>باسم الحربي | صفحات هبوط احترافية للمشاريع العقارية</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233B82F6'/%3E%3Cstop offset='1' stop-color='%231D4ED8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Crect x='12' y='32' width='8' height='12' rx='4' fill='%23fff'/%3E%3Crect x='28' y='24' width='8' height='20' rx='4' fill='%23fff'/%3E%3Crect x='44' y='18' width='8' height='26' rx='4' fill='%23fff'/%3E%3Cpath d='M16 32 L32 24 L48 18 L56 13' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' opacity='0.85'/%3E%3Ccircle cx='56' cy='13' r='8' fill='%23fff' opacity='0.25'/%3E%3Ccircle cx='56' cy='13' r='4.5' fill='%23fff'/%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Noto+Kufi+Arabic:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 :root{--em:#1D4ED8;--em2:#3B82F6;--em3:#1E3A8A;--gold:#D4A853;--gold2:#FDF6E9;--ink:#111827;--sl:#374151;--st:#6B7280;--mist:#D1D5DB;--off:#FAFAF8;--iv:#F5F3EE;--line:#E5E7EB}
@@ -15,7 +16,12 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
 /* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:.9rem 3rem;display:flex;justify-content:space-between;align-items:center;background:rgba(250,250,248,0);backdrop-filter:blur(0);transition:all .4s}
 .nav.on{background:rgba(250,250,248,.96);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(0,0,0,.05)}
-.nav-brand{font-family:'Noto Kufi Arabic';font-weight:900;font-size:1.1rem;color:var(--em);text-decoration:none}
+.nav-brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.nav-logo-mark{width:38px;height:38px;flex-shrink:0;border-radius:11px;box-shadow:0 3px 12px rgba(59,130,246,.28);transition:transform .3s}
+.nav-brand:hover .nav-logo-mark{transform:translateY(-1px) scale(1.04)}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1.15}
+.nav-logo-name{font-family:'Noto Kufi Arabic';font-weight:900;font-size:1.05rem;color:var(--ink)}
+.nav-logo-tag{font-size:.62rem;font-weight:600;letter-spacing:.02em;color:var(--em)}
 .nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
 .nav-links a{text-decoration:none;font-size:.84rem;color:var(--sl);font-weight:500;transition:color .2s}
 .nav-links a:hover{color:var(--em)}
@@ -141,7 +147,27 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
 <body>
 
 <nav class="nav" id="nav">
-  <a href="#" class="nav-brand">باسم الحربي</a>
+  <a href="#" class="nav-brand" aria-label="باسم الحربي — الرئيسية">
+    <svg class="nav-logo-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="bs-logo" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#3B82F6"/>
+          <stop offset="1" stop-color="#1D4ED8"/>
+        </linearGradient>
+      </defs>
+      <rect width="64" height="64" rx="16" fill="url(#bs-logo)"/>
+      <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/>
+      <rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/>
+      <rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+      <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+      <circle cx="56" cy="13" r="8" fill="#fff" opacity="0.25"/>
+      <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+    </svg>
+    <span class="nav-logo-text">
+      <span class="nav-logo-name">باسم الحربي</span>
+      <span class="nav-logo-tag">صفحات هبوط احترافية</span>
+    </span>
+  </a>
   <ul class="nav-links">
     <li><a href="#what">الخدمة</a></li>
     <li><a href="#pricing">الأسعار</a></li>
