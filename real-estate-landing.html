@@ -136,9 +136,9 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
 
 /* APARTMENTS */
 .apt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.apt{background:#fff;border:1px solid rgba(0,0,0,.05);border-radius:var(--r);overflow:hidden;transition:all .4s;position:relative}
-.apt:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 25px 60px rgba(0,0,0,.08)}
-.apt:nth-child(2){border-color:var(--em);border-width:2px}
+.apt{background:#fff;border:2px solid var(--em);border-radius:var(--r);overflow:hidden;transition:all .4s;position:relative}
+.apt:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 25px 60px rgba(16,185,129,.18)}
+.apt:nth-child(2){box-shadow:0 12px 36px -10px rgba(16,185,129,.28)}
 .apt-visual{height:200px;position:relative;overflow:hidden;background:linear-gradient(135deg,#ECFDF5,#FEF9EF);display:grid;place-items:center}
 .apt-visual::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='.5' fill='%23000' opacity='.04'/%3E%3C/svg%3E")}
 .apt-visual span{font-size:3rem;opacity:.15;position:relative;z-index:1}
