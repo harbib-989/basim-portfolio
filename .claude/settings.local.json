@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"C:\\\\Users\\\\b_asi\\\\OneDrive\\\\Desktop\\\\NEWPRO\\\\.claude\\\\worktrees\\\\quizzical-neumann-a0cdb5\" ls-files)",
+      "Bash(npm --version)",
+      "Bash(git mv *)",
+      "Bash(npm install *)",
+      "Bash(git rm *)",
+      "Bash(npm run *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}

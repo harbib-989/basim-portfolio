@@ -29,41 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { cairo: ['Cairo', 'sans-serif'] },
-          colors: {
-            primary: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
-            accent: { DEFAULT: '#0ea5e9', dark: '#0284c7' },
-            corporate: { navy: '#0f172a', slate: '#1e293b', gray: '#64748b' }
-          },
-          animation: {
-            'fade-in': 'fadeIn 0.6s ease-out forwards',
-            'slide-up': 'slideUp 0.5s ease-out forwards',
-            'float': 'float 3s ease-in-out infinite'
-          },
-          keyframes: {
-            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-            slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
-            float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-8px)' } }
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Cairo', sans-serif; }
-    .animate-delay-100 { animation-delay: 100ms; }
-    .animate-delay-200 { animation-delay: 200ms; }
-    .animate-delay-300 { animation-delay: 300ms; }
-    .animate-delay-400 { animation-delay: 400ms; }
-    [data-animate].in-view { opacity: 1; transform: translateY(0); }
-    [data-animate] { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
-  </style>
+  <link rel="stylesheet" href="/src/style.css">
 </head>
 <body class="bg-slate-50 text-corporate-slate antialiased">
   <!-- WhatsApp floating button -->
@@ -263,7 +229,7 @@
         <div class="mt-14 grid gap-8 sm:grid-cols-2" data-animate>
           <div class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:border-accent/30 hover:shadow-xl">
             <div class="aspect-video w-full overflow-hidden bg-slate-100">
-              <img src="images/work/acthub.png" alt="لقطة من موقع الرابط الموحد acthub.act.edu.sa" class="h-full w-full object-cover transition group-hover:scale-105"
+              <img src="/images/work/acthub.webp" alt="لقطة من موقع الرابط الموحد acthub.act.edu.sa" width="1280" height="720" loading="lazy" decoding="async" class="h-full w-full object-cover transition group-hover:scale-105"
                    onerror="this.src='https://placehold.co/640x360/0ea5e9/ffffff?text=acthub.act.edu.sa'; this.onerror=null;">
             </div>
             <div class="flex flex-1 flex-col p-6">
@@ -273,7 +239,7 @@
           </div>
           <div class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:border-accent/30 hover:shadow-xl">
             <div class="aspect-video w-full overflow-hidden bg-slate-100">
-              <img src="images/work/mytable.png" alt="لقطة من موقع جدولي mytable.act.edu.sa" class="h-full w-full object-cover transition group-hover:scale-105"
+              <img src="/images/work/mytable.webp" alt="لقطة من موقع جدولي mytable.act.edu.sa" width="1280" height="720" loading="lazy" decoding="async" class="h-full w-full object-cover transition group-hover:scale-105"
                    onerror="this.src='https://placehold.co/640x360/0284c7/ffffff?text=mytable.act.edu.sa'; this.onerror=null;">
             </div>
             <div class="flex flex-1 flex-col p-6">
@@ -283,7 +249,7 @@
           </div>
           <div class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:border-accent/30 hover:shadow-xl">
             <div class="aspect-video w-full overflow-hidden bg-slate-100">
-              <img src="images/work/complaints.png" alt="لقطة من نظام إدارة الشكاوي والتظلمات" class="h-full w-full object-cover transition group-hover:scale-105"
+              <img src="/images/work/complaints.webp" alt="لقطة من نظام إدارة الشكاوي والتظلمات" width="1280" height="720" loading="lazy" decoding="async" class="h-full w-full object-cover transition group-hover:scale-105"
                    onerror="this.src='https://placehold.co/640x360/0369a1/ffffff?text=%D9%86%D8%B8%D8%A7%D9%85+%D8%A7%D9%84%D8%B4%D9%83%D8%A7%D9%88%D9%8A'; this.onerror=null;">
             </div>
             <div class="flex flex-1 flex-col p-6">
@@ -293,7 +259,7 @@
           </div>
           <div class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:border-accent/30 hover:shadow-xl">
             <div class="aspect-video w-full overflow-hidden bg-slate-100">
-              <img src="images/work/invitations.png" alt="لقطة من نظام إدارة الدعوات الرسمية" class="h-full w-full object-cover transition group-hover:scale-105"
+              <img src="/images/work/invitations.webp" alt="لقطة من نظام إدارة الدعوات الرسمية" width="1280" height="720" loading="lazy" decoding="async" class="h-full w-full object-cover transition group-hover:scale-105"
                    onerror="this.src='https://placehold.co/640x360/25D366/ffffff?text=%D8%A7%D9%84%D8%AF%D8%B9%D9%88%D8%A7%D8%AA+%D8%A7%D9%84%D8%B1%D8%B3%D9%85%D9%8A%D8%A9'; this.onerror=null;">
             </div>
             <div class="flex flex-1 flex-col p-6">
