@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
   <rect width="40" height="40" rx="10" fill="#0ea5e9"/>
-  <text x="3" y="26" font-size="12" font-weight="700" fill="white" font-family="monospace">&lt;</text>
-  <text x="20" y="28" font-size="18" font-weight="800" fill="white" text-anchor="middle" font-family="sans-serif">ب</text>
-  <text x="26" y="26" font-size="12" font-weight="700" fill="white" font-family="monospace">/&gt;</text>
+  <polyline points="5,20 12,20 12,11 22,11 22,20 35,20" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="5" cy="20" r="2.5" fill="white"/>
+  <circle cx="17" cy="11" r="2.5" fill="white"/>
+  <circle cx="35" cy="20" r="2.5" fill="white"/>
 </svg>
