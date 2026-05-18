@@ -79,6 +79,23 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
 .wib h3{font-size:1rem;font-weight:700;margin-bottom:.4rem}
 .wib p{color:var(--st);line-height:1.75;font-size:.84rem}
 
+/* LIVE DEMO */
+.demo-bg{background:linear-gradient(180deg,#fff,var(--iv))}
+.demo-wrap{max-width:900px;margin:0 auto}
+.demo-frame{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 30px 70px -28px rgba(29,78,216,.4);position:relative}
+.demo-bar{display:flex;align-items:center;gap:.7rem;padding:.7rem 1rem;background:#F3F4F6;border-bottom:1px solid var(--line)}
+.demo-dots{display:flex;gap:.4rem;flex-shrink:0}
+.demo-dots i{width:11px;height:11px;border-radius:50%;display:block}
+.demo-url{flex:1;background:#fff;border:1px solid var(--line);border-radius:8px;padding:.32rem 1rem;font-size:.72rem;color:var(--st);text-align:center;direction:ltr;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.demo-screen{position:relative;height:480px;overflow:hidden;background:#FAFAF8}
+.demo-screen iframe{position:absolute;top:0;right:0;width:1200px;border:0;pointer-events:none;transform-origin:top right}
+.demo-fade{position:absolute;inset:auto 0 0 0;height:130px;background:linear-gradient(transparent,rgba(255,255,255,.95));pointer-events:none}
+.demo-cta{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:2.2rem;gap:.6rem;text-decoration:none}
+.demo-open{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,var(--em),var(--em2));color:#fff;padding:1rem 2.3rem;border-radius:12px;font-family:'Tajawal';font-size:1.02rem;font-weight:800;box-shadow:0 12px 30px -8px rgba(29,78,216,.55);transition:transform .25s,box-shadow .25s}
+.demo-cta:hover .demo-open{transform:translateY(-3px);box-shadow:0 18px 40px -10px rgba(29,78,216,.6)}
+.demo-hint{font-size:.74rem;font-weight:600;color:var(--st);background:rgba(255,255,255,.9);padding:.25rem .8rem;border-radius:100px}
+.demo-note{text-align:center;margin-top:1.2rem;font-size:.82rem;color:var(--st)}
+
 /* PRICING PACKAGE */
 .package-box{max-width:700px;margin:0 auto;background:#fff;border:2px solid var(--em);border-radius:24px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,.05)}
 .pkg-head{background:linear-gradient(135deg,var(--em),var(--em2));padding:1.8rem 2rem;text-align:center}
@@ -189,6 +206,7 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
   </a>
   <ul class="nav-links">
     <li><a href="#what">الخدمة</a></li>
+    <li><a href="#demo">النموذج</a></li>
     <li><a href="#pricing">الأسعار</a></li>
     <li><a href="#process">آلية العمل</a></li>
   </ul>
@@ -226,6 +244,30 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
       <div class="wib rv"><div class="wib-icon">📊</div><h3>تقارير وإحصائيات</h3><p>تقارير دورية عن عدد الزوار والطلبات — تعرف كم شخص زار الصفحة وكم واحد تواصل معك</p></div>
       <div class="wib rv"><div class="wib-icon">📐</div><h3>قسم مخططات ومواصفات</h3><p>عرض المخططات الهندسية والمواصفات التفصيلية — يساعد العميل في اتخاذ القرار بدون ما يتصل يسأل</p></div>
       <div class="wib rv"><div class="wib-icon">🔗</div><h3>مشاركة سهلة للعملاء</h3><p>رابط مباشر للمشروع + باركود QR جاهز للطباعة على اللوحات والإعلانات — العميل يفتح الصفحة بمسحة واحدة بدون عناء</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE DEMO -->
+<section class="demo-bg" id="demo">
+  <div class="sec">
+    <div class="sec-head rv"><div class="sec-tag">شوف بعينك</div><h2 class="sec-h2">نموذج حقيقي.. مو مجرد كلام</h2><p class="sec-p">هذي صفحة هبوط فعلية صمّمتها لمشروع عقاري — افتحها وتنقّل فيها بنفسك وشوف كيف بتكون صفحتك</p></div>
+    <div class="demo-wrap rv">
+      <div class="demo-frame">
+        <div class="demo-bar">
+          <div class="demo-dots"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i></div>
+          <div class="demo-url">🔒 basim-dev.com/real-estate-landing.html</div>
+        </div>
+        <div class="demo-screen">
+          <iframe id="demoFrame" src="/real-estate-landing.html" title="نموذج صفحة هبوط عقارية" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+          <div class="demo-fade"></div>
+          <a href="/real-estate-landing.html" target="_blank" rel="noopener" class="demo-cta">
+            <span class="demo-hint">معاينة حيّة — اضغط للتجربة الكاملة</span>
+            <span class="demo-open">🚀 افتح النموذج المباشر</span>
+          </a>
+        </div>
+      </div>
+      <p class="demo-note">صفحتك راح تكون مخصصة بهوية مشروعك وشققك وأسعارك — هذا مجرد مثال على الشكل والمستوى</p>
     </div>
   </div>
 </section>
@@ -301,6 +343,7 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
 const ro=new IntersectionObserver(es=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('on'),i*60);ro.unobserve(e.target)}})},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
 document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('on',scrollY>60));
+(function(){var f=document.getElementById('demoFrame');if(!f)return;function fit(){var w=f.parentElement.clientWidth,s=w/1200;f.style.transform='scale('+s+')';f.style.height=(f.parentElement.clientHeight/s)+'px'}f.addEventListener('load',fit);fit();window.addEventListener('resize',fit)})();
 </script>
 </body>
 </html>
