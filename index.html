@@ -39,9 +39,35 @@
   <meta name="twitter:image" content="https://basim-dev.com/images/og-cover.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/style.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://basim-dev.com/#business",
+    "name": "حلول رقمية",
+    "url": "https://basim-dev.com",
+    "image": "https://basim-dev.com/images/og-cover.png",
+    "logo": "https://basim-dev.com/favicon.svg",
+    "description": "حلول رقمية — تطوير المواقع والأنظمة، أتمتة الأعمال، والتحول الرقمي للشركات والمؤسسات في المملكة العربية السعودية.",
+    "telephone": "+966554299950",
+    "email": "basim.devs@gmail.com",
+    "priceRange": "$$",
+    "areaServed": { "@type": "Country", "name": "Saudi Arabia" },
+    "founder": { "@type": "Person", "name": "باسم الحربي" },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "خدمات حلول رقمية",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "تطوير المواقع والأنظمة" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "أتمتة الأعمال" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "التحول الرقمي" } }
+      ]
+    }
+  }
+  </script>
 </head>
 <body class="bg-slate-50 text-corporate-slate antialiased dark:bg-slate-950 dark:text-slate-200">
   <a href="#main" class="skip-link">تخطّي إلى المحتوى</a>
@@ -50,6 +76,11 @@
      class="fixed bottom-6 left-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all hover:scale-110 hover:shadow-xl animate-float">
     <svg aria-hidden="true" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
+  <!-- Back to top button -->
+  <button type="button" id="back-to-top" aria-label="العودة لأعلى الصفحة"
+          class="fixed bottom-6 right-6 z-50 flex h-12 w-12 translate-y-3 items-center justify-center rounded-full bg-accent text-white opacity-0 shadow-lg transition-all duration-300 pointer-events-none hover:bg-accent-dark">
+    <svg aria-hidden="true" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+  </button>
 
   <!-- Navigation -->
   <header class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/95">
@@ -74,7 +105,7 @@
         </span>
         <span class="flex flex-col leading-tight">
           <span class="text-lg font-extrabold tracking-tight text-corporate-navy dark:text-white">حلول رقمية</span>
-          <span class="text-[10px] font-medium tracking-wide text-accent">تطوير • أتمتة • تحول رقمي</span>
+          <span class="text-[10px] font-semibold tracking-wide text-accent">تطوير • أتمتة • تحول رقمي</span>
         </span>
       </a>
       <div class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
@@ -85,7 +116,7 @@
         <a href="#platforms" class="py-2 text-slate-600 dark:text-slate-300 transition hover:text-accent">المنصات</a>
       </div>
       <div class="flex items-center gap-2">
-        <a href="#contact" class="hidden rounded-lg bg-accent px-4 py-2.5 font-medium text-white transition hover:bg-accent-dark md:inline-flex">تواصل</a>
+        <a href="#contact" class="hidden rounded-lg bg-accent px-4 py-2.5 font-semibold text-white transition hover:bg-accent-dark md:inline-flex">تواصل</a>
         <button type="button" id="theme-toggle" aria-label="تبديل الوضع الليلي" title="تبديل الوضع الليلي"
                 class="rounded-lg p-2 text-slate-600 transition hover:bg-slate-100 hover:text-accent dark:text-slate-300 dark:hover:bg-slate-800">
           <svg id="icon-sun" aria-hidden="true" class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
@@ -102,7 +133,7 @@
       <a href="#process" class="block py-2 text-slate-600 dark:text-slate-300">كيف نعمل</a>
       <a href="#work" class="block py-2 text-slate-600 dark:text-slate-300">أعمالنا</a>
       <a href="#platforms" class="block py-2 text-slate-600 dark:text-slate-300">المنصات</a>
-      <a href="#contact" class="mt-2 block rounded-lg bg-accent py-2 text-center font-medium text-white">تواصل الآن</a>
+      <a href="#contact" class="mt-2 block rounded-lg bg-accent py-2 text-center font-semibold text-white">تواصل الآن</a>
     </div>
   </header>
 
@@ -112,7 +143,7 @@
       <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%230284c7\' fill-opacity=\'0.04\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-60"></div>
       <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-          <p class="mb-4 text-sm font-medium uppercase tracking-wider text-accent opacity-0 animate-fade-in">تطوير برمجيات • أتمتة • تحول رقمي</p>
+          <p class="mb-4 text-sm font-semibold uppercase tracking-wider text-accent opacity-0 animate-fade-in">تطوير برمجيات • أتمتة • تحول رقمي</p>
           <h1 class="mb-6 text-4xl font-extrabold leading-tight text-corporate-navy dark:text-white opacity-0 animate-fade-in animate-delay-100 sm:text-5xl lg:text-6xl">
             نبني حلولاً رقمية<br><span class="text-accent">تنمو بها</span> أعمالك
           </h1>
@@ -126,6 +157,49 @@
             <a href="#services" class="inline-flex items-center rounded-xl border-2 border-slate-300 bg-white px-8 py-4 text-lg font-semibold text-slate-700 dark:text-slate-300 transition hover:border-accent hover:text-accent dark:border-slate-600 dark:bg-slate-800 dark:hover:border-accent">
               استكشف الخدمات
             </a>
+          </div>
+          <div class="mt-16 opacity-0 animate-fade-in animate-delay-400">
+            <svg viewBox="0 0 720 440" class="mx-auto w-full max-w-3xl drop-shadow-2xl" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="hero-bar" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0" stop-color="#0284c7"/>
+                  <stop offset="1" stop-color="#38bdf8"/>
+                </linearGradient>
+              </defs>
+              <rect x="6" y="6" width="708" height="428" rx="22" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+              <line x1="6" y1="58" x2="714" y2="58" stroke="#e2e8f0" stroke-width="2"/>
+              <circle cx="40" cy="32" r="6" fill="#cbd5e1"/>
+              <circle cx="62" cy="32" r="6" fill="#cbd5e1"/>
+              <circle cx="84" cy="32" r="6" fill="#cbd5e1"/>
+              <rect x="520" y="22" width="160" height="20" rx="10" fill="#f1f5f9"/>
+              <rect x="40" y="86" width="408" height="312" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+              <rect x="64" y="110" width="150" height="14" rx="7" fill="#e2e8f0"/>
+              <rect x="64" y="134" width="96" height="9" rx="4.5" fill="#eef2f6"/>
+              <rect x="74" y="300" width="40" height="60" rx="8" fill="url(#hero-bar)" opacity="0.55"/>
+              <rect x="134" y="270" width="40" height="90" rx="8" fill="url(#hero-bar)" opacity="0.7"/>
+              <rect x="194" y="240" width="40" height="120" rx="8" fill="url(#hero-bar)" opacity="0.82"/>
+              <rect x="254" y="210" width="40" height="150" rx="8" fill="url(#hero-bar)" opacity="0.92"/>
+              <rect x="314" y="170" width="40" height="190" rx="8" fill="url(#hero-bar)"/>
+              <path d="M94 290 L154 258 L214 226 L274 196 L334 156" fill="none" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="334" cy="156" r="10" fill="#0ea5e9" opacity="0.18"/>
+              <circle cx="334" cy="156" r="5.5" fill="#0284c7"/>
+              <rect x="636" y="100" width="44" height="44" rx="12" fill="#e0f2fe"/>
+              <circle cx="658" cy="122" r="7" fill="#0284c7"/>
+              <rect x="474" y="108" width="150" height="12" rx="6" fill="#e2e8f0"/>
+              <rect x="528" y="129" width="96" height="9" rx="4.5" fill="#eef2f6"/>
+              <rect x="636" y="172" width="44" height="44" rx="12" fill="#e0f2fe"/>
+              <circle cx="658" cy="194" r="7" fill="#0284c7"/>
+              <rect x="474" y="180" width="150" height="12" rx="6" fill="#e2e8f0"/>
+              <rect x="528" y="201" width="96" height="9" rx="4.5" fill="#eef2f6"/>
+              <rect x="636" y="244" width="44" height="44" rx="12" fill="#e0f2fe"/>
+              <circle cx="658" cy="266" r="7" fill="#0284c7"/>
+              <rect x="474" y="252" width="150" height="12" rx="6" fill="#e2e8f0"/>
+              <rect x="528" y="273" width="96" height="9" rx="4.5" fill="#eef2f6"/>
+              <rect x="636" y="316" width="44" height="44" rx="12" fill="#e0f2fe"/>
+              <circle cx="658" cy="338" r="7" fill="#0284c7"/>
+              <rect x="474" y="324" width="150" height="12" rx="6" fill="#e2e8f0"/>
+              <rect x="528" y="345" width="96" height="9" rx="4.5" fill="#eef2f6"/>
+            </svg>
           </div>
         </div>
       </div>
@@ -145,7 +219,7 @@
             </div>
             <h3 class="text-xl font-bold text-corporate-navy dark:text-white">تطوير المواقع والأنظمة</h3>
             <p class="mt-3 text-slate-600 dark:text-slate-300">مواقع وأنظمة ويب سريعة وآمنة بتجربة استخدام سلسة — متجاوبة مع كل الأجهزة ومهيّأة لتصدّر نتائج البحث.</p>
-            <a href="#contact" class="mt-4 inline-flex items-center font-medium text-accent transition hover:underline">اطلب عرض سعر ←</a>
+            <a href="#contact" class="mt-4 inline-flex items-center font-semibold text-accent transition hover:underline">اطلب عرض سعر ←</a>
           </article>
           <article class="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50 p-8 transition hover:border-accent/30 hover:shadow-xl">
             <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-accent/10 text-accent transition group-hover:bg-accent group-hover:text-white">
@@ -153,7 +227,7 @@
             </div>
             <h3 class="text-xl font-bold text-corporate-navy dark:text-white">أتمتة الأعمال</h3>
             <p class="mt-3 text-slate-600 dark:text-slate-300">حوّل المهام المتكررة والتقارير اليدوية إلى عمليات تلقائية — وفّر ساعات العمل وقلّل الأخطاء وركّز على النمو.</p>
-            <a href="#contact" class="mt-4 inline-flex items-center font-medium text-accent transition hover:underline">اطلب عرض سعر ←</a>
+            <a href="#contact" class="mt-4 inline-flex items-center font-semibold text-accent transition hover:underline">اطلب عرض سعر ←</a>
           </article>
           <article class="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50 p-8 transition hover:border-accent/30 hover:shadow-xl sm:col-span-2 lg:col-span-1">
             <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-xl bg-accent/10 text-accent transition group-hover:bg-accent group-hover:text-white">
@@ -161,7 +235,7 @@
             </div>
             <h3 class="text-xl font-bold text-corporate-navy dark:text-white">التحول الرقمي</h3>
             <p class="mt-3 text-slate-600 dark:text-slate-300">استشارات وتنفيذ لربط أنظمتك في منظومة واحدة متكاملة — تجربة أفضل لعملائك وكفاءة أعلى لفريقك.</p>
-            <a href="#contact" class="mt-4 inline-flex items-center font-medium text-accent transition hover:underline">اطلب عرض سعر ←</a>
+            <a href="#contact" class="mt-4 inline-flex items-center font-semibold text-accent transition hover:underline">اطلب عرض سعر ←</a>
           </article>
         </div>
       </div>
@@ -332,7 +406,7 @@
             <div class="flex flex-1 flex-col p-8 pt-5">
               <h3 class="text-xl font-bold text-corporate-navy dark:text-white">منصة بيع عقارك</h3>
               <p class="mt-3 flex-1 text-slate-600 dark:text-slate-300">صفحات تسويقية احترافية تساعد المطورين والمسوّقين العقاريين على عرض مشاريعهم وبيع عقاراتهم بشكل أسرع.</p>
-              <span class="mt-5 inline-flex items-center font-medium text-accent transition group-hover:underline">جرّب المنصة ←</span>
+              <span class="mt-5 inline-flex items-center font-semibold text-accent transition group-hover:underline">جرّب المنصة ←</span>
             </div>
           </a>
           <a href="https://ertiqaa.vercel.app/login" target="_blank" rel="noopener" class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50 shadow-sm transition hover:border-accent/40 hover:shadow-xl">
@@ -345,7 +419,7 @@
             <div class="flex flex-1 flex-col p-8 pt-5">
               <h3 class="text-xl font-bold text-corporate-navy dark:text-white">منصة ارتقاء</h3>
               <p class="mt-3 flex-1 text-slate-600 dark:text-slate-300">منصة متكاملة لإدارة المدارس — تنظّم العمليات الإدارية والتعليمية وتسهّل المتابعة والتواصل بين الإدارة والمعلمين وأولياء الأمور.</p>
-              <span class="mt-5 inline-flex items-center font-medium text-accent transition group-hover:underline">جرّب المنصة ←</span>
+              <span class="mt-5 inline-flex items-center font-semibold text-accent transition group-hover:underline">جرّب المنصة ←</span>
             </div>
           </a>
         </div>
@@ -353,7 +427,7 @@
     </section>
 
     <!-- CTA -->
-    <section class="py-16 sm:py-24 bg-accent">
+    <section class="py-16 sm:py-24 bg-gradient-to-br from-sky-500 to-sky-800">
       <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-white sm:text-4xl">جاهز لبدء مشروعك الرقمي؟</h2>
         <p class="mt-4 text-lg text-white/90">احصل على استشارة مجانية ووضع خطة تناسب ميزانيتك ومواعيدك.</p>
@@ -409,21 +483,32 @@
             <div id="form-status" role="status" aria-live="polite" class="mb-4 hidden rounded-lg p-4 text-sm"></div>
             <div class="space-y-6">
               <div>
-                <label for="name" class="block text-sm font-medium text-slate-700 dark:text-slate-300">الاسم</label>
+                <label for="name" class="block text-sm font-semibold text-slate-700 dark:text-slate-300">الاسم</label>
                 <input type="text" id="name" name="name" required minlength="2" autocomplete="name" placeholder="اسمك أو اسم الشركة"
                        aria-describedby="name-error"
                        class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder-slate-500 aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500/20">
                 <p id="name-error" class="mt-1 hidden text-sm text-red-600 dark:text-red-400"></p>
               </div>
               <div>
-                <label for="email" class="block text-sm font-medium text-slate-700 dark:text-slate-300">البريد الإلكتروني</label>
+                <label for="email" class="block text-sm font-semibold text-slate-700 dark:text-slate-300">البريد الإلكتروني</label>
                 <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@company.com"
                        aria-describedby="email-error"
                        class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder-slate-500 aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500/20">
                 <p id="email-error" class="mt-1 hidden text-sm text-red-600 dark:text-red-400"></p>
               </div>
               <div>
-                <label for="message" class="block text-sm font-medium text-slate-700 dark:text-slate-300">الرسالة</label>
+                <label for="request-type" class="block text-sm font-semibold text-slate-700 dark:text-slate-300">نوع الطلب</label>
+                <select id="request-type" name="request-type" required aria-describedby="request-type-error"
+                        class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500/20">
+                  <option value="" disabled selected>اختر نوع الطلب...</option>
+                  <option value="تطوير المواقع والأنظمة">تطوير المواقع والأنظمة</option>
+                  <option value="أتمتة الأعمال">أتمتة الأعمال</option>
+                  <option value="التحول الرقمي">التحول الرقمي</option>
+                </select>
+                <p id="request-type-error" class="mt-1 hidden text-sm text-red-600 dark:text-red-400"></p>
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-semibold text-slate-700 dark:text-slate-300">الرسالة</label>
                 <textarea id="message" name="message" rows="4" required minlength="10" placeholder="صف مشروعك أو احتياجك..."
                           aria-describedby="message-error"
                           class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder-slate-500 aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500/20"></textarea>
@@ -458,6 +543,21 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Back to top
+    (function () {
+      var btn = document.getElementById('back-to-top');
+      var hiddenCls = ['opacity-0', 'pointer-events-none', 'translate-y-3'];
+      function onScroll() {
+        if (window.scrollY > 400) btn.classList.remove.apply(btn.classList, hiddenCls);
+        else btn.classList.add.apply(btn.classList, hiddenCls);
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+      btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    })();
 
     // Mobile menu
     var menuBtn = document.getElementById('menu-btn');
@@ -501,6 +601,7 @@
       var fields = {
         name: { el: document.getElementById('name'), err: document.getElementById('name-error') },
         email: { el: document.getElementById('email'), err: document.getElementById('email-error') },
+        requestType: { el: document.getElementById('request-type'), err: document.getElementById('request-type-error') },
         message: { el: document.getElementById('message'), err: document.getElementById('message-error') }
       };
       var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -521,9 +622,11 @@
         var ok = true, first = null;
         var name = fields.name.el.value.trim();
         var email = fields.email.el.value.trim();
+        var requestType = fields.requestType.el.value;
         var message = fields.message.el.value.trim();
         if (name.length < 2) { setError('name', 'الرجاء إدخال الاسم (حرفان على الأقل).'); ok = false; first = first || fields.name.el; } else setError('name', '');
         if (!emailRe.test(email)) { setError('email', 'الرجاء إدخال بريد إلكتروني صحيح.'); ok = false; first = first || fields.email.el; } else setError('email', '');
+        if (!requestType) { setError('requestType', 'الرجاء اختيار نوع الطلب.'); ok = false; first = first || fields.requestType.el; } else setError('requestType', '');
         if (message.length < 10) { setError('message', 'الرجاء كتابة رسالة لا تقل عن ١٠ أحرف.'); ok = false; first = first || fields.message.el; } else setError('message', '');
         if (first) first.focus();
         return ok;
