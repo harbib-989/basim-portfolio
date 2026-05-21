@@ -142,15 +142,16 @@
     <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-slate-50 to-white py-16 sm:py-24 lg:py-32 dark:from-slate-900 dark:to-slate-950">
       <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%230284c7\' fill-opacity=\'0.04\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-60"></div>
       <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
+        <div class="flex flex-col items-center gap-12 lg:flex-row lg:gap-10">
+          <div class="flex-1 text-center lg:text-right">
           <p class="mb-4 text-sm font-semibold uppercase tracking-wider text-accent opacity-0 animate-fade-in">تطوير برمجيات • أتمتة • تحول رقمي</p>
           <h1 class="mb-6 text-4xl font-extrabold leading-tight text-corporate-navy dark:text-white opacity-0 animate-fade-in animate-delay-100 sm:text-5xl lg:text-6xl">
             نبني حلولاً رقمية<br><span class="text-accent">تنمو بها</span> أعمالك
           </h1>
-          <p class="mx-auto max-w-2xl text-lg text-slate-600 dark:text-slate-300 opacity-0 animate-fade-in animate-delay-200 sm:text-xl">
+          <p class="mx-auto max-w-2xl text-lg text-slate-600 dark:text-slate-300 opacity-0 animate-fade-in animate-delay-200 sm:text-xl lg:mx-0">
             مواقع وأنظمة احترافية، وأتمتة تختصر وقتك، وتحول رقمي يرفع كفاءة شركتك — تنفيذ سريع ودعم موثوق من البداية حتى التشغيل.
           </p>
-          <div class="mt-10 flex flex-wrap items-center justify-center gap-4 opacity-0 animate-slide-up animate-delay-300">
+          <div class="mt-10 flex flex-wrap items-center justify-center gap-4 opacity-0 animate-slide-up animate-delay-300 lg:justify-start">
             <a href="#contact" class="inline-flex items-center rounded-xl bg-accent px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:bg-accent-dark hover:shadow-xl">
               اطلب استشارة
             </a>
@@ -158,8 +159,9 @@
               استكشف الخدمات
             </a>
           </div>
-          <div class="mt-16 opacity-0 animate-fade-in animate-delay-400">
-            <svg viewBox="0 0 720 440" class="mx-auto w-full max-w-3xl drop-shadow-2xl" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          </div>
+          <div class="w-full flex-1 opacity-0 animate-fade-in animate-delay-400">
+            <svg viewBox="0 0 720 440" class="mx-auto w-full max-w-3xl drop-shadow-2xl lg:max-w-none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <defs>
                 <linearGradient id="hero-bar" x1="0" y1="1" x2="0" y2="0">
                   <stop offset="0" stop-color="#0284c7"/>
@@ -473,7 +475,7 @@
               <span>موثّق لدى منصة العمل الحر — رمز التوثيق: <strong class="text-slate-700 dark:text-slate-300 font-semibold">FL-144293594</strong></span>
             </div>
           </div>
-          <form id="contact-form" novalidate class="rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50 p-8" action="https://formspree.io/f/mdawkjdb" method="POST">
+          <form id="contact-form" novalidate class="self-start rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-800/50 p-5 sm:p-6" action="https://formspree.io/f/mdawkjdb" method="POST">
             <input type="hidden" name="_subject" value="رسالة جديدة من موقع حلول رقمية">
             <!-- Honeypot: hidden from humans, bots fill it and Formspree drops the submission -->
             <div aria-hidden="true" class="absolute -left-[9999px] h-0 w-0 overflow-hidden">
@@ -481,25 +483,25 @@
               <input type="text" id="company-website" name="_gotcha" tabindex="-1" autocomplete="off">
             </div>
             <div id="form-status" role="status" aria-live="polite" class="mb-4 hidden rounded-lg p-4 text-sm"></div>
-            <div class="space-y-6">
+            <div class="space-y-4">
               <div>
                 <label for="name" class="block text-sm font-semibold text-slate-700 dark:text-slate-300">الاسم</label>
                 <input type="text" id="name" name="name" required minlength="2" autocomplete="name" placeholder="اسمك أو اسم الشركة"
                        aria-describedby="name-error"
-                       class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder-slate-500 aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500/20">
+                       class="mt-1.5 w-full rounded-lg border border-slate-300 px-3.5 py-2.5 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder-slate-500 aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500/20">
                 <p id="name-error" class="mt-1 hidden text-sm text-red-600 dark:text-red-400"></p>
               </div>
               <div>
                 <label for="email" class="block text-sm font-semibold text-slate-700 dark:text-slate-300">البريد الإلكتروني</label>
                 <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@company.com"
                        aria-describedby="email-error"
-                       class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder-slate-500 aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500/20">
+                       class="mt-1.5 w-full rounded-lg border border-slate-300 px-3.5 py-2.5 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder-slate-500 aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500/20">
                 <p id="email-error" class="mt-1 hidden text-sm text-red-600 dark:text-red-400"></p>
               </div>
               <div>
                 <label for="request-type" class="block text-sm font-semibold text-slate-700 dark:text-slate-300">نوع الطلب</label>
                 <select id="request-type" name="request-type" required aria-describedby="request-type-error"
-                        class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500/20">
+                        class="mt-1.5 w-full rounded-lg border border-slate-300 px-3.5 py-2.5 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500/20">
                   <option value="" disabled selected>اختر نوع الطلب...</option>
                   <option value="تطوير المواقع والأنظمة">تطوير المواقع والأنظمة</option>
                   <option value="أتمتة الأعمال">أتمتة الأعمال</option>
@@ -509,16 +511,16 @@
               </div>
               <div>
                 <label for="message" class="block text-sm font-semibold text-slate-700 dark:text-slate-300">الرسالة</label>
-                <textarea id="message" name="message" rows="4" required minlength="10" placeholder="صف مشروعك أو احتياجك..."
+                <textarea id="message" name="message" rows="3" required minlength="10" placeholder="صف مشروعك أو احتياجك..."
                           aria-describedby="message-error"
-                          class="mt-2 w-full rounded-lg border border-slate-300 px-4 py-3 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder-slate-500 aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500/20"></textarea>
+                          class="mt-1.5 w-full rounded-lg border border-slate-300 px-3.5 py-2.5 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder-slate-500 aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500/20"></textarea>
                 <p id="message-error" class="mt-1 hidden text-sm text-red-600 dark:text-red-400"></p>
               </div>
               <p class="text-xs text-slate-500 dark:text-slate-400">
                 بإرسالك هذا النموذج فإنك توافق على
                 <a href="/privacy.html" class="text-accent underline-offset-2 hover:underline">سياسة الخصوصية</a>.
               </p>
-              <button type="submit" id="submit-btn" class="w-full rounded-xl bg-accent py-4 font-semibold text-white transition hover:bg-accent-dark disabled:opacity-70">
+              <button type="submit" id="submit-btn" class="w-full rounded-lg bg-accent py-3 font-semibold text-white transition hover:bg-accent-dark disabled:opacity-70">
                 إرسال الرسالة
               </button>
             </div>
