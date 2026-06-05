@@ -194,6 +194,40 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
 .fp-chip small{display:block;font-size:.68rem;color:var(--stone);margin-bottom:.15rem}
 .fp-chip strong{font-size:1.05rem;color:var(--em);font-weight:800}
 
+/* UNITS TABLE */
+.utbl-bg{background:#fff}
+.utbl-summary{display:flex;justify-content:center;gap:1.5rem;margin-bottom:1.6rem;flex-wrap:wrap;font-size:.88rem;font-weight:700;color:var(--slate)}
+.utbl-summary span{display:inline-flex;align-items:center;gap:.45rem}
+.utbl-summary span::before{content:'';width:10px;height:10px;border-radius:50%}
+.utbl-summary .sm-available::before{background:var(--em-glow)}
+.utbl-summary .sm-reserved::before{background:#F59E0B}
+.utbl-summary .sm-sold::before{background:#9CA3AF}
+.utbl-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid rgba(0,0,0,.06);box-shadow:0 6px 28px -10px rgba(15,23,42,.08);background:#fff}
+.utbl{width:100%;min-width:920px;border-collapse:collapse;font-family:'Tajawal';background:#fff}
+.utbl thead{background:linear-gradient(135deg,var(--em),var(--em-glow));color:#fff}
+.utbl th{padding:1rem .85rem;text-align:right;font-weight:700;font-size:.82rem;white-space:nowrap}
+.utbl td{padding:1rem .85rem;text-align:right;font-size:.88rem;border-bottom:1px solid rgba(0,0,0,.04);vertical-align:middle;color:var(--slate)}
+.utbl tbody tr{transition:background .2s}
+.utbl tbody tr:hover{background:#ECFDF5}
+.utbl tbody tr:last-child td{border-bottom:none}
+.utbl-unit{font-weight:800;color:var(--em);font-family:'Noto Kufi Arabic';font-size:1rem;line-height:1.2}
+.utbl-unit small{display:block;font-size:.68rem;font-weight:500;color:var(--stone);margin-top:.2rem;font-family:'Tajawal'}
+.utbl-price{font-weight:800;color:var(--ink);white-space:nowrap;font-size:.95rem}
+.utbl-price small{display:block;font-size:.65rem;font-weight:400;color:var(--stone)}
+.utbl-status{display:inline-flex;align-items:center;gap:.4rem;padding:.35rem .85rem;border-radius:100px;font-size:.74rem;font-weight:700;white-space:nowrap}
+.utbl-status::before{content:'';width:6px;height:6px;border-radius:50%;background:currentColor}
+.status-available{background:rgba(16,185,129,.12);color:var(--em)}
+.status-reserved{background:rgba(245,158,11,.14);color:#D97706}
+.status-sold{background:rgba(0,0,0,.06);color:#6B7280}
+.utbl-cta{background:var(--em);color:#fff;border:none;padding:.55rem 1.1rem;border-radius:8px;font-family:'Tajawal';font-size:.78rem;font-weight:700;cursor:pointer;transition:all .25s;text-decoration:none;display:inline-block;white-space:nowrap}
+.utbl-cta:hover{background:var(--em-deep);transform:translateY(-1px)}
+.utbl-cta.disabled{background:rgba(0,0,0,.06);color:#9CA3AF;cursor:not-allowed;pointer-events:none}
+.utbl-cta.muted{background:rgba(245,158,11,.14);color:#D97706}
+.utbl-cta.muted:hover{background:rgba(245,158,11,.22);color:#B45309}
+.utbl-specs{color:var(--stone);font-size:.82rem;line-height:1.55}
+.utbl-hint{display:none;text-align:center;font-size:.74rem;color:var(--stone);margin-top:1rem}
+@media(max-width:920px){.utbl-hint{display:block}}
+
 /* CONTACT */
 .contact-card{max-width:680px;margin:0 auto;background:#fff;border:1px solid rgba(0,0,0,.05);border-radius:24px;padding:3rem;box-shadow:0 8px 40px rgba(0,0,0,.04);position:relative;overflow:hidden}
 .contact-card::before{content:'';position:absolute;top:0;right:0;left:0;height:4px;background:linear-gradient(90deg,var(--em),var(--em-glow),var(--sand))}
@@ -243,6 +277,7 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
     <ul class="topnav">
       <li><a href="#features">المزايا</a></li>
       <li><a href="#units">الشقق</a></li>
+      <li><a href="#units-table">الجدول</a></li>
       <li><a href="#plans">المخططات</a></li>
     </ul>
     <a href="#contact" class="topnav-cta">احجز شقتك</a>
@@ -404,6 +439,120 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="utbl-bg" id="units-table">
+  <div class="sec">
+    <div class="sec-head rv">
+      <div class="sec-eyebrow">جدول الوحدات</div>
+      <h2 class="sec-h2">جميع الشقق — مساحات وأسعار وحالة التوفر</h2>
+      <p class="sec-p">جدول تفصيلي لكل وحدة في المشروع — يحدّث فور حدوث حجز أو بيع</p>
+    </div>
+    <div class="utbl-summary rv">
+      <span class="sm-available">متوفرة: ٥</span>
+      <span class="sm-reserved">محجوزة: ٢</span>
+      <span class="sm-sold">مباعة: ١</span>
+    </div>
+    <div class="utbl-wrap rv">
+      <table class="utbl">
+        <thead>
+          <tr>
+            <th>الشقة</th>
+            <th>المساحة</th>
+            <th>غرف نوم</th>
+            <th>دورات مياه</th>
+            <th>المواصفات</th>
+            <th>السعر</th>
+            <th>الحالة</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="utbl-unit">A1<small>نموذج A — الدور الأول</small></span></td>
+            <td>١٢٠ م²</td>
+            <td>٣</td>
+            <td>٢</td>
+            <td class="utbl-specs">صالة معيشة • مطبخ مجهز • شرفة • موقف خاص</td>
+            <td><span class="utbl-price">٤٥٠,٠٠٠<small>ريال سعودي</small></span></td>
+            <td><span class="utbl-status status-available">متوفرة</span></td>
+            <td><a href="#contact" class="utbl-cta">احجز</a></td>
+          </tr>
+          <tr>
+            <td><span class="utbl-unit">A2<small>نموذج A — الدور الأول</small></span></td>
+            <td>١٢٠ م²</td>
+            <td>٣</td>
+            <td>٢</td>
+            <td class="utbl-specs">صالة معيشة • مطبخ مجهز • شرفة • موقف خاص</td>
+            <td><span class="utbl-price">٤٥٠,٠٠٠<small>ريال سعودي</small></span></td>
+            <td><span class="utbl-status status-sold">مباعة</span></td>
+            <td><span class="utbl-cta disabled">غير متاحة</span></td>
+          </tr>
+          <tr>
+            <td><span class="utbl-unit">B1<small>نموذج B — الدور الثاني</small></span></td>
+            <td>١٥٠ م²</td>
+            <td>٤</td>
+            <td>٣</td>
+            <td class="utbl-specs">صالتين • مطبخ مفتوح • شرفتين • موقف + مستودع</td>
+            <td><span class="utbl-price">٥٨٠,٠٠٠<small>ريال سعودي</small></span></td>
+            <td><span class="utbl-status status-available">متوفرة</span></td>
+            <td><a href="#contact" class="utbl-cta">احجز</a></td>
+          </tr>
+          <tr>
+            <td><span class="utbl-unit">B2<small>نموذج B — الدور الثاني</small></span></td>
+            <td>١٥٠ م²</td>
+            <td>٤</td>
+            <td>٣</td>
+            <td class="utbl-specs">صالتين • مطبخ مفتوح • شرفتين • موقف + مستودع</td>
+            <td><span class="utbl-price">٥٨٠,٠٠٠<small>ريال سعودي</small></span></td>
+            <td><span class="utbl-status status-reserved">محجوزة</span></td>
+            <td><a href="#contact" class="utbl-cta muted">للاستفسار</a></td>
+          </tr>
+          <tr>
+            <td><span class="utbl-unit">B3<small>نموذج B — الدور الثاني • شرقية</small></span></td>
+            <td>١٤٥ م²</td>
+            <td>٤</td>
+            <td>٣</td>
+            <td class="utbl-specs">صالتين • مطبخ مفتوح • شرفة • موقف خاص</td>
+            <td><span class="utbl-price">٥٦٠,٠٠٠<small>ريال سعودي</small></span></td>
+            <td><span class="utbl-status status-available">متوفرة</span></td>
+            <td><a href="#contact" class="utbl-cta">احجز</a></td>
+          </tr>
+          <tr>
+            <td><span class="utbl-unit">B4<small>نموذج B — الدور الثاني • غربية</small></span></td>
+            <td>١٤٥ م²</td>
+            <td>٤</td>
+            <td>٣</td>
+            <td class="utbl-specs">صالتين • مطبخ مفتوح • شرفة • موقف خاص</td>
+            <td><span class="utbl-price">٥٦٠,٠٠٠<small>ريال سعودي</small></span></td>
+            <td><span class="utbl-status status-available">متوفرة</span></td>
+            <td><a href="#contact" class="utbl-cta">احجز</a></td>
+          </tr>
+          <tr>
+            <td><span class="utbl-unit">C1<small>نموذج C — الدور الأخير (بنتهاوس)</small></span></td>
+            <td>٢٠٠ م²</td>
+            <td>٥</td>
+            <td>٤</td>
+            <td class="utbl-specs">صالات متعددة • مطبخ فاخر • سطح خاص ٥٠م² • موقفين</td>
+            <td><span class="utbl-price">٧٥٠,٠٠٠<small>ريال سعودي</small></span></td>
+            <td><span class="utbl-status status-available">متوفرة</span></td>
+            <td><a href="#contact" class="utbl-cta">احجز</a></td>
+          </tr>
+          <tr>
+            <td><span class="utbl-unit">C2<small>نموذج C — الدور الأخير (بنتهاوس)</small></span></td>
+            <td>٢٠٠ م²</td>
+            <td>٥</td>
+            <td>٤</td>
+            <td class="utbl-specs">صالات متعددة • مطبخ فاخر • سطح خاص ٥٠م² • موقفين</td>
+            <td><span class="utbl-price">٧٥٠,٠٠٠<small>ريال سعودي</small></span></td>
+            <td><span class="utbl-status status-reserved">محجوزة</span></td>
+            <td><a href="#contact" class="utbl-cta muted">للاستفسار</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="utbl-hint">↔ مرّر يميناً ويساراً لاستعراض الجدول كاملاً</p>
   </div>
 </section>
 
