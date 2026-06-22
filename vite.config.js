@@ -13,6 +13,7 @@ export default defineConfig({
         main: resolve(import.meta.dirname, 'index.html'),
         privacy: resolve(import.meta.dirname, 'privacy.html'),
         realEstate: resolve(import.meta.dirname, 'real-estate-landing.html'),
+        realEstate2: resolve(import.meta.dirname, 'real-estate-landing-2.html'),
         basimServices: resolve(import.meta.dirname, 'basim-services.html'),
       },
     },
