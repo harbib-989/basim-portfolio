@@ -240,6 +240,9 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;strok
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-bottom:.9rem}
 .fgrp{margin-bottom:.9rem}
 .fgrp label{display:block;font-size:.8rem;font-weight:700;margin-bottom:.45rem;color:var(--navy)}
+.fgrp .f-err{display:none;font-size:.76rem;color:#dc2626;margin-top:.4rem}
+.fgrp.invalid input{border-color:#dc2626;box-shadow:0 0 0 3px rgba(220,38,38,.1)}
+.fgrp.invalid .f-err{display:block}
 .fgrp input,.fgrp select,.fgrp textarea{width:100%;background:var(--off);border:1.5px solid var(--mist);border-radius:var(--rs);padding:.9rem 1rem;font-family:'Tajawal';font-size:.92rem;color:var(--ink);outline:none;transition:border-color .25s,box-shadow .25s,background .25s}
 .fgrp input:focus,.fgrp select:focus,.fgrp textarea:focus{border-color:var(--gold);background:#fff;box-shadow:0 0 0 3px rgba(197,165,114,.15)}
 .fgrp input::placeholder,.fgrp textarea::placeholder{color:#B8B0A2}
@@ -583,10 +586,10 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;strok
       <p class="sec-p">سجّل بياناتك وسيتواصل معك مستشار عقاري خلال ساعات</p>
     </div>
     <div class="contact-card rv">
-      <div class="frow"><div class="fgrp"><label>الاسم الكامل</label><input type="text" placeholder="أدخل اسمك الكامل"></div><div class="fgrp"><label>رقم الجوال</label><input type="tel" placeholder="05XXXXXXXX" dir="ltr"></div></div>
-      <div class="frow"><div class="fgrp"><label>البريد الإلكتروني</label><input type="email" placeholder="example@email.com" dir="ltr"></div><div class="fgrp"><label>الشقة المفضلة</label><select><option value="">اختر النموذج</option><option>نموذج A — ١٢٠م² (٤٥٠ ألف)</option><option>نموذج B — ١٥٠م² (٥٨٠ ألف)</option><option>نموذج C — ٢٠٠م² (٧٥٠ ألف)</option></select></div></div>
+      <div class="frow"><div class="fgrp" id="f-name"><label>الاسم الكامل</label><input id="in-name" type="text" placeholder="أدخل اسمك الكامل"><p class="f-err">الرجاء إدخال الاسم كاملاً (حرفان على الأقل)</p></div><div class="fgrp" id="f-phone"><label>رقم الجوال</label><input id="in-phone" type="tel" placeholder="05XXXXXXXX" dir="ltr" maxlength="13"><p class="f-err">الرجاء إدخال رقم جوال سعودي صحيح (05XXXXXXXX)</p></div></div>
+      <div class="frow"><div class="fgrp" id="f-email"><label>البريد الإلكتروني</label><input id="in-email" type="email" placeholder="example@email.com" dir="ltr"><p class="f-err">الرجاء إدخال بريد إلكتروني صحيح</p></div><div class="fgrp"><label>الشقة المفضلة</label><select><option value="">اختر النموذج</option><option>نموذج A — ١٢٠م² (٤٥٠ ألف)</option><option>نموذج B — ١٥٠م² (٥٨٠ ألف)</option><option>نموذج C — ٢٠٠م² (٧٥٠ ألف)</option></select></div></div>
       <div class="fgrp"><label>ملاحظات إضافية</label><textarea placeholder="اكتب استفسارك هنا..."></textarea></div>
-      <button class="form-go" onclick="this.innerHTML='✓ تم إرسال طلبك — سنتواصل معك قريباً';this.style.background='#0F1E33';setTimeout(()=>{this.innerHTML='أرسل طلب الحجز';this.style.background=''},4000)">أرسل طلب الحجز</button>
+      <button class="form-go" onclick="return submitBooking(this)">أرسل طلب الحجز</button>
     </div>
   </div>
 </section>
@@ -599,6 +602,29 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;strok
 const ro=new IntersectionObserver(es=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('on'),i*60);ro.unobserve(e.target)}})},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
 document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
 window.addEventListener('scroll',()=>{document.getElementById('topbar').classList.toggle('solid',scrollY>60)});
+const saPhoneRe=/^(?:\+?966|0)5\d{8}$/,emailRe=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function submitBooking(btn){
+  var name=document.getElementById('in-name').value.trim(),phone=document.getElementById('in-phone').value.trim().replace(/[\s-]/g,''),email=document.getElementById('in-email').value.trim();
+  var nameOk=name.length>=2,phoneOk=saPhoneRe.test(phone),emailOk=emailRe.test(email);
+  document.getElementById('f-name').classList.toggle('invalid',!nameOk);
+  document.getElementById('f-phone').classList.toggle('invalid',!phoneOk);
+  document.getElementById('f-email').classList.toggle('invalid',!emailOk);
+  if(!nameOk||!phoneOk||!emailOk){
+    (!nameOk?document.getElementById('in-name'):!phoneOk?document.getElementById('in-phone'):document.getElementById('in-email')).focus();
+    return false;
+  }
+  btn.innerHTML='✓ تم إرسال طلبك — سنتواصل معك قريباً';btn.style.background='#0F1E33';
+  setTimeout(()=>{btn.innerHTML='أرسل طلب الحجز';btn.style.background=''},4000);
+  return false;
+}
+['in-name','in-phone','in-email'].forEach(id=>{
+  var field=document.getElementById(id).closest('.fgrp');
+  document.getElementById(id).addEventListener('input',function(){
+    if(!field.classList.contains('invalid'))return;
+    var ok=id==='in-name'?this.value.trim().length>=2:id==='in-phone'?saPhoneRe.test(this.value.trim().replace(/[\s-]/g,'')):emailRe.test(this.value.trim());
+    field.classList.toggle('invalid',!ok);
+  });
+});
 (function(){
   const slides=document.querySelectorAll('.showcase-slide');
   const dots=document.querySelectorAll('.showcase-dots button');

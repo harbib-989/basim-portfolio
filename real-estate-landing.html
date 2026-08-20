@@ -234,6 +234,9 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:.8rem}
 .fgrp{margin-bottom:.8rem}
 .fgrp label{display:block;font-size:.8rem;font-weight:600;margin-bottom:.4rem;color:var(--slate)}
+.fgrp .f-err{display:none;font-size:.76rem;color:#dc2626;margin-top:.35rem}
+.fgrp.invalid input{border-color:#dc2626;box-shadow:0 0 0 3px rgba(220,38,38,.1)}
+.fgrp.invalid .f-err{display:block}
 .fgrp input,.fgrp select,.fgrp textarea{width:100%;background:var(--off);border:1.5px solid rgba(0,0,0,.06);border-radius:var(--rs);padding:.85rem 1rem;font-family:'Tajawal';font-size:.92rem;color:var(--ink);outline:none;transition:all .25s}
 .fgrp input:focus,.fgrp select:focus,.fgrp textarea:focus{border-color:var(--em);background:#fff;box-shadow:0 0 0 3px rgba(16,185,129,.08)}
 .fgrp input::placeholder,.fgrp textarea::placeholder{color:var(--mist)}
@@ -605,10 +608,10 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
       <p class="sec-p">سجّل بياناتك وسيتواصل معك مستشار عقاري خلال ساعات</p>
     </div>
     <div class="contact-card rv">
-      <div class="frow"><div class="fgrp"><label>الاسم الكامل</label><input type="text" placeholder="أدخل اسمك الكامل"></div><div class="fgrp"><label>رقم الجوال</label><input type="tel" placeholder="05XXXXXXXX" dir="ltr"></div></div>
-      <div class="frow"><div class="fgrp"><label>البريد الإلكتروني</label><input type="email" placeholder="example@email.com" dir="ltr"></div><div class="fgrp"><label>الشقة المفضلة</label><select><option value="">اختر النموذج</option><option>نموذج A — ١٢٠م² (٤٥٠ ألف)</option><option>نموذج B — ١٥٠م² (٥٨٠ ألف)</option><option>نموذج C — ٢٠٠م² (٧٥٠ ألف)</option></select></div></div>
+      <div class="frow"><div class="fgrp" id="f-name"><label>الاسم الكامل</label><input id="in-name" type="text" placeholder="أدخل اسمك الكامل"><p class="f-err">الرجاء إدخال الاسم كاملاً (حرفان على الأقل)</p></div><div class="fgrp" id="f-phone"><label>رقم الجوال</label><input id="in-phone" type="tel" placeholder="05XXXXXXXX" dir="ltr" maxlength="13"><p class="f-err">الرجاء إدخال رقم جوال سعودي صحيح (05XXXXXXXX)</p></div></div>
+      <div class="frow"><div class="fgrp" id="f-email"><label>البريد الإلكتروني</label><input id="in-email" type="email" placeholder="example@email.com" dir="ltr"><p class="f-err">الرجاء إدخال بريد إلكتروني صحيح</p></div><div class="fgrp"><label>الشقة المفضلة</label><select><option value="">اختر النموذج</option><option>نموذج A — ١٢٠م² (٤٥٠ ألف)</option><option>نموذج B — ١٥٠م² (٥٨٠ ألف)</option><option>نموذج C — ٢٠٠م² (٧٥٠ ألف)</option></select></div></div>
       <div class="fgrp"><label>ملاحظات إضافية</label><textarea placeholder="اكتب استفسارك هنا..."></textarea></div>
-      <button class="form-go" onclick="this.textContent='✓ تم إرسال طلبك — سنتواصل معك قريباً';this.style.background='#25D366';setTimeout(()=>{this.textContent='أرسل طلب الحجز';this.style.background=''},4000)">أرسل طلب الحجز</button>
+      <button class="form-go" onclick="return submitBooking(this)">أرسل طلب الحجز</button>
     </div>
   </div>
 </section>
@@ -621,6 +624,29 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
 const ro=new IntersectionObserver(es=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('on'),i*60);ro.unobserve(e.target)}})},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
 document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
 window.addEventListener('scroll',()=>{document.getElementById('topbar').classList.toggle('solid',scrollY>60)});
+const saPhoneRe=/^(?:\+?966|0)5\d{8}$/,emailRe=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function submitBooking(btn){
+  var name=document.getElementById('in-name').value.trim(),phone=document.getElementById('in-phone').value.trim().replace(/[\s-]/g,''),email=document.getElementById('in-email').value.trim();
+  var nameOk=name.length>=2,phoneOk=saPhoneRe.test(phone),emailOk=emailRe.test(email);
+  document.getElementById('f-name').classList.toggle('invalid',!nameOk);
+  document.getElementById('f-phone').classList.toggle('invalid',!phoneOk);
+  document.getElementById('f-email').classList.toggle('invalid',!emailOk);
+  if(!nameOk||!phoneOk||!emailOk){
+    (!nameOk?document.getElementById('in-name'):!phoneOk?document.getElementById('in-phone'):document.getElementById('in-email')).focus();
+    return false;
+  }
+  btn.textContent='✓ تم إرسال طلبك — سنتواصل معك قريباً';btn.style.background='#25D366';
+  setTimeout(()=>{btn.textContent='أرسل طلب الحجز';btn.style.background=''},4000);
+  return false;
+}
+['in-name','in-phone','in-email'].forEach(id=>{
+  var field=document.getElementById(id).closest('.fgrp');
+  document.getElementById(id).addEventListener('input',function(){
+    if(!field.classList.contains('invalid'))return;
+    var ok=id==='in-name'?this.value.trim().length>=2:id==='in-phone'?saPhoneRe.test(this.value.trim().replace(/[\s-]/g,'')):emailRe.test(this.value.trim());
+    field.classList.toggle('invalid',!ok);
+  });
+});
 // Hero Slideshow
 (function(){
   const slides=document.querySelectorAll('.showcase-slide');
