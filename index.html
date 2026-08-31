@@ -570,10 +570,19 @@
                           class="mt-1.5 w-full rounded-lg border border-slate-300 px-3.5 py-2.5 focus:border-accent focus:ring-2 focus:ring-accent/20 dark:border-slate-600 dark:bg-slate-900 dark:text-white dark:placeholder-slate-500 aria-[invalid=true]:border-red-500 aria-[invalid=true]:ring-red-500/20"></textarea>
                 <p id="message-error" class="mt-1 hidden text-sm text-red-600 dark:text-red-400"></p>
               </div>
-              <p class="text-xs text-slate-500 dark:text-slate-400">
-                بإرسالك هذا النموذج فإنك توافق على
-                <a href="/privacy.html" class="text-accent underline-offset-2 hover:underline">سياسة الخصوصية</a>.
-              </p>
+              <div>
+                <label class="flex items-start gap-2 text-xs text-slate-500 dark:text-slate-400">
+                  <input type="checkbox" id="agree-terms" required aria-describedby="agree-terms-error"
+                         class="mt-0.5 h-4 w-4 flex-shrink-0 rounded border-slate-300 text-accent focus:ring-accent/40 dark:border-slate-600 dark:bg-slate-900">
+                  <span>
+                    أوافق على
+                    <a href="/terms.html" target="_blank" class="text-accent underline-offset-2 hover:underline">الشروط والأحكام</a>
+                    و
+                    <a href="/privacy.html" target="_blank" class="text-accent underline-offset-2 hover:underline">سياسة الخصوصية</a>.
+                  </span>
+                </label>
+                <p id="agree-terms-error" class="mt-1 hidden text-sm text-red-600 dark:text-red-400"></p>
+              </div>
               <button type="submit" id="submit-btn" class="w-full rounded-lg bg-accent py-3 font-semibold text-white transition hover:bg-accent-dark disabled:opacity-70">
                 إرسال الرسالة
               </button>
@@ -592,9 +601,9 @@
         <span class="text-slate-300 dark:text-slate-600">•</span>
         <a href="/terms.html" class="text-slate-600 underline-offset-4 transition hover:text-accent hover:underline dark:text-slate-300">الشروط والأحكام</a>
         <span class="text-slate-300 dark:text-slate-600">•</span>
-        <a href="/cookies.html" class="text-slate-600 underline-offset-4 transition hover:text-accent hover:underline dark:text-slate-300">سياسة ملفات تعريف الارتباط</a>
-        <span class="text-slate-300 dark:text-slate-600">•</span>
         <a href="/refund.html" class="text-slate-600 underline-offset-4 transition hover:text-accent hover:underline dark:text-slate-300">سياسة الاسترجاع والإلغاء</a>
+        <span class="text-slate-300 dark:text-slate-600">•</span>
+        <a href="/cookies.html" class="text-slate-600 underline-offset-4 transition hover:text-accent hover:underline dark:text-slate-300">سياسة ملفات تعريف الارتباط</a>
       </p>
       <div class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-1.5 text-xs text-slate-500 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-400">
         <svg aria-hidden="true" class="h-4 w-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
@@ -664,7 +673,8 @@
         name: { el: document.getElementById('name'), err: document.getElementById('name-error') },
         email: { el: document.getElementById('email'), err: document.getElementById('email-error') },
         requestType: { el: document.getElementById('request-type'), err: document.getElementById('request-type-error') },
-        message: { el: document.getElementById('message'), err: document.getElementById('message-error') }
+        message: { el: document.getElementById('message'), err: document.getElementById('message-error') },
+        agreeTerms: { el: document.getElementById('agree-terms'), err: document.getElementById('agree-terms-error') }
       };
       var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -690,6 +700,7 @@
         if (!emailRe.test(email)) { setError('email', 'الرجاء إدخال بريد إلكتروني صحيح.'); ok = false; first = first || fields.email.el; } else setError('email', '');
         if (!requestType) { setError('requestType', 'الرجاء اختيار نوع الطلب.'); ok = false; first = first || fields.requestType.el; } else setError('requestType', '');
         if (message.length < 10) { setError('message', 'الرجاء كتابة رسالة لا تقل عن ١٠ أحرف.'); ok = false; first = first || fields.message.el; } else setError('message', '');
+        if (!fields.agreeTerms.el.checked) { setError('agreeTerms', 'يجب الموافقة على الشروط والأحكام وسياسة الخصوصية للمتابعة.'); ok = false; first = first || fields.agreeTerms.el; } else setError('agreeTerms', '');
         if (first) first.focus();
         return ok;
       }
