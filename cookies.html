@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var dark = stored ? stored === 'dark'
+          : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (dark) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    })();
+  </script>
+  <meta name="theme-color" content="#0284c7">
+  <meta name="description" content="سياسة ملفات تعريف الارتباط (Cookies) لموقع IrtiqaTech — أنواع الملفات المستخدمة وكيفية إدارتها.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://basim-dev.com/cookies.html">
+  <title>سياسة ملفات تعريف الارتباط | IrtiqaTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
+<body class="bg-slate-50 text-corporate-slate antialiased dark:bg-slate-950 dark:text-slate-200">
+  <a href="#main" class="skip-link">تخطّي إلى المحتوى</a>
+
+  <header class="border-b border-slate-200/80 bg-white/95 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-900/95">
+    <nav class="mx-auto flex max-w-3xl items-center justify-between px-4 py-4 sm:px-6">
+      <a href="/" class="flex items-center gap-2" aria-label="العودة للرئيسية">
+        <span class="block h-10 w-10 transition hover:scale-105">
+          <svg aria-hidden="true" class="h-full w-full" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="lg-badge" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#0ea5e9"/>
+                <stop offset="1" stop-color="#0369a1"/>
+              </linearGradient>
+            </defs>
+            <rect width="64" height="64" rx="16" fill="url(#lg-badge)"/>
+            <rect x="12" y="32" width="8" height="12" rx="4" fill="#ffffff"/>
+            <rect x="28" y="24" width="8" height="20" rx="4" fill="#ffffff"/>
+            <rect x="44" y="18" width="8" height="26" rx="4" fill="#ffffff"/>
+            <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+            <circle cx="56" cy="13" r="8" fill="#ffffff" opacity="0.25"/>
+            <circle cx="56" cy="13" r="4.5" fill="#ffffff"/>
+          </svg>
+        </span>
+        <span class="flex flex-col leading-tight">
+          <span class="text-lg font-extrabold tracking-tight text-corporate-navy dark:text-white">IrtiqaTech</span>
+          <span class="text-[10px] font-semibold tracking-wide text-accent">تطوير • أتمتة • تحول رقمي</span>
+        </span>
+      </a>
+      <a href="/" class="rounded-lg px-4 py-2 text-sm font-semibold text-slate-600 transition hover:text-accent dark:text-slate-300">← العودة للرئيسية</a>
+    </nav>
+  </header>
+
+  <main id="main" class="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
+    <h1 class="text-3xl font-extrabold text-corporate-navy sm:text-4xl dark:text-white">سياسة ملفات تعريف الارتباط (Cookies)</h1>
+    <p class="mt-3 text-sm text-slate-500 dark:text-slate-400">آخر تحديث: 31 أغسطس 2026</p>
+
+    <div class="mt-8 space-y-8 leading-relaxed text-slate-600 dark:text-slate-300">
+      <section>
+        <p>
+          توضح هذه السياسة كيفية استخدام موقع IrtiqaTech – ارتقاء التقنية لملفات تعريف الارتباط والتقنيات
+          المشابهة عند زيارة
+          <a href="https://basim-dev.com" class="text-accent underline-offset-2 hover:underline">basim-dev.com</a>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-corporate-navy dark:text-white">1. ما هي ملفات تعريف الارتباط؟</h2>
+        <p class="mt-3">
+          ملفات تعريف الارتباط هي ملفات نصية صغيرة يتم تخزينها على جهاز المستخدم عند زيارة بعض المواقع
+          الإلكترونية. وتساعد هذه الملفات في تشغيل الموقع وتحسين الأداء وفهم كيفية استخدام الزوار للموقع.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-corporate-navy dark:text-white">2. أنواع ملفات تعريف الارتباط التي قد نستخدمها</h2>
+        <p class="mt-3">قد يستخدم الموقع الأنواع التالية:</p>
+
+        <h3 class="mt-5 font-bold text-corporate-navy dark:text-white">ملفات ضرورية</h3>
+        <p class="mt-2">تُستخدم لتشغيل الوظائف الأساسية للموقع ولا يمكن الاستغناء عنها في بعض الحالات. قد تشمل وظائف مثل:</p>
+        <ul class="mt-3 list-disc space-y-2 pr-6">
+          <li>حماية الموقع.</li>
+          <li>إدارة الجلسة.</li>
+          <li>حفظ بعض إعدادات المستخدم.</li>
+          <li>تشغيل النماذج أو الخصائص الأساسية.</li>
+        </ul>
+
+        <h3 class="mt-5 font-bold text-corporate-navy dark:text-white">ملفات الأداء والتحليلات</h3>
+        <p class="mt-2">قد تُستخدم لفهم كيفية استخدام الزوار للموقع، مثل:</p>
+        <ul class="mt-3 list-disc space-y-2 pr-6">
+          <li>عدد الزيارات.</li>
+          <li>الصفحات الأكثر مشاهدة.</li>
+          <li>مدة الزيارة.</li>
+          <li>نوع الجهاز أو المتصفح.</li>
+          <li>أداء الموقع وسرعة تحميل الصفحات.</li>
+        </ul>
+        <p class="mt-3">وتساعد هذه المعلومات في تطوير الموقع وتحسين تجربة المستخدم.</p>
+
+        <h3 class="mt-5 font-bold text-corporate-navy dark:text-white">ملفات وظيفية</h3>
+        <p class="mt-2">قد تساعد على تذكر بعض الخيارات أو الإعدادات التي يحددها المستخدم لتحسين تجربته عند العودة إلى الموقع.</p>
+
+        <h3 class="mt-5 font-bold text-corporate-navy dark:text-white">ملفات مقدمي الخدمات الخارجية</h3>
+        <p class="mt-2">قد يتم تحميل ملفات تعريف ارتباط من خدمات خارجية مستخدمة في الموقع، مثل خدمات:</p>
+        <ul class="mt-3 list-disc space-y-2 pr-6">
+          <li>الاستضافة.</li>
+          <li>التحليلات.</li>
+          <li>قياس الأداء.</li>
+          <li>النماذج.</li>
+          <li>الفيديو أو الخرائط.</li>
+          <li>خدمات التواصل الخارجية.</li>
+        </ul>
+        <p class="mt-3">وتخضع هذه الملفات لسياسات الجهات التي تقدم تلك الخدمات.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-corporate-navy dark:text-white">3. Vercel وخدمات الاستضافة</h2>
+        <p class="mt-3">
+          يتم استضافة الموقع أو تشغيل أجزاء منه باستخدام خدمات تقنية مثل Vercel، وقد تقوم هذه الخدمات بمعالجة
+          بعض البيانات التقنية اللازمة لتشغيل الموقع وقياس الأداء وحمايته. وتخضع معالجة البيانات بواسطة هذه
+          الخدمات لسياسات الخصوصية الخاصة بها.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-corporate-navy dark:text-white">4. هل نستخدم ملفات إعلانية؟</h2>
+        <p class="mt-3">
+          لا نستخدم ملفات تعريف الارتباط لأغراض الإعلانات المخصصة ما لم يتم توضيح ذلك للمستخدم والحصول على
+          الموافقة اللازمة عند الحاجة.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-corporate-navy dark:text-white">5. الموافقة على ملفات تعريف الارتباط</h2>
+        <p class="mt-3">
+          في حال استخدام ملفات غير ضرورية تتطلب موافقة المستخدم، قد يظهر إشعار أو نافذة تسمح للمستخدم بقبولها
+          أو رفضها أو إدارة تفضيلاته. ولا يتم تفعيل ملفات غير ضرورية تتطلب موافقة قبل الحصول عليها، متى كان
+          ذلك مطلوبًا نظامًا.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-corporate-navy dark:text-white">6. إدارة ملفات تعريف الارتباط</h2>
+        <p class="mt-3">يمكن للمستخدم التحكم في ملفات تعريف الارتباط من خلال إعدادات المتصفح. ويمكن عادةً:</p>
+        <ul class="mt-3 list-disc space-y-2 pr-6">
+          <li>حذف ملفات تعريف الارتباط الحالية.</li>
+          <li>منع تخزين ملفات جديدة.</li>
+          <li>السماح بها لمواقع محددة فقط.</li>
+          <li>حظر ملفات الطرف الثالث.</li>
+        </ul>
+        <p class="mt-3">وقد يؤدي تعطيل بعض الملفات إلى عدم عمل بعض خصائص الموقع بالشكل المتوقع.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-corporate-navy dark:text-white">7. مدة الاحتفاظ</h2>
+        <p class="mt-3">
+          تختلف مدة الاحتفاظ بملفات تعريف الارتباط بحسب نوع الملف والغرض منه. فبعضها ينتهي عند إغلاق المتصفح،
+          بينما قد يبقى البعض الآخر لفترة محددة.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-corporate-navy dark:text-white">8. البيانات الشخصية</h2>
+        <p class="mt-3">
+          إذا نتج عن استخدام ملفات تعريف الارتباط جمع بيانات تُعد بيانات شخصية، فسيتم التعامل معها وفق
+          <a href="/privacy.html" class="text-accent underline-offset-2 hover:underline">سياسة الخصوصية</a>
+          الخاصة بالموقع والأنظمة المعمول بها في المملكة العربية السعودية.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-corporate-navy dark:text-white">9. التحديثات</h2>
+        <p class="mt-3">
+          قد نقوم بتحديث سياسة ملفات تعريف الارتباط إذا تغيرت التقنيات المستخدمة في الموقع أو المتطلبات
+          النظامية. وسيظهر تاريخ آخر تحديث أعلى هذه الصفحة.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-corporate-navy dark:text-white">10. التواصل</h2>
+        <p class="mt-3">إذا كان لديك استفسار حول استخدام ملفات تعريف الارتباط:</p>
+        <p class="mt-3">
+          <strong class="text-corporate-navy dark:text-white">IrtiqaTech – ارتقاء التقنية</strong><br>
+          البريد الإلكتروني: <a href="mailto:basim.devs@gmail.com" class="text-accent underline-offset-2 hover:underline">basim.devs@gmail.com</a><br>
+          الهاتف: <a href="https://wa.me/966502452288?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85" target="_blank" rel="noopener noreferrer" class="text-accent underline-offset-2 hover:underline">0502452288</a><br>
+          الموقع: <a href="https://basim-dev.com" class="text-accent underline-offset-2 hover:underline">basim-dev.com</a>
+        </p>
+      </section>
+    </div>
+
+    <div class="mt-12 border-t border-slate-200 pt-6 dark:border-slate-800">
+      <a href="/" class="inline-flex items-center rounded-xl bg-accent px-6 py-3 font-semibold text-white transition hover:bg-accent-dark">
+        ← العودة للصفحة الرئيسية
+      </a>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-slate-50 py-8 dark:border-slate-800 dark:bg-slate-900">
+    <div class="mx-auto max-w-3xl px-4 text-center text-sm text-slate-600 sm:px-6 dark:text-slate-300 space-y-3">
+      <p class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+        <a href="/privacy.html" class="underline-offset-4 transition hover:text-accent hover:underline">سياسة الخصوصية</a>
+        <span class="text-slate-300 dark:text-slate-600">•</span>
+        <a href="/terms.html" class="underline-offset-4 transition hover:text-accent hover:underline">الشروط والأحكام</a>
+        <span class="text-slate-300 dark:text-slate-600">•</span>
+        <a href="/cookies.html" class="underline-offset-4 transition hover:text-accent hover:underline">سياسة ملفات تعريف الارتباط</a>
+        <span class="text-slate-300 dark:text-slate-600">•</span>
+        <a href="/refund.html" class="underline-offset-4 transition hover:text-accent hover:underline">سياسة الاسترجاع والإلغاء</a>
+      </p>
+      <p>© <span id="year"></span> IrtiqaTech. جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
