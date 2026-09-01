@@ -1,0 +1,19 @@
+<svg viewBox="0 0 320 64" xmlns="http://www.w3.org/2000/svg" font-family="Tahoma, Arial, sans-serif">
+  <defs>
+    <linearGradient id="lg-badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#0369a1"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <rect width="64" height="64" rx="16" fill="url(#lg-badge)"/>
+    <rect x="12" y="32" width="8" height="12" rx="4" fill="#ffffff"/>
+    <rect x="28" y="24" width="8" height="20" rx="4" fill="#ffffff"/>
+    <rect x="44" y="18" width="8" height="26" rx="4" fill="#ffffff"/>
+    <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+    <circle cx="56" cy="13" r="8" fill="#ffffff" opacity="0.25"/>
+    <circle cx="56" cy="13" r="4.5" fill="#ffffff"/>
+  </g>
+  <text x="78" y="30" font-size="22" font-weight="800" fill="#0f172a">حلول رقمية</text>
+  <text x="78" y="48" font-size="10" font-weight="500" fill="#0ea5e9">تطوير • أتمتة • تحول رقمي</text>
+</svg>

@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Highlights + ستوريز - IrtiqaTech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Cairo',sans-serif;background:#f1f5f9;min-height:100vh;padding:30px 20px;color:#0f172a}
+.container{max-width:1400px;margin:0 auto}
+.header{background:linear-gradient(135deg,#0ea5e9 0%,#0369a1 100%);color:#fff;padding:40px;border-radius:24px;text-align:center;margin-bottom:30px;box-shadow:0 20px 50px rgba(2,132,199,.25)}
+.header h1{font-size:32px;font-weight:900;margin-bottom:8px}
+.header p{opacity:.9;font-size:14px}
+.steps{background:#fef3c7;border:2px solid #fbbf24;border-radius:16px;padding:20px 24px;margin-bottom:25px}
+.steps h3{color:#92400e;margin-bottom:10px;font-size:18px}
+.steps ol{padding-right:20px;color:#78350f}
+.steps li{margin-bottom:6px;font-size:14px;line-height:1.7}
+.section{background:#fff;border-radius:20px;padding:25px;margin-bottom:25px;box-shadow:0 4px 16px rgba(0,0,0,.04)}
+.section-header{display:flex;align-items:center;gap:15px;margin-bottom:20px;padding-bottom:15px;border-bottom:2px solid #f1f5f9}
+.section-num{width:50px;height:50px;background:linear-gradient(135deg,#0ea5e9,#0369a1);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;flex-shrink:0}
+.section-info h2{color:#0f172a;font-size:22px;margin-bottom:4px}
+.section-info p{color:#64748b;font-size:13px}
+.grid{display:grid;gap:15px;grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+.slide{background:#f8fafc;border-radius:12px;padding:12px;border:1px solid #e2e8f0;text-align:center}
+.slide.cover{border:2px solid #0ea5e9;background:#f0f9ff}
+.slide-label{font-size:11px;color:#0369a1;font-weight:700;margin-bottom:8px}
+.slide.cover .slide-label{background:#0ea5e9;color:#fff;padding:3px 10px;border-radius:12px;display:inline-block}
+.slide-preview{aspect-ratio:9/16;border-radius:8px;overflow:hidden;border:1px solid #e2e8f0;margin-bottom:10px;background:#fff}
+.slide-preview svg{display:block;width:100%;height:100%}
+.btn{width:100%;padding:8px;border-radius:7px;border:none;background:#0284c7;color:#fff;font-family:inherit;font-weight:700;font-size:12px;cursor:pointer;transition:background .2s}
+.btn:hover{background:#0369a1}
+.btn-all{background:#0f172a;margin-top:10px;padding:12px;font-size:13px}
+.btn-all:hover{background:#0369a1}
+.note{background:#fef3c7;border-radius:10px;padding:12px;margin-top:15px;font-size:13px;color:#92400e}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="header">
+  <h1>🎬 Highlights + ستوريز جاهزة</h1>
+  <p>6 مجموعات • 27 شريحة بحجم 1080×1920 • كلها بهوية موقعك</p>
+</div>
+
+<div class="steps">
+  <h3>📱 كيف تستخدم هذه الملفات؟</h3>
+  <ol>
+    <li>حمّل كل شرائح المجموعة بالترتيب (اضغط زر "تنزيل الكل" أسفل كل قسم)</li>
+    <li>انقل الصور لجوالك (AirDrop / واتساب لنفسك / Google Drive)</li>
+    <li>افتح إنستغرام → اضغط "+" أعلى الشاشة → Story</li>
+    <li>ارفع الصور بنفس الترتيب (شريحة شريحة)، انشر كل واحدة</li>
+    <li>اذهب لبروفايلك → اضغط "+" بجانب "Story Highlights"</li>
+    <li>اختر الستوريز التي رفعتها للتو، سمِّ الـ Highlight (مثلاً: الخدمات)</li>
+    <li>غيّر الـ Cover من Edit Highlight → Cover → Photo Library → اختر الـ Cover</li>
+    <li>كرّر للأربع الباقية</li>
+  </ol>
+</div>
+
+<!-- ============================================ -->
+<!-- ستوري الإطلاق -->
+<!-- ============================================ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">🚀</div>
+    <div class="section-info">
+      <h2>ستوري الإطلاق</h2>
+      <p>أول ستوري يعلن بدء الحساب — انشره الآن قبل أي شيء</p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="slide">
+      <div class="slide-label">ستوري ترحيبي</div>
+      <div class="slide-preview" id="launch-prev"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="launch">
+        <defs>
+          <linearGradient id="lg-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0c4a6e"/><stop offset="0.5" stop-color="#0369a1"/><stop offset="1" stop-color="#075985"/></linearGradient>
+          <linearGradient id="lg-logo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#0369a1"/></linearGradient>
+        </defs>
+        <rect width="1080" height="1920" fill="url(#lg-bg)"/>
+        <g opacity="0.08" fill="#0ea5e9">
+          <circle cx="100" cy="200" r="3"/><circle cx="200" cy="200" r="3"/><circle cx="300" cy="200" r="3"/>
+          <circle cx="100" cy="300" r="3"/><circle cx="200" cy="300" r="3"/>
+          <circle cx="780" cy="1700" r="3"/><circle cx="880" cy="1700" r="3"/><circle cx="980" cy="1700" r="3"/>
+        </g>
+        <g transform="translate(540, 720) scale(11) translate(-32,-32)">
+          <rect width="64" height="64" rx="16" fill="url(#lg-logo)" stroke="#7dd3fc" stroke-width="0.5"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#ffffff"/>
+          <rect x="28" y="24" width="8" height="20" rx="4" fill="#ffffff"/>
+          <rect x="44" y="18" width="8" height="26" rx="4" fill="#ffffff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
+          <circle cx="56" cy="13" r="8" fill="#ffffff" opacity="0.25"/>
+          <circle cx="56" cy="13" r="4.5" fill="#ffffff"/>
+        </g>
+        <text x="540" y="1180" font-family="Cairo, Arial, sans-serif" font-size="68" font-weight="900" text-anchor="middle" fill="#ffffff">حسابنا الجديد</text>
+        <text x="540" y="1265" font-family="Cairo, Arial, sans-serif" font-size="68" font-weight="900" text-anchor="middle" fill="#7dd3fc">انطلق! 🚀</text>
+        <line x1="380" y1="1340" x2="700" y2="1340" stroke="#0ea5e9" stroke-width="4"/>
+        <text x="540" y="1430" font-family="Cairo, Arial, sans-serif" font-size="38" text-anchor="middle" fill="#bae6fd">هنا تجد كل ما يخصّ</text>
+        <text x="540" y="1490" font-family="Cairo, Arial, sans-serif" font-size="38" text-anchor="middle" fill="#bae6fd">الحلول الرقمية لأعمالك</text>
+        <text x="540" y="1700" font-family="Cairo, Arial, sans-serif" font-size="32" font-weight="700" text-anchor="middle" fill="#ffffff">irtiqatech.sa</text>
+        <text x="540" y="1760" font-family="Cairo, Arial, sans-serif" font-size="26" text-anchor="middle" fill="#7dd3fc">@digital.solutions.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('launch','launch_welcome')">⬇ تنزيل</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================ -->
+<!-- 1. الخدمات -->
+<!-- ============================================ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">1</div>
+    <div class="section-info">
+      <h2>الخدمات (6 شرائح)</h2>
+      <p>عرض كل خدماتك بطريقة جذابة ومنظّمة</p>
+    </div>
+  </div>
+  <div class="grid">
+
+    <div class="slide cover">
+      <div class="slide-label">COVER</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" id="srv-cov">
+        <defs><linearGradient id="sc1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#0369a1"/></linearGradient></defs>
+        <rect width="1080" height="1080" fill="url(#sc1)"/>
+        <g transform="translate(540, 480)" stroke="#fff" stroke-width="30" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="-180" y="-150" width="360" height="240" rx="20"/>
+          <line x1="-180" y1="-80" x2="180" y2="-80"/>
+          <circle cx="-140" cy="-115" r="8" fill="#fff"/><circle cx="-100" cy="-115" r="8" fill="#fff"/>
+        </g>
+        <text x="540" y="780" font-family="Cairo, Arial, sans-serif" font-size="80" font-weight="800" text-anchor="middle" fill="#fff">الخدمات</text>
+      </svg></div>
+      <button class="btn" onclick="dl('srv-cov','services_COVER', 1080, 1080)">⬇ COVER</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 1 - مقدمة</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="srv1">
+        <defs><linearGradient id="s1bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0369a1"/><stop offset="1" stop-color="#0c4a6e"/></linearGradient></defs>
+        <rect width="1080" height="1920" fill="url(#s1bg)"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="150" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="700" font-family="Cairo, Arial, sans-serif" font-size="120" font-weight="900" text-anchor="middle" fill="#fff">خدماتنا</text>
+        <text x="540" y="830" font-family="Cairo, Arial, sans-serif" font-size="110" text-anchor="middle">🎯</text>
+        <line x1="380" y1="950" x2="700" y2="950" stroke="#0ea5e9" stroke-width="5"/>
+        <text x="540" y="1080" font-family="Cairo, Arial, sans-serif" font-size="48" text-anchor="middle" fill="#bae6fd">كل ما تحتاجه شركتك</text>
+        <text x="540" y="1150" font-family="Cairo, Arial, sans-serif" font-size="48" text-anchor="middle" fill="#bae6fd">للتحول الرقمي</text>
+        <text x="540" y="1280" font-family="Cairo, Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle" fill="#0ea5e9">في مكان واحد ✨</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#fff">irtiqatech.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('srv1','services_01_intro')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 2 - مواقع</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="srv2">
+        <rect width="1080" height="1920" fill="#f1f5f9"/>
+        <rect width="1080" height="320" fill="#0369a1"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="160" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="240" font-family="Cairo, Arial, sans-serif" font-size="28" text-anchor="middle" fill="#7dd3fc">١/٤</text>
+        <text x="540" y="500" font-family="Cairo, Arial, sans-serif" font-size="180" text-anchor="middle">🌐</text>
+        <text x="540" y="680" font-family="Cairo, Arial, sans-serif" font-size="84" font-weight="900" text-anchor="middle" fill="#0f172a">تطوير المواقع</text>
+        <line x1="380" y1="780" x2="700" y2="780" stroke="#0ea5e9" stroke-width="4"/>
+        <g font-family="Cairo, Arial, sans-serif" font-size="44" fill="#1e293b">
+          <text x="540" y="930" text-anchor="middle">✓ مواقع تعريفية احترافية</text>
+          <text x="540" y="1020" text-anchor="middle">✓ متجاوبة مع كل الأجهزة</text>
+          <text x="540" y="1110" text-anchor="middle">✓ سرعة فائقة + SEO</text>
+          <text x="540" y="1200" text-anchor="middle">✓ لوحة تحكم سهلة</text>
+        </g>
+        <rect x="290" y="1400" width="500" height="120" rx="60" fill="#0ea5e9"/>
+        <text x="540" y="1478" font-family="Cairo, Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle" fill="#fff">احجز استشارة مجانية</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#64748b">@digital.solutions.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('srv2','services_02_websites')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 3 - تطبيقات</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="srv3">
+        <defs><linearGradient id="s3bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#0369a1"/></linearGradient></defs>
+        <rect width="1080" height="1920" fill="url(#s3bg)"/>
+        <g transform="translate(80, 80) scale(1.5) translate(-32,-32)">
+          <rect width="64" height="64" rx="16" fill="#fff"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#0369a1"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#0369a1"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#0369a1"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#0369a1" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#0ea5e9"/>
+        </g>
+        <text x="200" y="150" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="240" font-family="Cairo, Arial, sans-serif" font-size="28" text-anchor="middle" fill="#bae6fd">٢/٤</text>
+        <text x="540" y="500" font-family="Cairo, Arial, sans-serif" font-size="180" text-anchor="middle">📱</text>
+        <text x="540" y="680" font-family="Cairo, Arial, sans-serif" font-size="84" font-weight="900" text-anchor="middle" fill="#fff">تطبيقات الجوال</text>
+        <line x1="380" y1="780" x2="700" y2="780" stroke="#fff" stroke-width="4"/>
+        <g font-family="Cairo, Arial, sans-serif" font-size="44" fill="#fff">
+          <text x="540" y="930" text-anchor="middle">✓ iOS و Android</text>
+          <text x="540" y="1020" text-anchor="middle">✓ تجربة مستخدم سلسة</text>
+          <text x="540" y="1110" text-anchor="middle">✓ ربط مع كل خدمات الدفع</text>
+          <text x="540" y="1200" text-anchor="middle">✓ إشعارات فورية</text>
+        </g>
+        <rect x="290" y="1400" width="500" height="120" rx="60" fill="#fff"/>
+        <text x="540" y="1478" font-family="Cairo, Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle" fill="#0369a1">احجز استشارة مجانية</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#bae6fd">@digital.solutions.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('srv3','services_03_apps')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 4 - متاجر</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="srv4">
+        <rect width="1080" height="1920" fill="#f1f5f9"/>
+        <rect width="1080" height="320" fill="#0369a1"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="160" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="240" font-family="Cairo, Arial, sans-serif" font-size="28" text-anchor="middle" fill="#7dd3fc">٣/٤</text>
+        <text x="540" y="500" font-family="Cairo, Arial, sans-serif" font-size="180" text-anchor="middle">🛍️</text>
+        <text x="540" y="680" font-family="Cairo, Arial, sans-serif" font-size="80" font-weight="900" text-anchor="middle" fill="#0f172a">متاجر إلكترونية</text>
+        <line x1="380" y1="780" x2="700" y2="780" stroke="#0ea5e9" stroke-width="4"/>
+        <g font-family="Cairo, Arial, sans-serif" font-size="42" fill="#1e293b">
+          <text x="540" y="920" text-anchor="middle">✓ سلة • زد • شوبيفاي • مخصص</text>
+          <text x="540" y="1010" text-anchor="middle">✓ دفع: مدى + Apple Pay + STC Pay</text>
+          <text x="540" y="1100" text-anchor="middle">✓ شحن: أرامكس + سمسا</text>
+          <text x="540" y="1190" text-anchor="middle">✓ فاتورة إلكترونية متوافقة</text>
+        </g>
+        <rect x="290" y="1400" width="500" height="120" rx="60" fill="#0ea5e9"/>
+        <text x="540" y="1478" font-family="Cairo, Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle" fill="#fff">احجز استشارة مجانية</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#64748b">@digital.solutions.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('srv4','services_04_stores')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 5 - أنظمة</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="srv5">
+        <defs><linearGradient id="s5bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#075985"/></linearGradient></defs>
+        <rect width="1080" height="1920" fill="url(#s5bg)"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="150" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="240" font-family="Cairo, Arial, sans-serif" font-size="28" text-anchor="middle" fill="#7dd3fc">٤/٤</text>
+        <text x="540" y="500" font-family="Cairo, Arial, sans-serif" font-size="180" text-anchor="middle">⚙️</text>
+        <text x="540" y="680" font-family="Cairo, Arial, sans-serif" font-size="76" font-weight="900" text-anchor="middle" fill="#fff">أنظمة وأتمتة</text>
+        <line x1="380" y1="780" x2="700" y2="780" stroke="#0ea5e9" stroke-width="4"/>
+        <g font-family="Cairo, Arial, sans-serif" font-size="42" fill="#bae6fd">
+          <text x="540" y="930" text-anchor="middle">✓ أنظمة CRM مخصصة</text>
+          <text x="540" y="1020" text-anchor="middle">✓ لوحات تحكم داخلية</text>
+          <text x="540" y="1110" text-anchor="middle">✓ أتمتة العمليات</text>
+          <text x="540" y="1200" text-anchor="middle">✓ تكامل مع أنظمتك الحالية</text>
+        </g>
+        <rect x="290" y="1400" width="500" height="120" rx="60" fill="#0ea5e9"/>
+        <text x="540" y="1478" font-family="Cairo, Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle" fill="#fff">احجز استشارة مجانية</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#7dd3fc">@digital.solutions.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('srv5','services_05_systems')">⬇ تنزيل</button>
+    </div>
+
+  </div>
+  <button class="btn btn-all" onclick="dlAll(['srv-cov','srv1','srv2','srv3','srv4','srv5'],['services_COVER','services_01_intro','services_02_websites','services_03_apps','services_04_stores','services_05_systems'],[1080,1080,1080,1080,1080,1080],[1080,1920,1920,1920,1920,1920])">⬇ تنزيل كل شرائح "الخدمات"</button>
+</div>
+
+<!-- ============================================ -->
+<!-- 2. أعمالنا -->
+<!-- ============================================ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">2</div>
+    <div class="section-info">
+      <h2>أعمالنا (5 شرائح)</h2>
+      <p>عرض مشاريعك السابقة بطريقة احترافية</p>
+    </div>
+  </div>
+  <div class="grid">
+
+    <div class="slide cover">
+      <div class="slide-label">COVER</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" id="prt-cov">
+        <defs><linearGradient id="pc1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0284c7"/><stop offset="1" stop-color="#075985"/></linearGradient></defs>
+        <rect width="1080" height="1080" fill="url(#pc1)"/>
+        <g transform="translate(540, 460)" stroke="#fff" stroke-width="28" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M -180 100 L -180 -100 L -60 -100 L -30 -150 L 180 -150 L 180 100 Z"/>
+          <circle cx="0" cy="-20" r="50"/>
+        </g>
+        <text x="540" y="780" font-family="Cairo, Arial, sans-serif" font-size="80" font-weight="800" text-anchor="middle" fill="#fff">أعمالنا</text>
+      </svg></div>
+      <button class="btn" onclick="dl('prt-cov','portfolio_COVER', 1080, 1080)">⬇ COVER</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 1 - مقدمة</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="prt1">
+        <defs><linearGradient id="pt1bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0369a1"/><stop offset="1" stop-color="#0c4a6e"/></linearGradient></defs>
+        <rect width="1080" height="1920" fill="url(#pt1bg)"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="150" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="600" font-family="Cairo, Arial, sans-serif" font-size="160" text-anchor="middle">💼</text>
+        <text x="540" y="800" font-family="Cairo, Arial, sans-serif" font-size="120" font-weight="900" text-anchor="middle" fill="#fff">أعمالنا</text>
+        <line x1="380" y1="900" x2="700" y2="900" stroke="#0ea5e9" stroke-width="5"/>
+        <text x="540" y="1050" font-family="Cairo, Arial, sans-serif" font-size="48" text-anchor="middle" fill="#bae6fd">مشاريع حقيقية</text>
+        <text x="540" y="1120" font-family="Cairo, Arial, sans-serif" font-size="48" text-anchor="middle" fill="#bae6fd">لعملاء حقيقيين</text>
+        <text x="540" y="1280" font-family="Cairo, Arial, sans-serif" font-size="42" font-weight="700" text-anchor="middle" fill="#0ea5e9">تعرّف على أعمالنا الحديثة ✨</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#fff">irtiqatech.sa/work</text>
+      </svg></div>
+      <button class="btn" onclick="dl('prt1','portfolio_01_intro')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 2 - إحصائيات</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="prt2">
+        <rect width="1080" height="1920" fill="#f1f5f9"/>
+        <rect width="1080" height="320" fill="#0369a1"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="160" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="500" font-family="Cairo, Arial, sans-serif" font-size="56" font-weight="800" text-anchor="middle" fill="#0f172a">أرقامنا تتحدث</text>
+        <g font-family="Cairo, Arial, sans-serif" text-anchor="middle">
+          <rect x="190" y="640" width="700" height="280" rx="20" fill="#fff" stroke="#0ea5e9" stroke-width="3"/>
+          <text x="540" y="760" font-size="120" font-weight="900" fill="#0369a1">+50</text>
+          <text x="540" y="850" font-size="42" fill="#475569">مشروع منجز</text>
+
+          <rect x="190" y="980" width="700" height="280" rx="20" fill="#fff" stroke="#0ea5e9" stroke-width="3"/>
+          <text x="540" y="1100" font-size="120" font-weight="900" fill="#0369a1">+4</text>
+          <text x="540" y="1190" font-size="42" fill="#475569">سنوات خبرة</text>
+
+          <rect x="190" y="1320" width="700" height="280" rx="20" fill="#fff" stroke="#0ea5e9" stroke-width="3"/>
+          <text x="540" y="1440" font-size="120" font-weight="900" fill="#0369a1">100%</text>
+          <text x="540" y="1530" font-size="42" fill="#475569">رضا العملاء</text>
+        </g>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#64748b">@digital.solutions.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('prt2','portfolio_02_stats')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 3 - مشروع 1</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="prt3">
+        <defs><linearGradient id="pt3bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#0369a1"/></linearGradient></defs>
+        <rect width="1080" height="1920" fill="url(#pt3bg)"/>
+        <g transform="translate(80, 80) scale(1.5) translate(-32,-32)">
+          <rect width="64" height="64" rx="16" fill="#fff"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#0369a1"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#0369a1"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#0369a1"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#0369a1" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#0ea5e9"/>
+        </g>
+        <text x="200" y="150" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <rect x="80" y="280" width="280" height="60" rx="30" fill="#fff"/>
+        <text x="220" y="322" font-family="Cairo, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#0369a1">مشروع #1</text>
+        <text x="80" y="500" font-family="Cairo, Arial, sans-serif" font-size="76" font-weight="900" fill="#fff">منصة actHub</text>
+        <text x="80" y="580" font-family="Cairo, Arial, sans-serif" font-size="38" fill="#bae6fd">منصة تدريب وفعاليات متكاملة</text>
+        <rect x="80" y="660" width="920" height="600" rx="20" fill="#fff" opacity="0.95"/>
+        <text x="540" y="770" font-family="Cairo, Arial, sans-serif" font-size="40" font-weight="800" text-anchor="middle" fill="#0f172a">التحديات والحلول</text>
+        <line x1="380" y1="800" x2="700" y2="800" stroke="#0ea5e9" stroke-width="3"/>
+        <g font-family="Cairo, Arial, sans-serif" font-size="34" fill="#1e293b">
+          <text x="120" y="900">⚡ موقع سريع متجاوب</text>
+          <text x="120" y="980">🔐 نظام تسجيل آمن</text>
+          <text x="120" y="1060">💳 بوابة دفع متكاملة</text>
+          <text x="120" y="1140">📊 لوحة تحكم متقدمة</text>
+          <text x="120" y="1220">📱 تطبيق جوال مرافق</text>
+        </g>
+        <rect x="290" y="1400" width="500" height="120" rx="60" fill="#fff"/>
+        <text x="540" y="1478" font-family="Cairo, Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle" fill="#0369a1">شاهد المشروع كاملاً</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#fff">irtiqatech.sa/work</text>
+      </svg></div>
+      <button class="btn" onclick="dl('prt3','portfolio_03_project1')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 4 - CTA</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="prt4">
+        <defs><linearGradient id="pt4bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#075985"/></linearGradient></defs>
+        <rect width="1080" height="1920" fill="url(#pt4bg)"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="150" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="600" font-family="Cairo, Arial, sans-serif" font-size="160" text-anchor="middle">🚀</text>
+        <text x="540" y="800" font-family="Cairo, Arial, sans-serif" font-size="72" font-weight="900" text-anchor="middle" fill="#fff">هل أنت التالي؟</text>
+        <line x1="340" y1="900" x2="740" y2="900" stroke="#0ea5e9" stroke-width="5"/>
+        <text x="540" y="1040" font-family="Cairo, Arial, sans-serif" font-size="42" text-anchor="middle" fill="#bae6fd">احصل على عرض سعر</text>
+        <text x="540" y="1110" font-family="Cairo, Arial, sans-serif" font-size="42" text-anchor="middle" fill="#bae6fd">مخصص لمشروعك</text>
+        <rect x="240" y="1280" width="600" height="140" rx="70" fill="#0ea5e9"/>
+        <text x="540" y="1370" font-family="Cairo, Arial, sans-serif" font-size="48" font-weight="900" text-anchor="middle" fill="#fff">راسلنا الآن 💬</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#7dd3fc">@digital.solutions.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('prt4','portfolio_04_cta')">⬇ تنزيل</button>
+    </div>
+
+  </div>
+  <button class="btn btn-all" onclick="dlAll(['prt-cov','prt1','prt2','prt3','prt4'],['portfolio_COVER','portfolio_01_intro','portfolio_02_stats','portfolio_03_project1','portfolio_04_cta'],[1080,1080,1080,1080,1080],[1080,1920,1920,1920,1920])">⬇ تنزيل كل شرائح "أعمالنا"</button>
+</div>
+
+<!-- ============================================ -->
+<!-- 3. الأسعار -->
+<!-- ============================================ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">3</div>
+    <div class="section-info">
+      <h2>الأسعار (5 شرائح)</h2>
+      <p>عرض الباقات بشفافية يبني الثقة ويصفّي الجمهور</p>
+    </div>
+  </div>
+  <div class="grid">
+
+    <div class="slide cover">
+      <div class="slide-label">COVER</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" id="prc-cov">
+        <defs><linearGradient id="pcv1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0369a1"/><stop offset="1" stop-color="#0c4a6e"/></linearGradient></defs>
+        <rect width="1080" height="1080" fill="url(#pcv1)"/>
+        <g transform="translate(540, 470)">
+          <circle r="160" fill="none" stroke="#fff" stroke-width="28"/>
+          <text x="0" y="50" font-family="Arial, sans-serif" font-size="200" font-weight="900" text-anchor="middle" fill="#fff">$</text>
+        </g>
+        <text x="540" y="800" font-family="Cairo, Arial, sans-serif" font-size="80" font-weight="800" text-anchor="middle" fill="#fff">الأسعار</text>
+      </svg></div>
+      <button class="btn" onclick="dl('prc-cov','pricing_COVER', 1080, 1080)">⬇ COVER</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 1 - مقدمة</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="prc1">
+        <defs><linearGradient id="pr1bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0369a1"/><stop offset="1" stop-color="#0c4a6e"/></linearGradient></defs>
+        <rect width="1080" height="1920" fill="url(#pr1bg)"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="150" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="600" font-family="Cairo, Arial, sans-serif" font-size="160" text-anchor="middle">💰</text>
+        <text x="540" y="800" font-family="Cairo, Arial, sans-serif" font-size="120" font-weight="900" text-anchor="middle" fill="#fff">باقاتنا</text>
+        <line x1="380" y1="900" x2="700" y2="900" stroke="#0ea5e9" stroke-width="5"/>
+        <text x="540" y="1050" font-family="Cairo, Arial, sans-serif" font-size="48" text-anchor="middle" fill="#bae6fd">أسعار شفافة</text>
+        <text x="540" y="1120" font-family="Cairo, Arial, sans-serif" font-size="48" text-anchor="middle" fill="#bae6fd">بدون مفاجآت ✨</text>
+        <text x="540" y="1280" font-family="Cairo, Arial, sans-serif" font-size="36" font-weight="700" text-anchor="middle" fill="#0ea5e9">اختر الباقة المناسبة لك ✨</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#fff">irtiqatech.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('prc1','pricing_01_intro')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 2 - موقع</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="prc2">
+        <rect width="1080" height="1920" fill="#f1f5f9"/>
+        <rect width="1080" height="320" fill="#0369a1"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="160" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <rect x="80" y="450" width="920" height="1100" rx="30" fill="#fff" stroke="#0ea5e9" stroke-width="4"/>
+        <text x="540" y="560" font-family="Cairo, Arial, sans-serif" font-size="50" font-weight="800" text-anchor="middle" fill="#0369a1">باقة الموقع التعريفي</text>
+        <text x="540" y="720" font-family="Cairo, Arial, sans-serif" font-size="48" text-anchor="middle" fill="#64748b">ابتداءً من</text>
+        <text x="540" y="850" font-family="Cairo, Arial, sans-serif" font-size="130" font-weight="900" text-anchor="middle" fill="#0369a1">3,500 ريال</text>
+        <line x1="380" y1="920" x2="700" y2="920" stroke="#0ea5e9" stroke-width="4"/>
+        <g font-family="Cairo, Arial, sans-serif" font-size="34" fill="#1e293b">
+          <text x="540" y="1030" text-anchor="middle">✓ 5 صفحات احترافية</text>
+          <text x="540" y="1100" text-anchor="middle">✓ تصميم متجاوب وعصري</text>
+          <text x="540" y="1170" text-anchor="middle">✓ لوحة تحكم سهلة</text>
+          <text x="540" y="1240" text-anchor="middle">✓ تحسين SEO أساسي</text>
+          <text x="540" y="1310" text-anchor="middle">✓ ربط نطاق + استضافة سنة</text>
+          <text x="540" y="1380" text-anchor="middle">✓ صيانة 3 أشهر مجاناً</text>
+          <text x="540" y="1450" font-weight="700" fill="#0ea5e9" text-anchor="middle">⚡ التسليم خلال 14 يوم</text>
+        </g>
+        <rect x="290" y="1640" width="500" height="120" rx="60" fill="#0ea5e9"/>
+        <text x="540" y="1718" font-family="Cairo, Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle" fill="#fff">اطلب الآن</text>
+      </svg></div>
+      <button class="btn" onclick="dl('prc2','pricing_02_website')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 3 - متجر</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="prc3">
+        <defs><linearGradient id="pr3bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#0369a1"/></linearGradient></defs>
+        <rect width="1080" height="1920" fill="url(#pr3bg)"/>
+        <g transform="translate(80, 80) scale(1.5) translate(-32,-32)">
+          <rect width="64" height="64" rx="16" fill="#fff"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#0369a1"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#0369a1"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#0369a1"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#0369a1" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#0ea5e9"/>
+        </g>
+        <text x="200" y="150" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <rect x="500" y="280" width="280" height="60" rx="30" fill="#fbbf24"/>
+        <text x="640" y="322" font-family="Cairo, Arial, sans-serif" font-size="28" font-weight="800" text-anchor="middle" fill="#0f172a">الأكثر طلباً ⭐</text>
+        <rect x="80" y="380" width="920" height="1200" rx="30" fill="#fff" stroke="#fbbf24" stroke-width="5"/>
+        <text x="540" y="500" font-family="Cairo, Arial, sans-serif" font-size="50" font-weight="800" text-anchor="middle" fill="#0369a1">باقة المتجر الإلكتروني</text>
+        <text x="540" y="660" font-family="Cairo, Arial, sans-serif" font-size="48" text-anchor="middle" fill="#64748b">ابتداءً من</text>
+        <text x="540" y="790" font-family="Cairo, Arial, sans-serif" font-size="130" font-weight="900" text-anchor="middle" fill="#0369a1">7,500 ريال</text>
+        <line x1="380" y1="860" x2="700" y2="860" stroke="#0ea5e9" stroke-width="4"/>
+        <g font-family="Cairo, Arial, sans-serif" font-size="32" fill="#1e293b">
+          <text x="540" y="960" text-anchor="middle">✓ متجر كامل + لوحة تحكم</text>
+          <text x="540" y="1030" text-anchor="middle">✓ بوابات دفع محلية (مدى، Apple Pay)</text>
+          <text x="540" y="1100" text-anchor="middle">✓ تكامل شحن + فاتورة إلكترونية</text>
+          <text x="540" y="1170" text-anchor="middle">✓ تحسين SEO متقدم</text>
+          <text x="540" y="1240" text-anchor="middle">✓ تطبيق جوال PWA</text>
+          <text x="540" y="1310" text-anchor="middle">✓ صيانة 6 أشهر مجاناً</text>
+          <text x="540" y="1380" font-weight="700" fill="#0ea5e9" text-anchor="middle">⚡ التسليم 21-30 يوم</text>
+        </g>
+        <rect x="290" y="1680" width="500" height="120" rx="60" fill="#fff"/>
+        <text x="540" y="1758" font-family="Cairo, Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle" fill="#0369a1">اطلب الآن</text>
+      </svg></div>
+      <button class="btn" onclick="dl('prc3','pricing_03_store')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 4 - أنظمة</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="prc4">
+        <defs><linearGradient id="pr4bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#075985"/></linearGradient></defs>
+        <rect width="1080" height="1920" fill="url(#pr4bg)"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="150" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <rect x="80" y="400" width="920" height="1180" rx="30" fill="#0c4a6e" stroke="#0ea5e9" stroke-width="4"/>
+        <text x="540" y="520" font-family="Cairo, Arial, sans-serif" font-size="48" font-weight="800" text-anchor="middle" fill="#fff">باقة الأنظمة المخصصة</text>
+        <text x="540" y="600" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#7dd3fc">CRM • أنظمة إدارة • تطبيقات</text>
+        <text x="540" y="780" font-family="Cairo, Arial, sans-serif" font-size="48" text-anchor="middle" fill="#bae6fd">ابتداءً من</text>
+        <text x="540" y="910" font-family="Cairo, Arial, sans-serif" font-size="120" font-weight="900" text-anchor="middle" fill="#0ea5e9">12,000 ريال</text>
+        <line x1="380" y1="980" x2="700" y2="980" stroke="#0ea5e9" stroke-width="4"/>
+        <g font-family="Cairo, Arial, sans-serif" font-size="32" fill="#bae6fd">
+          <text x="540" y="1080" text-anchor="middle">✓ تحليل احتياجات تفصيلي</text>
+          <text x="540" y="1150" text-anchor="middle">✓ تصميم النظام حسب أعمالك</text>
+          <text x="540" y="1220" text-anchor="middle">✓ تكامل مع أنظمتك الحالية</text>
+          <text x="540" y="1290" text-anchor="middle">✓ تدريب فريقك على الاستخدام</text>
+          <text x="540" y="1360" text-anchor="middle">✓ صيانة سنوية</text>
+          <text x="540" y="1430" font-weight="700" fill="#0ea5e9" text-anchor="middle">⚡ المدة: حسب حجم المشروع</text>
+        </g>
+        <rect x="290" y="1660" width="500" height="120" rx="60" fill="#0ea5e9"/>
+        <text x="540" y="1738" font-family="Cairo, Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle" fill="#fff">احجز تحليل مجاني</text>
+      </svg></div>
+      <button class="btn" onclick="dl('prc4','pricing_04_systems')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 5 - CTA</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="prc5">
+        <defs><linearGradient id="pr5bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0369a1"/><stop offset="1" stop-color="#0c4a6e"/></linearGradient></defs>
+        <rect width="1080" height="1920" fill="url(#pr5bg)"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="150" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="550" font-family="Cairo, Arial, sans-serif" font-size="160" text-anchor="middle">🎁</text>
+        <text x="540" y="750" font-family="Cairo, Arial, sans-serif" font-size="80" font-weight="900" text-anchor="middle" fill="#fff">عرض حصري</text>
+        <line x1="340" y1="850" x2="740" y2="850" stroke="#0ea5e9" stroke-width="5"/>
+        <text x="540" y="980" font-family="Cairo, Arial, sans-serif" font-size="48" text-anchor="middle" fill="#bae6fd">استشارة مجانية</text>
+        <text x="540" y="1050" font-family="Cairo, Arial, sans-serif" font-size="48" text-anchor="middle" fill="#bae6fd">+ عرض سعر مفصّل</text>
+        <text x="540" y="1180" font-family="Cairo, Arial, sans-serif" font-size="42" text-anchor="middle" fill="#7dd3fc">خلال 24 ساعة من تواصلك</text>
+        <rect x="240" y="1350" width="600" height="140" rx="70" fill="#0ea5e9"/>
+        <text x="540" y="1440" font-family="Cairo, Arial, sans-serif" font-size="48" font-weight="900" text-anchor="middle" fill="#fff">راسلنا الآن 💬</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#fff">irtiqatech.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('prc5','pricing_05_cta')">⬇ تنزيل</button>
+    </div>
+
+  </div>
+  <button class="btn btn-all" onclick="dlAll(['prc-cov','prc1','prc2','prc3','prc4','prc5'],['pricing_COVER','pricing_01_intro','pricing_02_website','pricing_03_store','pricing_04_systems','pricing_05_cta'],[1080,1080,1080,1080,1080,1080],[1080,1920,1920,1920,1920,1920])">⬇ تنزيل كل شرائح "الأسعار"</button>
+  <div class="note">💡 ملاحظة: الأسعار مقترحة وقابلة للتعديل. عدّل أرقامك في Canva/Figma إذا كانت تختلف.</div>
+</div>
+
+<!-- ============================================ -->
+<!-- 4. آراء العملاء -->
+<!-- ============================================ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">4</div>
+    <div class="section-info">
+      <h2>آراء العملاء (4 شرائح)</h2>
+      <p>قوالب جاهزة — استبدل الاقتباسات بشهادات عملائك الحقيقيين</p>
+    </div>
+  </div>
+  <div class="grid">
+
+    <div class="slide cover">
+      <div class="slide-label">COVER</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" id="tst-cov">
+        <defs><linearGradient id="tc1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#0284c7"/></linearGradient></defs>
+        <rect width="1080" height="1080" fill="url(#tc1)"/>
+        <g transform="translate(540, 470)" fill="#fff">
+          <polygon points="0,-80 24,-24 80,-12 36,28 48,84 0,56 -48,84 -36,28 -80,-12 -24,-24"/>
+        </g>
+        <text x="540" y="780" font-family="Cairo, Arial, sans-serif" font-size="60" font-weight="800" text-anchor="middle" fill="#fff">آراء العملاء</text>
+      </svg></div>
+      <button class="btn" onclick="dl('tst-cov','testimonials_COVER', 1080, 1080)">⬇ COVER</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 1 - مقدمة</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="tst1">
+        <defs><linearGradient id="tt1bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0369a1"/><stop offset="1" stop-color="#0c4a6e"/></linearGradient></defs>
+        <rect width="1080" height="1920" fill="url(#tt1bg)"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="150" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <g font-size="120" text-anchor="middle">
+          <text x="380" y="650" fill="#fbbf24">⭐</text>
+          <text x="460" y="650" fill="#fbbf24">⭐</text>
+          <text x="540" y="650" fill="#fbbf24">⭐</text>
+          <text x="620" y="650" fill="#fbbf24">⭐</text>
+          <text x="700" y="650" fill="#fbbf24">⭐</text>
+        </g>
+        <text x="540" y="850" font-family="Cairo, Arial, sans-serif" font-size="100" font-weight="900" text-anchor="middle" fill="#fff">5.0</text>
+        <text x="540" y="930" font-family="Cairo, Arial, sans-serif" font-size="40" text-anchor="middle" fill="#bae6fd">تقييم عملائنا</text>
+        <line x1="380" y1="1000" x2="700" y2="1000" stroke="#0ea5e9" stroke-width="4"/>
+        <text x="540" y="1130" font-family="Cairo, Arial, sans-serif" font-size="44" text-anchor="middle" fill="#fff">ماذا يقولون عنا؟</text>
+        <text x="540" y="1210" font-family="Cairo, Arial, sans-serif" font-size="34" text-anchor="middle" fill="#7dd3fc">اقرأ شهادات عملائنا الكرام ✨</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#fff">@digital.solutions.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('tst1','testimonials_01_intro')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 2 - شهادة 1</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="tst2">
+        <rect width="1080" height="1920" fill="#f1f5f9"/>
+        <rect width="1080" height="320" fill="#0369a1"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="160" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="540" font-family="Georgia, serif" font-size="200" font-weight="900" text-anchor="middle" fill="#0ea5e9" opacity="0.4">"</text>
+        <g font-family="Cairo, Arial, sans-serif" fill="#1e293b" text-anchor="middle">
+          <text x="540" y="780" font-size="44" font-weight="600">تجربة احترافية من البداية</text>
+          <text x="540" y="850" font-size="44" font-weight="600">للنهاية، التزموا بالوقت</text>
+          <text x="540" y="920" font-size="44" font-weight="600">والجودة فاقت توقعاتي.</text>
+          <text x="540" y="990" font-size="44" font-weight="600">أنصح أي شخص يبحث عن</text>
+          <text x="540" y="1060" font-size="44" font-weight="600">مطوّر موثوق.</text>
+        </g>
+        <g font-size="60" text-anchor="middle">
+          <text x="420" y="1240" fill="#fbbf24">⭐</text>
+          <text x="500" y="1240" fill="#fbbf24">⭐</text>
+          <text x="540" y="1240" fill="#fbbf24">⭐</text>
+          <text x="580" y="1240" fill="#fbbf24">⭐</text>
+          <text x="660" y="1240" fill="#fbbf24">⭐</text>
+        </g>
+        <line x1="380" y1="1340" x2="700" y2="1340" stroke="#0ea5e9" stroke-width="3"/>
+        <text x="540" y="1430" font-family="Cairo, Arial, sans-serif" font-size="40" font-weight="800" text-anchor="middle" fill="#0f172a">أحمد العتيبي</text>
+        <text x="540" y="1490" font-family="Cairo, Arial, sans-serif" font-size="30" text-anchor="middle" fill="#64748b">مدير شركة "س" — الرياض</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#64748b">@digital.solutions.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('tst2','testimonials_02_quote1')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 3 - شهادة 2</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="tst3">
+        <defs><linearGradient id="tt3bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0ea5e9"/><stop offset="1" stop-color="#0369a1"/></linearGradient></defs>
+        <rect width="1080" height="1920" fill="url(#tt3bg)"/>
+        <g transform="translate(80, 80) scale(1.5) translate(-32,-32)">
+          <rect width="64" height="64" rx="16" fill="#fff"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#0369a1"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#0369a1"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#0369a1"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#0369a1" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#0ea5e9"/>
+        </g>
+        <text x="200" y="150" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="540" font-family="Georgia, serif" font-size="200" font-weight="900" text-anchor="middle" fill="#fff" opacity="0.4">"</text>
+        <g font-family="Cairo, Arial, sans-serif" fill="#fff" text-anchor="middle">
+          <text x="540" y="780" font-size="44" font-weight="600">المتجر اللي بنوه لنا</text>
+          <text x="540" y="850" font-size="44" font-weight="600">رفع مبيعاتنا 3 أضعاف</text>
+          <text x="540" y="920" font-size="44" font-weight="600">في 60 يوم بس!</text>
+          <text x="540" y="990" font-size="44" font-weight="600">دعم متواصل وسرعة في</text>
+          <text x="540" y="1060" font-size="44" font-weight="600">الاستجابة 👏</text>
+        </g>
+        <g font-size="60" text-anchor="middle">
+          <text x="420" y="1240" fill="#fbbf24">⭐</text>
+          <text x="500" y="1240" fill="#fbbf24">⭐</text>
+          <text x="540" y="1240" fill="#fbbf24">⭐</text>
+          <text x="580" y="1240" fill="#fbbf24">⭐</text>
+          <text x="660" y="1240" fill="#fbbf24">⭐</text>
+        </g>
+        <line x1="380" y1="1340" x2="700" y2="1340" stroke="#fff" stroke-width="3"/>
+        <text x="540" y="1430" font-family="Cairo, Arial, sans-serif" font-size="40" font-weight="800" text-anchor="middle" fill="#fff">سارة الزهراني</text>
+        <text x="540" y="1490" font-family="Cairo, Arial, sans-serif" font-size="30" text-anchor="middle" fill="#bae6fd">صاحبة متجر — جدة</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#bae6fd">@digital.solutions.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('tst3','testimonials_03_quote2')">⬇ تنزيل</button>
+    </div>
+
+  </div>
+  <button class="btn btn-all" onclick="dlAll(['tst-cov','tst1','tst2','tst3'],['testimonials_COVER','testimonials_01_intro','testimonials_02_quote1','testimonials_03_quote2'],[1080,1080,1080,1080],[1080,1920,1920,1920])">⬇ تنزيل كل شرائح "آراء العملاء"</button>
+  <div class="note">💡 الشهادات الموجودة عيّنات. استبدلها بشهادات عملائك الفعليين عبر Canva — افتح الـ PNG في Canva، عدّل النص والاسم.</div>
+</div>
+
+<!-- ============================================ -->
+<!-- 5. تواصل -->
+<!-- ============================================ -->
+<div class="section">
+  <div class="section-header">
+    <div class="section-num">5</div>
+    <div class="section-info">
+      <h2>تواصل (4 شرائح)</h2>
+      <p>كل طرق التواصل في مكان واحد سهل الوصول</p>
+    </div>
+  </div>
+  <div class="grid">
+
+    <div class="slide cover">
+      <div class="slide-label">COVER</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" id="cnt-cov">
+        <defs><linearGradient id="cc1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#075985"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs>
+        <rect width="1080" height="1080" fill="url(#cc1)"/>
+        <g transform="translate(540, 470)" stroke="#fff" stroke-width="28" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="-180" y="-130" width="360" height="260" rx="20"/>
+          <polyline points="-180,-100 0,40 180,-100"/>
+        </g>
+        <text x="540" y="800" font-family="Cairo, Arial, sans-serif" font-size="80" font-weight="800" text-anchor="middle" fill="#fff">تواصل</text>
+      </svg></div>
+      <button class="btn" onclick="dl('cnt-cov','contact_COVER', 1080, 1080)">⬇ COVER</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 1 - تحية</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="cnt1">
+        <defs><linearGradient id="ct1bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0369a1"/><stop offset="1" stop-color="#0c4a6e"/></linearGradient></defs>
+        <rect width="1080" height="1920" fill="url(#ct1bg)"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="150" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="600" font-family="Cairo, Arial, sans-serif" font-size="160" text-anchor="middle">📞</text>
+        <text x="540" y="800" font-family="Cairo, Arial, sans-serif" font-size="100" font-weight="900" text-anchor="middle" fill="#fff">تواصل معنا</text>
+        <line x1="340" y1="900" x2="740" y2="900" stroke="#0ea5e9" stroke-width="5"/>
+        <text x="540" y="1060" font-family="Cairo, Arial, sans-serif" font-size="46" text-anchor="middle" fill="#bae6fd">فريقنا جاهز للرد على</text>
+        <text x="540" y="1130" font-family="Cairo, Arial, sans-serif" font-size="46" text-anchor="middle" fill="#bae6fd">استفساراتك خلال ساعة ⚡</text>
+        <text x="540" y="1280" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="700" text-anchor="middle" fill="#0ea5e9">كل وسائل التواصل في الداخل ✨</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#fff">irtiqatech.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('cnt1','contact_01_intro')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 2 - وسائل</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="cnt2">
+        <rect width="1080" height="1920" fill="#f1f5f9"/>
+        <rect width="1080" height="320" fill="#0369a1"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="160" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="450" font-family="Cairo, Arial, sans-serif" font-size="50" font-weight="800" text-anchor="middle" fill="#0f172a">اختر الطريقة الأنسب لك</text>
+        <g font-family="Cairo, Arial, sans-serif" fill="#1e293b">
+          <rect x="80" y="560" width="920" height="180" rx="20" fill="#fff" stroke="#0ea5e9" stroke-width="3"/>
+          <text x="180" y="660" font-size="80">💬</text>
+          <text x="540" y="640" font-size="38" font-weight="800">واتساب</text>
+          <text x="540" y="700" font-size="34" fill="#0369a1">0502452288</text>
+
+          <rect x="80" y="780" width="920" height="180" rx="20" fill="#fff" stroke="#0ea5e9" stroke-width="3"/>
+          <text x="180" y="880" font-size="80">📧</text>
+          <text x="540" y="860" font-size="38" font-weight="800">البريد الإلكتروني</text>
+          <text x="540" y="920" font-size="32" fill="#0369a1">basim.devs@gmail.com</text>
+
+          <rect x="80" y="1000" width="920" height="180" rx="20" fill="#fff" stroke="#0ea5e9" stroke-width="3"/>
+          <text x="180" y="1100" font-size="80">🌐</text>
+          <text x="540" y="1080" font-size="38" font-weight="800">الموقع الإلكتروني</text>
+          <text x="540" y="1140" font-size="34" fill="#0369a1">irtiqatech.sa</text>
+
+          <rect x="80" y="1220" width="920" height="180" rx="20" fill="#fff" stroke="#0ea5e9" stroke-width="3"/>
+          <text x="180" y="1320" font-size="80">📱</text>
+          <text x="540" y="1300" font-size="38" font-weight="800">إنستغرام</text>
+          <text x="540" y="1360" font-size="34" fill="#0369a1">@digital.solutions.sa</text>
+        </g>
+        <rect x="290" y="1500" width="500" height="120" rx="60" fill="#0ea5e9"/>
+        <text x="540" y="1578" font-family="Cairo, Arial, sans-serif" font-size="42" font-weight="800" text-anchor="middle" fill="#fff">راسلنا الآن 💬</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#64748b">جاهزون لخدمتك</text>
+      </svg></div>
+      <button class="btn" onclick="dl('cnt2','contact_02_methods')">⬇ تنزيل</button>
+    </div>
+
+    <div class="slide">
+      <div class="slide-label">شريحة 3 - أوقات</div>
+      <div class="slide-preview"><svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg" id="cnt3">
+        <defs><linearGradient id="ct3bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f172a"/><stop offset="1" stop-color="#075985"/></linearGradient></defs>
+        <rect width="1080" height="1920" fill="url(#ct3bg)"/>
+        <g transform="translate(80, 80) scale(1.5) translate(0,0)">
+          <rect width="64" height="64" rx="16" fill="#0ea5e9"/>
+          <rect x="12" y="32" width="8" height="12" rx="4" fill="#fff"/><rect x="28" y="24" width="8" height="20" rx="4" fill="#fff"/><rect x="44" y="18" width="8" height="26" rx="4" fill="#fff"/>
+          <path d="M16 32 L32 24 L48 18 L56 13" fill="none" stroke="#fff" stroke-width="2.5"/>
+          <circle cx="56" cy="13" r="4.5" fill="#fff"/>
+        </g>
+        <text x="200" y="150" font-family="Cairo, Arial, sans-serif" font-size="38" font-weight="800" fill="#fff">IrtiqaTech</text>
+        <text x="540" y="500" font-family="Cairo, Arial, sans-serif" font-size="160" text-anchor="middle">⏰</text>
+        <text x="540" y="700" font-family="Cairo, Arial, sans-serif" font-size="70" font-weight="900" text-anchor="middle" fill="#fff">ضمان الرد</text>
+        <line x1="380" y1="800" x2="700" y2="800" stroke="#0ea5e9" stroke-width="4"/>
+        <rect x="180" y="900" width="720" height="200" rx="20" fill="#0c4a6e" stroke="#0ea5e9" stroke-width="2"/>
+        <text x="540" y="990" font-family="Cairo, Arial, sans-serif" font-size="36" text-anchor="middle" fill="#bae6fd">من السبت إلى الخميس</text>
+        <text x="540" y="1060" font-family="Cairo, Arial, sans-serif" font-size="50" font-weight="900" text-anchor="middle" fill="#fff">9 صباحاً — 9 مساءً</text>
+
+        <rect x="180" y="1150" width="720" height="200" rx="20" fill="#0ea5e9"/>
+        <text x="540" y="1240" font-family="Cairo, Arial, sans-serif" font-size="36" text-anchor="middle" fill="#fff">نضمن الرد على رسائلك</text>
+        <text x="540" y="1310" font-family="Cairo, Arial, sans-serif" font-size="50" font-weight="900" text-anchor="middle" fill="#fff">خلال ساعة واحدة ⚡</text>
+
+        <text x="540" y="1500" font-family="Cairo, Arial, sans-serif" font-size="36" text-anchor="middle" fill="#bae6fd">ولو خارج الدوام؟</text>
+        <text x="540" y="1570" font-family="Cairo, Arial, sans-serif" font-size="36" text-anchor="middle" fill="#7dd3fc">نرد أول يوم عمل تالٍ</text>
+        <text x="540" y="1800" font-family="Cairo, Arial, sans-serif" font-size="32" text-anchor="middle" fill="#fff">irtiqatech.sa</text>
+      </svg></div>
+      <button class="btn" onclick="dl('cnt3','contact_03_hours')">⬇ تنزيل</button>
+    </div>
+
+  </div>
+  <button class="btn btn-all" onclick="dlAll(['cnt-cov','cnt1','cnt2','cnt3'],['contact_COVER','contact_01_intro','contact_02_methods','contact_03_hours'],[1080,1080,1080,1080],[1080,1920,1920,1920])">⬇ تنزيل كل شرائح "تواصل"</button>
+</div>
+
+<div class="steps" style="background:#dcfce7;border-color:#16a34a">
+  <h3 style="color:#166534">✅ بعد تحميل وتركيب كل Highlights:</h3>
+  <ol style="color:#14532d">
+    <li>عودة للحساب — البروفايل يبدو غني ومكتمل ✨</li>
+    <li>تواصل معي وأبدأ لك تصميم الـ 6 منشورات التأسيسية للشبكة</li>
+    <li>ابدأ نشر ستوري يومي بسيط (حتى لو إعادة نشر شرائح من هنا) — لتُبقي الحساب "حياً"</li>
+  </ol>
+</div>
+
+</div>
+
+<script>
+async function dl(svgId, name, w, h) {
+  w = w || 1080;
+  h = h || 1920;
+  const svg = document.getElementById(svgId);
+  const clone = svg.cloneNode(true);
+  clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+  if (!clone.getAttribute('viewBox')) {
+    clone.setAttribute('viewBox', `0 0 ${w} ${h}`);
+  }
+  const svgData = new XMLSerializer().serializeToString(clone);
+  const blob = new Blob([svgData], {type: 'image/svg+xml;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const img = new Image();
+  img.onload = function() {
+    const canvas = document.createElement('canvas');
+    canvas.width = w;
+    canvas.height = h;
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(img, 0, 0, w, h);
+    URL.revokeObjectURL(url);
+    canvas.toBlob(b => {
+      const link = document.createElement('a');
+      link.download = name + '.png';
+      link.href = URL.createObjectURL(b);
+      link.click();
+    }, 'image/png');
+  };
+  img.src = url;
+}
+
+async function dlAll(ids, names, widths, heights) {
+  for (let i = 0; i < ids.length; i++) {
+    await new Promise(resolve => {
+      setTimeout(() => {
+        dl(ids[i], names[i], widths[i], heights[i]);
+        resolve();
+      }, i * 600);
+    });
+  }
+}
+</script>
+
+</body>
+</html>

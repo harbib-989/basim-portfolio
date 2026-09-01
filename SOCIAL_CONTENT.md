@@ -16,7 +16,7 @@
 موثّق رسمياً لدى منصة العمل الحر — رمز التوثيق: FL-144293594
 
 إذا كنت تبحث عن حل تقني موثوق وسريع التنفيذ، تواصل معي:
-🌐 basim-dev.com
+🌐 irtiqatech.sa
 📧 basim.devs@gmail.com
 📞 0502452288
 
@@ -38,7 +38,7 @@ I specialize in:
 Serving companies across Saudi Arabia and the Gulf region.
 
 📌 Certified Freelancer — FL-144293594
-🌐 basim-dev.com
+🌐 irtiqatech.sa
 📩 basim.devs@gmail.com
 
 Let's build something great together!
@@ -57,7 +57,7 @@ Let's build something great together!
 
 موثّق رسمياً لدى منصة العمل الحر 🔐
 
-🌐 basim-dev.com
+🌐 irtiqatech.sa
 
 تواصل معي إذا كنت تحتاج حل تقني 💻
 
@@ -76,7 +76,7 @@ Let's build something great together!
 ✅ استشارات التحول الرقمي
 
 📌 FL-144293594 (موثّق رسمياً)
-🌐 basim-dev.com
+🌐 irtiqatech.sa
 
 DM أو واتساب: 0502452288 📲
 
@@ -99,7 +99,7 @@ DM أو واتساب: 0502452288 📲
 رمز التوثيق: FL-144293594
 
 زيارة الموقع من الرابط في البايو 👆
-basim-dev.com
+irtiqatech.sa
 
 —
 #برمجة #تطوير_ويب #تحول_رقمي #أتمتة_الأعمال #مطور_برمجيات
@@ -121,7 +121,7 @@ basim-dev.com
 
 📩 تواصل للحصول على استشارة
 📞 0502452288
-🌐 basim-dev.com
+🌐 irtiqatech.sa
 
 —
 #برمجة #تطوير_ويب #أتمتة #تحول_رقمي #تقنية_المعلومات

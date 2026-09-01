@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <!-- خيار 4: فاخر - أسود وذهبي Premium -->
+  <defs>
+    <radialGradient id="bg4">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+    <linearGradient id="goldlux" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4D03F"/>
+      <stop offset="50%" stop-color="#D4A017"/>
+      <stop offset="100%" stop-color="#9A7B0A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg4)"/>
+
+  <!-- إطار خارجي ذهبي رفيع -->
+  <rect x="40" y="40" width="1000" height="1000" fill="none" stroke="url(#goldlux)" stroke-width="1.5"/>
+  <rect x="55" y="55" width="970" height="970" fill="none" stroke="url(#goldlux)" stroke-width="0.5" opacity="0.5"/>
+
+  <!-- زوايا مزخرفة -->
+  <g stroke="url(#goldlux)" stroke-width="2" fill="none">
+    <!-- يمين علوي -->
+    <path d="M 90 90 L 90 130 M 90 90 L 130 90"/>
+    <path d="M 990 90 L 990 130 M 990 90 L 950 90"/>
+    <path d="M 90 990 L 90 950 M 90 990 L 130 990"/>
+    <path d="M 990 990 L 990 950 M 990 990 L 950 990"/>
+  </g>
+
+  <!-- الشعار: ماسة سداسية مع رمز برمجي -->
+  <g transform="translate(540, 410)">
+    <!-- توهج خفيف -->
+    <circle cx="0" cy="0" r="200" fill="url(#goldlux)" opacity="0.05"/>
+
+    <!-- إطار ذهبي خارجي على شكل معين -->
+    <polygon points="0,-180 156,0 0,180 -156,0" fill="none" stroke="url(#goldlux)" stroke-width="4"/>
+    <polygon points="0,-170 147,0 0,170 -147,0" fill="none" stroke="url(#goldlux)" stroke-width="1" opacity="0.6"/>
+
+    <!-- مربع داخلي -->
+    <polygon points="0,-130 113,0 0,130 -113,0" fill="#0A0A0A" stroke="url(#goldlux)" stroke-width="2"/>
+
+    <!-- رمز برمجي مركزي { } -->
+    <g fill="url(#goldlux)" font-family="Georgia, serif" font-weight="bold">
+      <text x="-55" y="20" font-size="120" text-anchor="middle">{</text>
+      <text x="55" y="20" font-size="120" text-anchor="middle">}</text>
+    </g>
+
+    <!-- نقاط ذهبية في الزوايا -->
+    <circle cx="0" cy="-180" r="6" fill="url(#goldlux)"/>
+    <circle cx="156" cy="0" r="6" fill="url(#goldlux)"/>
+    <circle cx="0" cy="180" r="6" fill="url(#goldlux)"/>
+    <circle cx="-156" cy="0" r="6" fill="url(#goldlux)"/>
+  </g>
+
+  <!-- خط فاصل علوي -->
+  <g transform="translate(540, 650)">
+    <line x1="-220" y1="0" x2="-30" y2="0" stroke="url(#goldlux)" stroke-width="1"/>
+    <circle cx="-20" cy="0" r="3" fill="url(#goldlux)"/>
+    <circle cx="0" cy="0" r="5" fill="url(#goldlux)"/>
+    <circle cx="20" cy="0" r="3" fill="url(#goldlux)"/>
+    <line x1="30" y1="0" x2="220" y2="0" stroke="url(#goldlux)" stroke-width="1"/>
+  </g>
+
+  <!-- النص العربي بأسلوب فاخر -->
+  <text x="540" y="745" font-family="Arial, sans-serif" font-size="100" font-weight="900" text-anchor="middle" fill="url(#goldlux)" letter-spacing="-2">حلول رقمية</text>
+
+  <!-- النص الإنجليزي -->
+  <text x="540" y="820" font-family="Georgia, serif" font-size="36" font-weight="400" text-anchor="middle" fill="#FFFFFF" letter-spacing="14" opacity="0.95">DIGITAL  SOLUTIONS</text>
+
+  <!-- خط فاصل سفلي -->
+  <g transform="translate(540, 870)">
+    <line x1="-220" y1="0" x2="-30" y2="0" stroke="url(#goldlux)" stroke-width="1"/>
+    <polygon points="-15,-5 0,0 -15,5" fill="url(#goldlux)"/>
+    <polygon points="15,-5 0,0 15,5" fill="url(#goldlux)"/>
+    <line x1="30" y1="0" x2="220" y2="0" stroke="url(#goldlux)" stroke-width="1"/>
+  </g>
+
+  <!-- شعار سفلي -->
+  <text x="540" y="930" font-family="Georgia, serif" font-size="22" font-style="italic" text-anchor="middle" fill="url(#goldlux)" opacity="0.8" letter-spacing="3">Premium Web &amp; Software Development</text>
+</svg>

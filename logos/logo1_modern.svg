@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+  <!-- خيار 1: عصري وبسيط - أزرق احترافي + ذهبي -->
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B5394"/>
+      <stop offset="100%" stop-color="#1F4E79"/>
+    </linearGradient>
+    <linearGradient id="gold1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F1C232"/>
+      <stop offset="100%" stop-color="#E69138"/>
+    </linearGradient>
+  </defs>
+
+  <!-- خلفية -->
+  <rect width="1080" height="1080" fill="url(#bg1)"/>
+
+  <!-- زخرفة هندسية خلفية -->
+  <g opacity="0.06" fill="#FFFFFF">
+    <rect x="100" y="100" width="60" height="60" rx="8"/>
+    <rect x="200" y="100" width="60" height="60" rx="8"/>
+    <rect x="100" y="200" width="60" height="60" rx="8"/>
+    <rect x="920" y="920" width="60" height="60" rx="8"/>
+    <rect x="820" y="920" width="60" height="60" rx="8"/>
+    <rect x="920" y="820" width="60" height="60" rx="8"/>
+  </g>
+
+  <!-- الشعار: حرف الحاء المنحوت من بكسلات (يرمز للحلول الرقمية) -->
+  <g transform="translate(540, 420)">
+    <!-- دائرة الخلفية -->
+    <circle cx="0" cy="0" r="180" fill="#FFFFFF" opacity="0.95"/>
+    <circle cx="0" cy="0" r="180" fill="none" stroke="url(#gold1)" stroke-width="6"/>
+
+    <!-- بكسلات تشكل شكل H أو حرف ح مبسط -->
+    <g fill="#0B5394">
+      <!-- العمود الأيسر -->
+      <rect x="-90" y="-70" width="35" height="35" rx="5"/>
+      <rect x="-90" y="-25" width="35" height="35" rx="5"/>
+      <rect x="-90" y="20" width="35" height="35" rx="5"/>
+      <rect x="-90" y="65" width="35" height="35" rx="5"/>
+
+      <!-- الشريط الأوسط -->
+      <rect x="-50" y="-5" width="35" height="35" rx="5"/>
+      <rect x="-10" y="-5" width="35" height="35" rx="5"/>
+      <rect x="30" y="-5" width="35" height="35" rx="5"/>
+
+      <!-- العمود الأيمن -->
+      <rect x="55" y="-70" width="35" height="35" rx="5"/>
+      <rect x="55" y="-25" width="35" height="35" rx="5"/>
+      <rect x="55" y="20" width="35" height="35" rx="5"/>
+      <rect x="55" y="65" width="35" height="35" rx="5"/>
+    </g>
+
+    <!-- نقطة ذهبية مميزة -->
+    <circle cx="80" cy="-80" r="14" fill="url(#gold1)"/>
+  </g>
+
+  <!-- النص العربي -->
+  <text x="540" y="720" font-family="Arial, sans-serif" font-size="96" font-weight="bold" text-anchor="middle" fill="#FFFFFF">حلول رقمية</text>
+
+  <!-- خط ذهبي فاصل -->
+  <rect x="440" y="760" width="200" height="3" fill="url(#gold1)"/>
+
+  <!-- النص الإنجليزي -->
+  <text x="540" y="830" font-family="Arial, sans-serif" font-size="42" font-weight="500" text-anchor="middle" fill="#F1C232" letter-spacing="6">DIGITAL  SOLUTIONS</text>
+
+  <!-- شريط سفلي -->
+  <text x="540" y="910" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#FFFFFF" opacity="0.7">تطوير مواقع • تطبيقات • أنظمة</text>
+</svg>
