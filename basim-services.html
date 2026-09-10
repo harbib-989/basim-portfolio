@@ -156,10 +156,15 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
 .cf-err{display:none;font-size:.74rem;color:#dc2626;margin-top:.3rem}
 .cf-field.invalid input{border-color:#dc2626;box-shadow:0 0 0 3px rgba(220,38,38,.12)}
 .cf-field.invalid .cf-err{display:block}
-.cf-check{flex-direction:row;align-items:flex-start;gap:.5rem}
-.cf-check label{display:flex;align-items:flex-start;gap:.5rem;font-size:.78rem;color:var(--sl);cursor:pointer}
-.cf-check input{width:auto;flex-shrink:0;margin-top:.2rem;accent-color:var(--em)}
+.cf-check label{display:flex;align-items:flex-start;gap:.5rem;width:100%;font-size:.78rem;line-height:1.6;color:var(--sl);cursor:pointer}
+.cf-check input[type="checkbox"]{width:auto;flex-shrink:0;margin-top:.2rem;accent-color:var(--em)}
+.cf-check span{flex:1;min-width:0}
 .cf-check a{color:var(--em);text-decoration:underline;text-underline-offset:2px}
+.cf-status{display:none;font-size:.82rem;border-radius:10px;padding:.75rem 1rem;margin-bottom:.2rem}
+.cf-status.show{display:block}
+.cf-status.ok{background:#dcfce7;color:#166534}
+.cf-status.err{background:#fee2e2;color:#991b1b}
+.cform-btn:disabled{opacity:.65;cursor:not-allowed;transform:none!important}
 .cform input,.cform select,.cform textarea{width:100%;background:var(--off);border:1.5px solid var(--line);border-radius:10px;padding:.72rem .9rem;font-family:'Tajawal';font-size:.88rem;color:var(--ink);outline:none;transition:border-color .2s,box-shadow .2s,background .2s}
 .cform input:focus,.cform select:focus,.cform textarea:focus{border-color:var(--em);box-shadow:0 0 0 3px rgba(59,130,246,.12);background:#fff}
 .cform textarea{resize:vertical;min-height:80px}
@@ -339,18 +344,20 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
   <div class="sec">
     <div class="sec-head rv"><div class="sec-tag">جاهز تبدأ؟</div><h2 class="sec-h2">تواصل الان</h2><p class="sec-p">خلنا نحول مشروعك العقاري لصفحة تسويقية تبيع بدالك</p></div>
     <div class="contact-box rv">
-      <form class="cform" id="reqForm" onsubmit="return sendReq(event)">
+      <form class="cform" id="reqForm" action="https://formspree.io/f/mdawkjdb" method="POST" onsubmit="return sendReq(event)">
         <h3>اطلب صفحتك الآن</h3>
-        <p class="cform-sub">عبّي النموذج ويوصلك الرد على واتساب مباشرة</p>
-        <div class="cf-field" id="rf-name-field"><label for="rf-name">الاسم</label><input id="rf-name" type="text" required placeholder="اسمك الكامل"><p class="cf-err">الرجاء إدخال الاسم كاملاً (حرفان على الأقل)</p></div>
-        <div class="cf-field" id="rf-phone-field"><label for="rf-phone">رقم الجوال</label><input id="rf-phone" type="tel" required placeholder="05XXXXXXXX" dir="ltr" maxlength="13"><p class="cf-err">الرجاء إدخال رقم جوال سعودي صحيح (05XXXXXXXX)</p></div>
-        <div class="cf-field"><label for="rf-type">نوع العقار</label><select id="rf-type"><option>شقق تمليك</option><option>فلل</option><option>أراضي</option><option>مشروع متكامل</option><option>أخرى</option></select></div>
-        <div class="cf-field"><label for="rf-msg">تفاصيل إضافية</label><textarea id="rf-msg" placeholder="اكتب نبذة مختصرة عن مشروعك..."></textarea></div>
+        <p class="cform-sub">عبّي النموذج وسنرد عليك في أقرب وقت</p>
+        <input type="hidden" name="_subject" value="طلب صفحة تسويقية عقارية — بيع عقارك">
+        <div id="rf-status" class="cf-status" role="status" aria-live="polite"></div>
+        <div class="cf-field" id="rf-name-field"><label for="rf-name">الاسم</label><input id="rf-name" name="name" type="text" required placeholder="اسمك الكامل"><p class="cf-err">الرجاء إدخال الاسم كاملاً (حرفان على الأقل)</p></div>
+        <div class="cf-field" id="rf-phone-field"><label for="rf-phone">رقم الجوال</label><input id="rf-phone" name="phone" type="tel" required placeholder="05XXXXXXXX" dir="ltr" maxlength="13"><p class="cf-err">الرجاء إدخال رقم جوال سعودي صحيح (05XXXXXXXX)</p></div>
+        <div class="cf-field"><label for="rf-type">نوع العقار</label><select id="rf-type" name="property_type"><option>شقق تمليك</option><option>فلل</option><option>أراضي</option><option>مشروع متكامل</option><option>أخرى</option></select></div>
+        <div class="cf-field"><label for="rf-msg">تفاصيل إضافية</label><textarea id="rf-msg" name="details" placeholder="اكتب نبذة مختصرة عن مشروعك..."></textarea></div>
         <div class="cf-field cf-check" id="rf-agree-field">
           <label><input id="rf-agree" type="checkbox" required><span>أوافق على <a href="/terms.html" target="_blank">الشروط والأحكام</a> و<a href="/privacy.html" target="_blank">سياسة الخصوصية</a></span></label>
           <p class="cf-err">يجب الموافقة على الشروط والأحكام وسياسة الخصوصية للمتابعة</p>
         </div>
-        <button type="submit" class="cform-btn"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>أرسل الطلب عبر واتساب</button>
+        <button type="submit" id="rf-submit" class="cform-btn"><svg viewBox="0 0 24 24"><path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/></svg>أرسل الطلب</button>
       </form>
     </div>
   </div>
@@ -379,8 +386,25 @@ function sendReq(e){
   setFieldError('rf-phone',!phoneOk);
   setFieldError('rf-agree',!agreeOk);
   if(!nameOk||!phoneOk||!agreeOk){(!nameOk?document.getElementById('rf-name'):!phoneOk?document.getElementById('rf-phone'):document.getElementById('rf-agree')).focus();return false}
-  var msg='طلب صفحة تسويقية عقارية\nالاسم: '+n+'\nالجوال: '+p+'\nنوع العقار: '+t+(m?'\nتفاصيل: '+m:'')+'\n— مُرسل من موقع بيع عقارك';
-  window.open('https://wa.me/966502452288?text='+encodeURIComponent(msg),'_blank');
+  var form=document.getElementById('reqForm'),btn=document.getElementById('rf-submit'),status=document.getElementById('rf-status');
+  status.className='cf-status';status.textContent='';
+  btn.disabled=true;var origHtml=btn.innerHTML;btn.textContent='جاري الإرسال...';
+  fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+    .then(function(res){
+      if(res.ok){
+        status.textContent='شكراً لطلبك! تم إرسال بياناتك وسنرد عليك خلال ٢٤ ساعة.';
+        status.className='cf-status show ok';
+        form.reset();
+      } else {
+        status.textContent='حدث خطأ أثناء الإرسال. جرّب مرة أخرى أو تواصل عبر الواتساب.';
+        status.className='cf-status show err';
+      }
+    })
+    .catch(function(){
+      status.textContent='حدث خطأ في الاتصال. تحقق من الإنترنت أو تواصل عبر الواتساب.';
+      status.className='cf-status show err';
+    })
+    .finally(function(){btn.disabled=false;btn.innerHTML=origHtml});
   return false
 }
 document.getElementById('rf-name').addEventListener('input',function(){if(document.getElementById('rf-name-field').classList.contains('invalid'))setFieldError('rf-name',this.value.trim().length<2)});
