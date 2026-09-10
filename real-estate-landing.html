@@ -230,6 +230,14 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
 
 /* CONTACT */
 .contact-card{max-width:680px;margin:0 auto;background:#fff;border:1px solid rgba(0,0,0,.05);border-radius:24px;padding:3rem;box-shadow:0 8px 40px rgba(0,0,0,.04);position:relative;overflow:hidden}
+.demo-note{display:flex;align-items:center;gap:.6rem;background:#FEF9EF;border:1px solid var(--sand);border-radius:12px;padding:.85rem 1.1rem;margin-bottom:1.6rem;font-size:.86rem;color:var(--slate);line-height:1.7}
+.demo-note strong{color:var(--em-deep)}
+.demo-note a{color:var(--em);font-weight:700;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
+.fgrp input:disabled,.fgrp select:disabled,.fgrp textarea:disabled{background:#F1F1EF;color:var(--mist);cursor:not-allowed}
+.f-check input:disabled{cursor:not-allowed}
+.f-check label:has(input:disabled){cursor:not-allowed;opacity:.6}
+.form-go:disabled{background:var(--mist);cursor:not-allowed;box-shadow:none}
+.form-go:disabled:hover{transform:none}
 .contact-card::before{content:'';position:absolute;top:0;right:0;left:0;height:4px;background:linear-gradient(90deg,var(--em),var(--em-glow),var(--sand))}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:.8rem}
 .fgrp{margin-bottom:.8rem}
@@ -612,14 +620,18 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
       <p class="sec-p">سجّل بياناتك وسيتواصل معك مستشار عقاري خلال ساعات</p>
     </div>
     <div class="contact-card rv">
-      <div class="frow"><div class="fgrp" id="f-name"><label>الاسم الكامل</label><input id="in-name" type="text" placeholder="أدخل اسمك الكامل"><p class="f-err">الرجاء إدخال الاسم كاملاً (حرفان على الأقل)</p></div><div class="fgrp" id="f-phone"><label>رقم الجوال</label><input id="in-phone" type="tel" placeholder="05XXXXXXXX" dir="ltr" maxlength="13"><p class="f-err">الرجاء إدخال رقم جوال سعودي صحيح (05XXXXXXXX)</p></div></div>
-      <div class="frow"><div class="fgrp" id="f-email"><label>البريد الإلكتروني</label><input id="in-email" type="email" placeholder="example@email.com" dir="ltr"><p class="f-err">الرجاء إدخال بريد إلكتروني صحيح</p></div><div class="fgrp"><label>الشقة المفضلة</label><select><option value="">اختر النموذج</option><option>نموذج A — ١٢٠م² (٤٥٠ ألف)</option><option>نموذج B — ١٥٠م² (٥٨٠ ألف)</option><option>نموذج C — ٢٠٠م² (٧٥٠ ألف)</option></select></div></div>
-      <div class="fgrp"><label>ملاحظات إضافية</label><textarea placeholder="اكتب استفسارك هنا..."></textarea></div>
+      <div class="demo-note">
+        <span>ℹ️</span>
+        <span><strong>هذا نموذج توضيحي</strong> لعرض فكرة صفحات بيع العقارات وغير مفعّل فعليًا. لطلب صفحة حقيقية لمشروعك، تواصل عبر <a href="/sell-your-property.html">بيع عقارك</a>.</span>
+      </div>
+      <div class="frow"><div class="fgrp" id="f-name"><label>الاسم الكامل</label><input id="in-name" type="text" placeholder="أدخل اسمك الكامل" disabled><p class="f-err">الرجاء إدخال الاسم كاملاً (حرفان على الأقل)</p></div><div class="fgrp" id="f-phone"><label>رقم الجوال</label><input id="in-phone" type="tel" placeholder="05XXXXXXXX" dir="ltr" maxlength="13" disabled><p class="f-err">الرجاء إدخال رقم جوال سعودي صحيح (05XXXXXXXX)</p></div></div>
+      <div class="frow"><div class="fgrp" id="f-email"><label>البريد الإلكتروني</label><input id="in-email" type="email" placeholder="example@email.com" dir="ltr" disabled><p class="f-err">الرجاء إدخال بريد إلكتروني صحيح</p></div><div class="fgrp"><label>الشقة المفضلة</label><select disabled><option value="">اختر النموذج</option><option>نموذج A — ١٢٠م² (٤٥٠ ألف)</option><option>نموذج B — ١٥٠م² (٥٨٠ ألف)</option><option>نموذج C — ٢٠٠م² (٧٥٠ ألف)</option></select></div></div>
+      <div class="fgrp"><label>ملاحظات إضافية</label><textarea placeholder="اكتب استفسارك هنا..." disabled></textarea></div>
       <div class="fgrp f-check" id="f-agree">
-        <label><input id="in-agree" type="checkbox"><span>أوافق على <a href="/terms.html" target="_blank">الشروط والأحكام</a> و<a href="/privacy.html" target="_blank">سياسة الخصوصية</a></span></label>
+        <label><input id="in-agree" type="checkbox" disabled><span>أوافق على <a href="/terms.html" target="_blank">الشروط والأحكام</a> و<a href="/privacy.html" target="_blank">سياسة الخصوصية</a></span></label>
         <p class="f-err">يجب الموافقة على الشروط والأحكام وسياسة الخصوصية للمتابعة</p>
       </div>
-      <button class="form-go" onclick="return submitBooking(this)">أرسل طلب الحجز</button>
+      <button class="form-go" disabled title="نموذج توضيحي — غير مفعّل">نموذج توضيحي — غير مفعّل</button>
     </div>
   </div>
 </section>
