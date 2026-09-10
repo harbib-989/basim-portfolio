@@ -17,7 +17,7 @@ export default defineConfig({
         refund: resolve(import.meta.dirname, 'refund.html'),
         realEstate: resolve(import.meta.dirname, 'real-estate-landing.html'),
         realEstate2: resolve(import.meta.dirname, 'real-estate-landing-2.html'),
-        basimServices: resolve(import.meta.dirname, 'basim-services.html'),
+        sellYourProperty: resolve(import.meta.dirname, 'sell-your-property.html'),
       },
     },
   },
