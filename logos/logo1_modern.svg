@@ -55,7 +55,7 @@
   </g>
 
   <!-- النص العربي -->
-  <text x="540" y="720" font-family="Arial, sans-serif" font-size="96" font-weight="bold" text-anchor="middle" fill="#FFFFFF">حلول رقمية</text>
+  <text x="540" y="720" font-family="Arial, sans-serif" font-size="96" font-weight="bold" text-anchor="middle" fill="#FFFFFF">IrtiqaTech</text>
 
   <!-- خط ذهبي فاصل -->
   <rect x="440" y="760" width="200" height="3" fill="url(#gold1)"/>

@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /brand.html
 
-Sitemap: https://basim-dev.com/sitemap.xml
+Sitemap: https://irtiqatech.sa/sitemap.xml

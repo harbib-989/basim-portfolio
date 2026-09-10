@@ -63,8 +63,8 @@
     </g>
   </g>
 
-  <!-- خط عربي مزخرف "حلول رقمية" -->
-  <text x="540" y="690" font-family="Arial, sans-serif" font-size="110" font-weight="900" text-anchor="middle" fill="url(#bluegrad)" letter-spacing="-2">حلول رقمية</text>
+  <!-- خط عربي مزخرف "IrtiqaTech" -->
+  <text x="540" y="690" font-family="Arial, sans-serif" font-size="110" font-weight="900" text-anchor="middle" fill="url(#bluegrad)" letter-spacing="-2">IrtiqaTech</text>
 
   <!-- خط فاصل ذهبي -->
   <g transform="translate(540, 730)">

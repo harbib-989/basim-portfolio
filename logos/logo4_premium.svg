@@ -62,7 +62,7 @@
   </g>
 
   <!-- النص العربي بأسلوب فاخر -->
-  <text x="540" y="745" font-family="Arial, sans-serif" font-size="100" font-weight="900" text-anchor="middle" fill="url(#goldlux)" letter-spacing="-2">حلول رقمية</text>
+  <text x="540" y="745" font-family="Arial, sans-serif" font-size="100" font-weight="900" text-anchor="middle" fill="url(#goldlux)" letter-spacing="-2">IrtiqaTech</text>
 
   <!-- النص الإنجليزي -->
   <text x="540" y="820" font-family="Georgia, serif" font-size="36" font-weight="400" text-anchor="middle" fill="#FFFFFF" letter-spacing="14" opacity="0.95">DIGITAL  SOLUTIONS</text>
