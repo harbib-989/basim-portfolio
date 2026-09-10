@@ -17,7 +17,7 @@
 
 إذا كنت تبحث عن حل تقني موثوق وسريع التنفيذ، تواصل معي:
 🌐 irtiqatech.sa
-📧 basim.devs@gmail.com
+📧 info@irtiqatech.sa
 📞 0502452288
 
 #برمجة #تطوير_ويب #تحول_رقمي #أتمتة #فريلانسر #السعودية
@@ -39,7 +39,7 @@ Serving companies across Saudi Arabia and the Gulf region.
 
 📌 Certified Freelancer — FL-144293594
 🌐 irtiqatech.sa
-📩 basim.devs@gmail.com
+📩 info@irtiqatech.sa
 
 Let's build something great together!
 

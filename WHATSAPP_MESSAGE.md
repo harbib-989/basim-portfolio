@@ -40,7 +40,7 @@
 
 للتواصل:
 📞 0502452288
-📧 basim.devs@gmail.com
+📧 info@irtiqatech.sa
 ```
 
 ---
