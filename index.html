@@ -676,6 +676,7 @@
         agreeTerms: { el: document.getElementById('agree-terms'), err: document.getElementById('agree-terms-error') }
       };
       var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var nameRe = /^[ء-يa-zA-Z\s'-]{2,}$/;
 
       function setError(key, msg) {
         var f = fields[key];
@@ -695,7 +696,7 @@
         var email = fields.email.el.value.trim();
         var requestType = fields.requestType.el.value;
         var message = fields.message.el.value.trim();
-        if (name.length < 2) { setError('name', 'الرجاء إدخال الاسم (حرفان على الأقل).'); ok = false; first = first || fields.name.el; } else setError('name', '');
+        if (!nameRe.test(name)) { setError('name', 'الرجاء إدخال اسم صحيح (حروف فقط، بدون أرقام أو رموز).'); ok = false; first = first || fields.name.el; } else setError('name', '');
         if (!emailRe.test(email)) { setError('email', 'الرجاء إدخال بريد إلكتروني صحيح.'); ok = false; first = first || fields.email.el; } else setError('email', '');
         if (!requestType) { setError('requestType', 'الرجاء اختيار نوع الطلب.'); ok = false; first = first || fields.requestType.el; } else setError('requestType', '');
         if (message.length < 10) { setError('message', 'الرجاء كتابة رسالة لا تقل عن ١٠ أحرف.'); ok = false; first = first || fields.message.el; } else setError('message', '');

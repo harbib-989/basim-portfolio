@@ -355,7 +355,7 @@ body{font-family:'Tajawal',sans-serif;background:var(--off);color:var(--ink);ove
         <p class="cform-sub">عبّي النموذج وسنرد عليك في أقرب وقت</p>
         <input type="hidden" name="_subject" value="طلب صفحة تسويقية عقارية — بيع عقارك">
         <div id="rf-status" class="cf-status" role="status" aria-live="polite"></div>
-        <div class="cf-field" id="rf-name-field"><label for="rf-name">الاسم</label><input id="rf-name" name="name" type="text" required placeholder="اسمك الكامل"><p class="cf-err">الرجاء إدخال الاسم كاملاً (حرفان على الأقل)</p></div>
+        <div class="cf-field" id="rf-name-field"><label for="rf-name">الاسم</label><input id="rf-name" name="name" type="text" required placeholder="اسمك الكامل"><p class="cf-err">الرجاء إدخال اسم صحيح (حروف فقط، بدون أرقام أو رموز)</p></div>
         <div class="cf-field" id="rf-phone-field"><label for="rf-phone">رقم الجوال</label><input id="rf-phone" name="phone" type="tel" required placeholder="05XXXXXXXX" dir="ltr" maxlength="13"><p class="cf-err">الرجاء إدخال رقم جوال سعودي صحيح (05XXXXXXXX)</p></div>
         <div class="cf-field"><label for="rf-type">نوع العقار</label><select id="rf-type" name="property_type"><option>شقق تمليك</option><option>فلل</option><option>أراضي</option><option>مشروع متكامل</option><option>أخرى</option></select></div>
         <div class="cf-field"><label for="rf-msg">تفاصيل إضافية</label><textarea id="rf-msg" name="details" placeholder="اكتب نبذة مختصرة عن مشروعك..."></textarea></div>
@@ -389,12 +389,13 @@ document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('on',scrollY>60));
 (function(){var f=document.getElementById('demoFrame');if(!f)return;function fit(){var w=f.parentElement.clientWidth,s=w/1200;f.style.transform='scale('+s+')';f.style.height=(f.parentElement.clientHeight/s)+'px'}f.addEventListener('load',fit);fit();window.addEventListener('resize',fit)})();
 var saPhoneRe=/^(?:\+?966|0)5\d{8}$/;
+var nameRe=/^[ء-يa-zA-Z\s'-]{2,}$/;
 function setFieldError(id,invalid){var f=document.getElementById(id+'-field');if(!f)return;f.classList.toggle('invalid',invalid)}
 function sendReq(e){
   e.preventDefault();
   var n=document.getElementById('rf-name').value.trim(),p=document.getElementById('rf-phone').value.trim().replace(/[\s-]/g,''),t=document.getElementById('rf-type').value,m=document.getElementById('rf-msg').value.trim();
   var agreeOk=document.getElementById('rf-agree').checked;
-  var nameOk=n.length>=2,phoneOk=saPhoneRe.test(p);
+  var nameOk=nameRe.test(n),phoneOk=saPhoneRe.test(p);
   setFieldError('rf-name',!nameOk);
   setFieldError('rf-phone',!phoneOk);
   setFieldError('rf-agree',!agreeOk);
@@ -420,7 +421,7 @@ function sendReq(e){
     .finally(function(){btn.disabled=false;btn.innerHTML=origHtml});
   return false
 }
-document.getElementById('rf-name').addEventListener('input',function(){if(document.getElementById('rf-name-field').classList.contains('invalid'))setFieldError('rf-name',this.value.trim().length<2)});
+document.getElementById('rf-name').addEventListener('input',function(){if(document.getElementById('rf-name-field').classList.contains('invalid'))setFieldError('rf-name',!nameRe.test(this.value.trim()))});
 document.getElementById('rf-phone').addEventListener('input',function(){if(document.getElementById('rf-phone-field').classList.contains('invalid'))setFieldError('rf-phone',!saPhoneRe.test(this.value.trim().replace(/[\s-]/g,'')))});
 document.getElementById('rf-agree').addEventListener('change',function(){if(document.getElementById('rf-agree-field').classList.contains('invalid'))setFieldError('rf-agree',!this.checked)});
 </script>
