@@ -803,6 +803,22 @@
       document.querySelectorAll('[data-animate]').forEach(function (el) { observer.observe(el); });
     })();
 
+    // Portfolio marquee: only start scrolling once the section is substantially in view,
+    // so the first card always begins fully visible instead of mid-cycle.
+    (function () {
+      var marquee = document.querySelector('.portfolio-marquee');
+      if (!marquee) return;
+      var marqueeObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            marquee.classList.add('marquee-play');
+            marqueeObserver.disconnect();
+          }
+        });
+      }, { threshold: 0.6 });
+      marqueeObserver.observe(marquee);
+    })();
+
     // Hero dashboard: count-up numbers
     (function () {
       var els = document.querySelectorAll('.dash-count');
