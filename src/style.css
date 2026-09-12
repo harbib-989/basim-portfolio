@@ -124,13 +124,14 @@ textarea:focus-visible,
   transform: translateY(0);
 }
 
-/* Portfolio marquee: cards flow continuously right-to-left (JS-driven, see index.html) */
-.portfolio-marquee {
+/* Portfolio slider: the card strip steps one project at a time (JS-driven, see index.html) */
+.portfolio-slider {
   overflow: hidden;
 }
 
 .portfolio-track {
   display: flex;
+  gap: 1.25rem;
   width: max-content;
   will-change: transform;
 }
@@ -138,13 +139,29 @@ textarea:focus-visible,
 .portfolio-card {
   flex: 0 0 auto;
   width: 260px;
-  margin-inline-end: 1.25rem;
 }
 
 @media (min-width: 640px) {
   .portfolio-card { width: 300px; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .portfolio-track { animation: none; }
+.portfolio-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: #cbd5e1;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.dark .portfolio-dot {
+  background: #475569;
+}
+
+.portfolio-dot[aria-current="true"] {
+  width: 1.5rem;
+  background: var(--color-accent);
+}
+
+.dark .portfolio-dot[aria-current="true"] {
+  background: var(--color-primary-400);
 }

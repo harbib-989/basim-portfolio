@@ -373,7 +373,7 @@
           <h2 class="text-3xl font-bold text-corporate-navy dark:text-white sm:text-4xl">أعمالنا</h2>
           <p class="mt-4 max-w-2xl mx-auto text-slate-600 dark:text-slate-300">مشاريع ومواقع وأنظمة نفّذناها لعملائنا</p>
         </div>
-        <div class="mt-14 portfolio-marquee" data-animate>
+        <div class="mt-14 portfolio-slider" data-animate>
           <div class="portfolio-track">
             <div class="portfolio-card group flex flex-col overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm transition hover:border-accent/30 hover:shadow-xl">
               <div class="aspect-video w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
@@ -464,6 +464,20 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="mt-7 flex items-center justify-center gap-5" data-animate>
+          <button type="button" data-portfolio-prev aria-label="المشروع السابق" class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:border-accent/40 hover:text-accent dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+          </button>
+          <div class="flex items-center gap-2.5">
+            <button type="button" data-portfolio-dot class="portfolio-dot" aria-label="الرابط الموحد"></button>
+            <button type="button" data-portfolio-dot class="portfolio-dot" aria-label="موقع جدولي"></button>
+            <button type="button" data-portfolio-dot class="portfolio-dot" aria-label="نظام إدارة الشكاوي والتظلمات"></button>
+            <button type="button" data-portfolio-dot class="portfolio-dot" aria-label="نظام إدارة الدعوات الرسمية"></button>
+          </div>
+          <button type="button" data-portfolio-next aria-label="المشروع التالي" class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:border-accent/40 hover:text-accent dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" /></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -803,61 +817,84 @@
       document.querySelectorAll('[data-animate]').forEach(function (el) { observer.observe(el); });
     })();
 
-    // Portfolio marquee: driven directly via rAF instead of a CSS animation, so there is
-    // no reliance on animation-play-state (which can stick/stutter after being toggled
-    // from an initial paused state). Starts exactly when the section's own scroll-reveal
-    // fade-in finishes — not from a separate, independently-timed visibility check — so
-    // it can never run for a while unseen behind opacity:0 and appear already mid-cycle.
+    // Portfolio slider: the strip steps one project at a time. The strip holds the four
+    // projects twice, so the step past the last one lands on a frame identical to the
+    // start — which is what makes the silent reset back to index 0 invisible.
     (function () {
-      var marquee = document.querySelector('.portfolio-marquee');
+      var slider = document.querySelector('.portfolio-slider');
       var track = document.querySelector('.portfolio-track');
-      if (!marquee || !track) return;
+      if (!slider || !track) return;
 
-      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduceMotion) return;
+      var cards = Array.prototype.slice.call(track.querySelectorAll('.portfolio-card'));
+      var dots = Array.prototype.slice.call(document.querySelectorAll('[data-portfolio-dot]'));
+      var unique = dots.length;
+      if (cards.length < unique * 2 || unique < 2) return;
 
-      var speed = 40; // pixels per second
-      var offset = 0;
-      var halfWidth = 0;
-      var lastTime = null;
-      var running = false;
-      var hovered = false;
+      var SLIDE_MS = 700;
+      var INTERVAL_MS = 4000;
 
+      var index = 0;
+      var step = 0;
+      var sliding = false;
+      var paused = true;
+
+      // Measured per step, never cached from load time: the stylesheet that lays the
+      // strip out as a flex row can still be in flight when this script first runs.
       function measure() {
-        halfWidth = track.scrollWidth / 2;
+        step = Math.abs(cards[1].getBoundingClientRect().left - cards[0].getBoundingClientRect().left);
+        return step > 0;
       }
 
-      function step(timestamp) {
-        if (lastTime === null) lastTime = timestamp;
-        var delta = (timestamp - lastTime) / 1000;
-        lastTime = timestamp;
-        if (!hovered && halfWidth > 0) {
-          offset += speed * delta;
-          if (offset >= halfWidth) offset -= halfWidth;
-          track.style.transform = 'translateX(' + (-offset) + 'px)';
-        }
-        requestAnimationFrame(step);
+      function render(animate) {
+        track.style.transition = animate ? 'transform ' + SLIDE_MS + 'ms cubic-bezier(0.22, 1, 0.36, 1)' : 'none';
+        track.style.transform = 'translateX(' + (index * step) + 'px)';
+        dots.forEach(function (dot, i) {
+          if (i === index % unique) dot.setAttribute('aria-current', 'true');
+          else dot.removeAttribute('aria-current');
+        });
       }
 
-      function start() {
-        if (running) return;
-        running = true;
+      function goTo(target) {
+        if (sliding || !measure()) return;
+        sliding = true;
+        index = target;
+        render(true);
+        setTimeout(function () {
+          if (index >= unique) {
+            index = 0;
+            render(false);
+          }
+          sliding = false;
+        }, SLIDE_MS);
+      }
+
+      measure();
+      render(false);
+
+      window.addEventListener('resize', function () {
         measure();
-        lastTime = null;
-        requestAnimationFrame(step);
-      }
-
-      window.addEventListener('resize', measure);
-      marquee.addEventListener('mouseenter', function () { hovered = true; });
-      marquee.addEventListener('mouseleave', function () { hovered = false; });
-
-      marquee.addEventListener('transitionend', function (e) {
-        if (e.propertyName === 'opacity') start();
+        render(false);
       });
 
-      // Fallback: already visible (or opacity transition already finished) before this ran.
-      if (marquee.classList.contains('in-view') || getComputedStyle(marquee).opacity === '1') {
-        start();
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () { goTo(i); });
+      });
+
+      var nextBtn = document.querySelector('[data-portfolio-next]');
+      var prevBtn = document.querySelector('[data-portfolio-prev]');
+      if (nextBtn) nextBtn.addEventListener('click', function () { goTo(index + 1); });
+      if (prevBtn) prevBtn.addEventListener('click', function () { goTo(index > 0 ? index - 1 : unique - 1); });
+
+      slider.addEventListener('mouseenter', function () { paused = true; });
+      slider.addEventListener('mouseleave', function () { paused = false; });
+
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        setInterval(function () {
+          if (!paused) goTo(index + 1);
+        }, INTERVAL_MS);
+        new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) { paused = !entry.isIntersecting; });
+        }, { threshold: 0.25 }).observe(slider);
       }
     })();
 
