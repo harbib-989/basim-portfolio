@@ -805,8 +805,9 @@
 
     // Portfolio marquee: driven directly via rAF instead of a CSS animation, so there is
     // no reliance on animation-play-state (which can stick/stutter after being toggled
-    // from an initial paused state). Starts fresh only once the section is substantially
-    // in view, and pauses cleanly on hover.
+    // from an initial paused state). Starts exactly when the section's own scroll-reveal
+    // fade-in finishes — not from a separate, independently-timed visibility check — so
+    // it can never run for a while unseen behind opacity:0 and appear already mid-cycle.
     (function () {
       var marquee = document.querySelector('.portfolio-marquee');
       var track = document.querySelector('.portfolio-track');
@@ -838,21 +839,26 @@
         requestAnimationFrame(step);
       }
 
-      measure();
+      function start() {
+        if (running) return;
+        running = true;
+        measure();
+        lastTime = null;
+        requestAnimationFrame(step);
+      }
+
       window.addEventListener('resize', measure);
       marquee.addEventListener('mouseenter', function () { hovered = true; });
       marquee.addEventListener('mouseleave', function () { hovered = false; });
 
-      var marqueeObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting && !running) {
-            running = true;
-            requestAnimationFrame(step);
-            marqueeObserver.disconnect();
-          }
-        });
-      }, { threshold: 0.6 });
-      marqueeObserver.observe(marquee);
+      marquee.addEventListener('transitionend', function (e) {
+        if (e.propertyName === 'opacity') start();
+      });
+
+      // Fallback: already visible (or opacity transition already finished) before this ran.
+      if (marquee.classList.contains('in-view') || getComputedStyle(marquee).opacity === '1') {
+        start();
+      }
     })();
 
     // Hero dashboard: count-up numbers
