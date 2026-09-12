@@ -124,31 +124,15 @@ textarea:focus-visible,
   transform: translateY(0);
 }
 
-/* Portfolio marquee: cards flow continuously right-to-left */
-@keyframes marqueeScroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
+/* Portfolio marquee: cards flow continuously right-to-left (JS-driven, see index.html) */
 .portfolio-marquee {
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
-  mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
 }
 
 .portfolio-track {
   display: flex;
   width: max-content;
-  animation: marqueeScroll 32s linear infinite;
-  animation-play-state: paused;
-}
-
-.portfolio-marquee.marquee-play .portfolio-track {
-  animation-play-state: running;
-}
-
-.portfolio-track:hover {
-  animation-play-state: paused;
+  will-change: transform;
 }
 
 .portfolio-card {

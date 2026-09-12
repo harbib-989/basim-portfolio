@@ -803,15 +803,51 @@
       document.querySelectorAll('[data-animate]').forEach(function (el) { observer.observe(el); });
     })();
 
-    // Portfolio marquee: only start scrolling once the section is substantially in view,
-    // so the first card always begins fully visible instead of mid-cycle.
+    // Portfolio marquee: driven directly via rAF instead of a CSS animation, so there is
+    // no reliance on animation-play-state (which can stick/stutter after being toggled
+    // from an initial paused state). Starts fresh only once the section is substantially
+    // in view, and pauses cleanly on hover.
     (function () {
       var marquee = document.querySelector('.portfolio-marquee');
-      if (!marquee) return;
+      var track = document.querySelector('.portfolio-track');
+      if (!marquee || !track) return;
+
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduceMotion) return;
+
+      var speed = 40; // pixels per second
+      var offset = 0;
+      var halfWidth = 0;
+      var lastTime = null;
+      var running = false;
+      var hovered = false;
+
+      function measure() {
+        halfWidth = track.scrollWidth / 2;
+      }
+
+      function step(timestamp) {
+        if (lastTime === null) lastTime = timestamp;
+        var delta = (timestamp - lastTime) / 1000;
+        lastTime = timestamp;
+        if (!hovered && halfWidth > 0) {
+          offset += speed * delta;
+          if (offset >= halfWidth) offset -= halfWidth;
+          track.style.transform = 'translateX(' + (-offset) + 'px)';
+        }
+        requestAnimationFrame(step);
+      }
+
+      measure();
+      window.addEventListener('resize', measure);
+      marquee.addEventListener('mouseenter', function () { hovered = true; });
+      marquee.addEventListener('mouseleave', function () { hovered = false; });
+
       var marqueeObserver = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            marquee.classList.add('marquee-play');
+          if (entry.isIntersecting && !running) {
+            running = true;
+            requestAnimationFrame(step);
             marqueeObserver.disconnect();
           }
         });
