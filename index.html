@@ -465,11 +465,11 @@
             </div>
           </div>
         </div>
-        <div class="mt-7 flex items-center justify-center gap-5" data-animate>
+        <div class="mt-7 flex items-center justify-center gap-5" data-portfolio-controls data-animate>
           <button type="button" data-portfolio-prev aria-label="المشروع السابق" class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:border-accent/40 hover:text-accent dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
           </button>
-          <div class="flex items-center gap-2.5">
+          <div class="flex items-center gap-4">
             <button type="button" data-portfolio-dot class="portfolio-dot" aria-label="الرابط الموحد"></button>
             <button type="button" data-portfolio-dot class="portfolio-dot" aria-label="موقع جدولي"></button>
             <button type="button" data-portfolio-dot class="portfolio-dot" aria-label="نظام إدارة الشكاوي والتظلمات"></button>
@@ -827,16 +827,25 @@
 
       var cards = Array.prototype.slice.call(track.querySelectorAll('.portfolio-card'));
       var dots = Array.prototype.slice.call(document.querySelectorAll('[data-portfolio-dot]'));
-      var unique = dots.length;
+      var controls = document.querySelector('[data-portfolio-controls]');
+      // The strip's own duplicate set defines the loop period, so it is the source of
+      // truth — not the number of dots, which can fall out of sync with the projects.
+      var unique = cards.filter(function (card) { return !card.hasAttribute('aria-hidden'); }).length;
       if (cards.length < unique * 2 || unique < 2) return;
 
-      var SLIDE_MS = 700;
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      // A stylesheet rule forces transitions to finish instantly under reduced motion, so
+      // the lock below has to match that or it would deaden the controls for no reason.
+      var SLIDE_MS = reduceMotion ? 0 : 700;
       var INTERVAL_MS = 4000;
 
       var index = 0;
       var step = 0;
       var sliding = false;
+      var pending = null;
       var paused = true;
+      var autoplay = !reduceMotion;
+      var timer = null;
 
       // Measured per step, never cached from load time: the stylesheet that lays the
       // strip out as a flex row can still be in flight when this script first runs.
@@ -865,7 +874,42 @@
             render(false);
           }
           sliding = false;
+          if (pending) {
+            var resume = pending;
+            pending = null;
+            request(resume);
+          }
         }, SLIDE_MS);
+      }
+
+      // Targets are resolved from the index at the moment the slide actually starts: a
+      // request made mid-slide would otherwise be measured against an index that the
+      // silent reset is about to change under it.
+      function request(resolve) {
+        if (sliding) {
+          pending = resolve;
+          return;
+        }
+        goTo(resolve(index));
+      }
+
+      function schedule() {
+        if (timer) clearTimeout(timer);
+        timer = null;
+        if (autoplay && !paused) timer = setTimeout(tick, INTERVAL_MS);
+      }
+
+      function tick() {
+        goTo(index + 1);
+        schedule();
+      }
+
+      // Any deliberate pick hands control to the visitor for good: this is what lets
+      // touch and keyboard users stop the motion, neither of which can hover.
+      function drive(resolve) {
+        autoplay = false;
+        schedule();
+        request(resolve);
       }
 
       measure();
@@ -877,23 +921,44 @@
       });
 
       dots.forEach(function (dot, i) {
-        dot.addEventListener('click', function () { goTo(i); });
+        dot.addEventListener('click', function () {
+          drive(function () { return i; });
+        });
       });
 
       var nextBtn = document.querySelector('[data-portfolio-next]');
       var prevBtn = document.querySelector('[data-portfolio-prev]');
-      if (nextBtn) nextBtn.addEventListener('click', function () { goTo(index + 1); });
-      if (prevBtn) prevBtn.addEventListener('click', function () { goTo(index > 0 ? index - 1 : unique - 1); });
+      if (nextBtn) nextBtn.addEventListener('click', function () {
+        drive(function (i) { return i + 1; });
+      });
+      if (prevBtn) prevBtn.addEventListener('click', function () {
+        autoplay = false;
+        schedule();
+        request(function (i) {
+          if (i > 0) return i - 1;
+          // Stepping back from the first project: jump to the identical duplicate frame
+          // first, so the move reads as one card backwards instead of racing forwards.
+          index = unique;
+          render(false);
+          void track.offsetWidth;
+          return unique - 1;
+        });
+      });
 
-      slider.addEventListener('mouseenter', function () { paused = true; });
-      slider.addEventListener('mouseleave', function () { paused = false; });
+      [slider, controls].forEach(function (el) {
+        if (!el) return;
+        el.addEventListener('mouseenter', function () { paused = true; schedule(); });
+        el.addEventListener('mouseleave', function () { paused = false; schedule(); });
+        el.addEventListener('focusin', function () { paused = true; schedule(); });
+        el.addEventListener('focusout', function () { paused = false; schedule(); });
+      });
 
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        setInterval(function () {
-          if (!paused) goTo(index + 1);
-        }, INTERVAL_MS);
+      if (autoplay) {
         new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) { paused = !entry.isIntersecting; });
+          entries.forEach(function (entry) {
+            paused = !entry.isIntersecting;
+            schedule();
+          });
         }, { threshold: 0.25 }).observe(slider);
       }
     })();

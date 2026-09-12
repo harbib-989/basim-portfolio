@@ -136,25 +136,36 @@ textarea:focus-visible,
   will-change: transform;
 }
 
+/* Sized in rem like the container cap and the gap: mixing px here would let a large
+   root font size grow the viewport past what one duplicate set covers, which would
+   expose a bare edge at the exact frame the loop resets on. */
 .portfolio-card {
   flex: 0 0 auto;
-  width: 260px;
+  width: 16.25rem;
 }
 
 @media (min-width: 640px) {
-  .portfolio-card { width: 300px; }
+  .portfolio-card { width: 18.75rem; }
 }
 
 .portfolio-dot {
+  position: relative;
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 9999px;
-  background: #cbd5e1;
+  background: #64748b;
   transition: width 0.3s ease, background-color 0.3s ease;
 }
 
+/* Keeps the dot small while the button itself stays a 24px-wide tap target. */
+.portfolio-dot::after {
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
+}
+
 .dark .portfolio-dot {
-  background: #475569;
+  background: #94a3b8;
 }
 
 .portfolio-dot[aria-current="true"] {
