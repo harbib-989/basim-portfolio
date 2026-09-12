@@ -139,7 +139,6 @@ textarea:focus-visible,
 .portfolio-track {
   display: flex;
   width: max-content;
-  gap: 1.25rem;
   animation: marqueeScroll 32s linear infinite;
 }
 
@@ -150,6 +149,7 @@ textarea:focus-visible,
 .portfolio-card {
   flex: 0 0 auto;
   width: 260px;
+  margin-inline-end: 1.25rem;
 }
 
 @media (min-width: 640px) {
