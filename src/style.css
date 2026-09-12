@@ -140,6 +140,11 @@ textarea:focus-visible,
   display: flex;
   width: max-content;
   animation: marqueeScroll 32s linear infinite;
+  animation-play-state: paused;
+}
+
+.portfolio-marquee.in-view .portfolio-track {
+  animation-play-state: running;
 }
 
 .portfolio-track:hover {
