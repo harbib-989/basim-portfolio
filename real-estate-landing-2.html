@@ -254,6 +254,13 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;strok
 .form-go{width:100%;margin-top:.6rem;background:var(--navy);color:#fff;border:none;padding:1.05rem;border-radius:var(--rs);font-family:'Tajawal';font-size:1.05rem;font-weight:700;cursor:pointer;transition:background .3s,transform .3s;display:inline-flex;align-items:center;justify-content:center;gap:.5rem}
 .form-go svg{width:18px;height:18px;stroke:var(--gold)}
 .form-go:hover{background:var(--navy-deep);transform:translateY(-2px)}
+.demo-note{display:flex;align-items:center;gap:.6rem;background:#FBF6EC;border:1px solid var(--gold-lt);border-radius:12px;padding:.85rem 1.1rem;margin-bottom:1.6rem;font-size:.86rem;color:var(--slate);line-height:1.7}
+.demo-note strong{color:var(--navy)}
+.demo-note a{color:var(--gold-dp);font-weight:700;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
+.fgrp input:disabled,.fgrp select:disabled,.fgrp textarea:disabled{background:#F1EFEA;color:var(--mist);cursor:not-allowed}
+.f-check input:disabled{cursor:not-allowed}
+.f-check label:has(input:disabled){cursor:not-allowed;opacity:.6}
+.form-go:disabled,.form-go:disabled:hover{background:var(--mist);cursor:not-allowed;transform:none}
 
 /* FOOTER */
 .footer{text-align:center;padding:2.2rem 3rem;border-top:1px solid var(--mist);font-size:.78rem;color:var(--stone);background:#fff}
@@ -307,7 +314,7 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;strok
       <p class="hero-sub">شقق تمليك بتصاميم عصرية وتشطيبات راقية في موقع استراتيجي — مساحات تبدأ من ١٢٠م² مع خيارات تمويل مرنة وأسعار لن تتكرر</p>
       <div class="hero-cta-row">
         <a href="#units" class="cta-primary"><svg class="ic" viewBox="0 0 24 24"><path d="M4 11 12 4l8 7"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9"/></svg>شاهد الشقق المتاحة</a>
-        <a href="https://wa.me/966XXXXXXXXX" class="cta-secondary" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>تواصل واتساب</a>
+        <a href="#contact" class="cta-secondary"><svg class="ic" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>تواصل واتساب</a>
       </div>
       <div class="proof-row">
         <div class="proof"><strong>٨</strong><span>وحدات متاحة</span></div>
@@ -590,21 +597,25 @@ svg.ic{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.7;strok
       <p class="sec-p">سجّل بياناتك وسيتواصل معك مستشار عقاري خلال ساعات</p>
     </div>
     <div class="contact-card rv">
-      <div class="frow"><div class="fgrp" id="f-name"><label>الاسم الكامل</label><input id="in-name" type="text" placeholder="أدخل اسمك الكامل"><p class="f-err">الرجاء إدخال اسم صحيح (حروف فقط، بدون أرقام أو رموز)</p></div><div class="fgrp" id="f-phone"><label>رقم الجوال</label><input id="in-phone" type="tel" placeholder="05XXXXXXXX" dir="ltr" maxlength="13"><p class="f-err">الرجاء إدخال رقم جوال سعودي صحيح (05XXXXXXXX)</p></div></div>
-      <div class="frow"><div class="fgrp" id="f-email"><label>البريد الإلكتروني</label><input id="in-email" type="email" placeholder="example@email.com" dir="ltr"><p class="f-err">الرجاء إدخال بريد إلكتروني صحيح</p></div><div class="fgrp"><label>الشقة المفضلة</label><select><option value="">اختر النموذج</option><option>نموذج A — ١٢٠م² (٤٥٠ ألف)</option><option>نموذج B — ١٥٠م² (٥٨٠ ألف)</option><option>نموذج C — ٢٠٠م² (٧٥٠ ألف)</option></select></div></div>
-      <div class="fgrp"><label>ملاحظات إضافية</label><textarea placeholder="اكتب استفسارك هنا..."></textarea></div>
+      <div class="demo-note">
+        <span>ℹ️</span>
+        <span><strong>هذا نموذج توضيحي</strong> لعرض فكرة صفحات بيع العقارات وغير مفعّل فعليًا. لطلب صفحة حقيقية لمشروعك، تواصل عبر <a href="/sell-your-property.html">بيع عقارك</a>.</span>
+      </div>
+      <div class="frow"><div class="fgrp" id="f-name"><label>الاسم الكامل</label><input id="in-name" type="text" placeholder="أدخل اسمك الكامل" disabled><p class="f-err">الرجاء إدخال اسم صحيح (حروف فقط، بدون أرقام أو رموز)</p></div><div class="fgrp" id="f-phone"><label>رقم الجوال</label><input id="in-phone" type="tel" placeholder="05XXXXXXXX" dir="ltr" maxlength="13" disabled><p class="f-err">الرجاء إدخال رقم جوال سعودي صحيح (05XXXXXXXX)</p></div></div>
+      <div class="frow"><div class="fgrp" id="f-email"><label>البريد الإلكتروني</label><input id="in-email" type="email" placeholder="example@email.com" dir="ltr" disabled><p class="f-err">الرجاء إدخال بريد إلكتروني صحيح</p></div><div class="fgrp"><label>الشقة المفضلة</label><select disabled><option value="">اختر النموذج</option><option>نموذج A — ١٢٠م² (٤٥٠ ألف)</option><option>نموذج B — ١٥٠م² (٥٨٠ ألف)</option><option>نموذج C — ٢٠٠م² (٧٥٠ ألف)</option></select></div></div>
+      <div class="fgrp"><label>ملاحظات إضافية</label><textarea placeholder="اكتب استفسارك هنا..." disabled></textarea></div>
       <div class="fgrp f-check" id="f-agree">
-        <label><input id="in-agree" type="checkbox"><span>أوافق على <a href="/terms.html" target="_blank">الشروط والأحكام</a> و<a href="/privacy.html" target="_blank">سياسة الخصوصية</a></span></label>
+        <label><input id="in-agree" type="checkbox" disabled><span>أوافق على <a href="/terms.html" target="_blank">الشروط والأحكام</a> و<a href="/privacy.html" target="_blank">سياسة الخصوصية</a></span></label>
         <p class="f-err">يجب الموافقة على الشروط والأحكام وسياسة الخصوصية للمتابعة</p>
       </div>
-      <button class="form-go" onclick="return submitBooking(this)">أرسل طلب الحجز</button>
+      <button class="form-go" disabled title="نموذج توضيحي — غير مفعّل">نموذج توضيحي — غير مفعّل</button>
     </div>
   </div>
 </section>
 
 <footer class="footer"><p>جميع الحقوق محفوظة © 2026 — <a href="#">اسم المشروع</a> | تم التطوير بواسطة <a href="https://irtiqatech.sa/" target="_blank" rel="noopener">IrtiqaTech</a></p></footer>
 
-<a href="https://wa.me/966XXXXXXXXX" class="wa-btn" target="_blank" rel="noopener" aria-label="تواصل عبر واتساب"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<a href="#contact" class="wa-btn" aria-label="تواصل عبر واتساب — نموذج توضيحي"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 
 <script>
 const ro=new IntersectionObserver(es=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('on'),i*60);ro.unobserve(e.target)}})},{threshold:.06,rootMargin:'0px 0px -20px 0px'});
